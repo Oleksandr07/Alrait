@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<title>alrait</title>
+		<!-- CSS -->
+			<link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.5" media="screen" >
+			<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,400italic,500italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+			<link href="fonts/awesome/css/font-awesome.min.css" rel="stylesheet" media="screen">
+			<link href="css/style.css" rel="stylesheet" media="screen">
+			<link href="css/media.css" rel="stylesheet" media="screen">
+		<!-- END OF CSS -->
+		<!--SCRIPT -->
+			<script src="js/jquery-1.11.1.min.js"></script>
+			<script src="js/jquery.placeholder.js"></script>
+			<script src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
+			<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+			<script type="text/javascript" src="js/slick/slick.min.js"></script>
+			<link rel="stylesheet" href="js/selectric/public/selectric.css">
+			<script src="js/selectric/public/jquery.selectric.min.js"></script>
+			<link rel="stylesheet" href="js/fotorama/fotorama.css">
+			<script src="js/fotorama/fotorama.js"></script>
+			<link rel="stylesheet" type="text/css" href="js/tooltipster-master/css/tooltipster.css" />
+			<script type="text/javascript" src="js/tooltipster-master/js/jquery.tooltipster.min.js"></script>
+			<link rel="stylesheet" href="js/scrollbar/jquery.scrollbar.css">
+			<script src="js/scrollbar/jquery.scrollbar.js"></script>
+			<script src="js/isotope.pkgd.min.js"></script>
+			<script src="js/masonry.pkgd.min.js"></script>
+			
+			<link href="js/select2/select2.css" rel="stylesheet" />
+			<script src="js/select2/select2.js"></script>
+			<script src="js/select2/select2_locale_ru.js"></script>
+			
+			<script src="js/jquery.mobile-events.min.js"></script>
+			<script src="js/common.js"></script>
+			<!--[if IE]>  
+				<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>  
+			<![endif]--> 
+		<!-- END OF SCRIPT -->
+	</head>
+<body>
+<div class="wrapper">
+	<!--menu_mobile -->
+	<div class="menu_mobile">
+		<div class="content_menu">
+			<div class="scrollbar">
+				<ul>
+					<li class="active"><a href="#">Страница пользователя</a></li>
+					<li><a href="#">Анкета модели</a></li>
+					<li><a href="#">Уведомления<span>3</span></a></li>
+					<li><a href="#">Сообщения<span>2</span></a></li>
+					<li><a href="#">Баланс</a></li>
+					<li><a href="#">Правила</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu_close"><i class="fa fa-times"></i></div>
+	</div>
+	<div id="menu_overlay"></div>
+	<!-- END OF menu_mobile -->
+
+	<!--header -->
+	<header>
+		<div class="inner">
+			<div class="logo">
+				<a href="/" title="">
+					<img src="img/logo_x2.png" alt="">
+				</a>
+			</div>
+			<div class="nav">
+				<div class="nav_head">
+					<div class="nav_icon">
+						<span class="icon_bar"></span>
+						<span class="icon_bar"></span>
+						<span class="icon_bar"></span>
+					</div>
+					<div class="nav_title">Меню</div>
+				</div>
+				<div class="nav_body">
+					<div class="inner">
+					
+					</div>
+				</div>
+				<div id="nav_overlay"></div>
+			</div>
+			<div class="search">
+				<div class="search_head">
+					<form action="#">
+						<input type="text" placeholder="Найти специалиста, организацию или что-нибудь ещё">
+						<button class="search_submit" type="button"><i class="fa fa-search"></i></button>
+						<button class="search_close" type="reset"><i class="fa fa-times"></i></button>
+					</form>
+					<div class="search_result">
+						<div class="scrollbar">
+							<div class="search_section">
+								<div class="search_section_title">Специалисты</div>
+								<div class="search_row">
+									<div class="search_col">
+										<a href="#" class="search_img">
+											<img src="img/organization/organization_img1.png" alt="">
+										</a>
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Кузнецова Анастасия</a>
+											<span class="pro">pro</span>
+										</div>
+										<div class="search_organization">Парикмахер</div>
+									</div>
+								</div>
+								<div class="search_row">
+									<div class="search_col">
+										<a href="#" class="search_img">
+											<img src="img/organization/organization_img1.png" alt="">
+										</a>
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Кузнецова Анастасия</a>
+											<span class="pro">pro</span>
+										</div>
+										<div class="search_organization">Парикмахер</div>
+									</div>
+								</div>
+								<div class="search_more">
+									<a href="#">Показать ещё 69 специалистов</a>
+								</div>
+							</div>
+							<div class="search_section">
+								<div class="search_section_title">Организации</div>
+								<div class="search_row">
+									<div class="search_col">
+										<a href="#" class="search_img">
+											<img src="img/organization/organization_img2.png" alt="">
+										</a>
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Incanto (Инканто)</a>
+											<span class="pro">pro</span>
+										</div>
+										<div class="search_organization">Салон красоты</div>
+									</div>
+								</div>
+								<div class="search_row">
+									<div class="search_col">
+										<a href="#" class="search_img">
+											<img src="img/organization/organization_img2.png" alt="">
+										</a>
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Incanto (Инканто)</a>
+											<span class="pro">pro</span>
+										</div>
+										<div class="search_organization">Салон красоты</div>
+									</div>
+								</div>
+								<div class="search_more">
+									<a href="#">Показать ещё 53 организаций</a>
+								</div>
+							</div>
+							<div class="search_section">
+								<div class="search_section_title">И так каждая категория</div>
+								<div class="search_row">
+									<div class="search_col">
+										<a href="#" class="search_img">
+											<img src="img/organization/organization_img1.png" alt="">
+										</a>
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Кузнецова Анастасия</a>
+										</div>
+										<div class="search_organization">Парикмахер</div>
+									</div>
+								</div>
+								<div class="search_row">
+									<div class="search_col">
+
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Incanto (Инканто)</a>
+										</div>
+										<div class="search_organization">Салон красоты</div>
+									</div>
+								</div>
+								<div class="search_more">
+									<a href="#">Показать ещё 100 результатов</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="entrance">
+				<div class="entrance_lock"><i class="fa fa-lock"></i></div>
+				<div class="entrance_box">
+					<div class="login">
+						<a href="#modal_login" class="open_modal"><i class="fa fa-lock"></i>Войти</a>
+					</div>
+					<div class="reg">
+						<a href="#modal_reg" class="a_button a_grad open_modal">Зарегистрироваться</a>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</header>
+	<!-- END OF header -->
+	<!--main -->
+	<div class="content_menu">
+		<div class="inner">
+			<div class="menu_pc">
+				<ul>
+					<li class="active"><a href="#">Страница пользователя</a></li>
+					<li><a href="#">Анкета модели</a></li>
+					<li><a href="#">Уведомления<span>3</span></a></li>
+					<li><a href="#">Сообщения<span>2</span></a></li>
+					<li><a href="#">Баланс</a></li>
+					<li><a href="#">Правила</a></li>
+				</ul>
+			</div>
+			<div class="block_mobile">
+				<div class="menu_change"><i class="fa fa-list-ul"></i></div>
+				<div class="page_title">Все статьи</div>
+			</div>
+		</div>
+	</div>
+	<div id="main">
+		<div class="inner">
+			<!-- <div class="aside aside_left">
+				<div class="aside_menu">
+					<ul>
+						<li class="active"><a href="#"><i class="fa fa-angle-right"></i>Общая информация</a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i>Мои заказы</a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i>Избранное</a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i>Социальные сети</a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i>Настройки</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="content content_right">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<br/>
+				<hr/>
+				<br/>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="clear"></div> -->
+		</div>
+	</div>
+	<!-- END OF main -->
+</div>
+	<!--footer -->
+	<div class="top">
+		<a href="#main" class="a_button a_sm">Вверх <i class="fa fa-angle-up"></i></a>
+	</div>
+	<!--footer -->
+	<footer>
+		<div class="footer_nav">
+			<div class="inner">
+				<div class="top">
+					<a href="#main" class="a_button a_sm">Вверх <i class="fa fa-angle-up"></i></a>
+				</div>
+				<ul>
+					<li class="active"><a href="#">О проекте</a></li>
+					<li><a href="#">Правила</a></li>
+					<li><a href="#">Частые вопросы</a></li>
+					<li><a href="#">Обратная связь</a></li>
+					<li><a href="#">Реклама на сайте</a></li>
+					<li><a href="#">Оплата услуг</a></li>
+					<li><a href="#">Договор оферты</a></li>
+				</ul>
+				<span class="nav_active"></span>
+			</div>
+		</div>
+		<div class="footer_bottom">
+			<div class="inner">
+				<div class="copyright">2015 © alrait.by. Все права защищены, копирование материалов только с разрешения редакции.</div>
+			</div>
+		</div>
+	</footer>
+	<!-- END OF footer -->
+
+
+	<!-- Validation -->
+	<script src="js/validation/dist/jquery.validate.js"></script>
+	<script>
+		// $.validator.setDefaults({
+		// 	submitHandler: function() {
+		// 		alert("submitted!");
+		// 	}
+		// });
+		
+		$().ready(function() {
+			// validate signup form on keyup and submit
+			$("#modal_reg form").validate({
+				rules: {
+					firstname: "required",
+					lastname: "required",
+					email: {
+						required: true,
+						email: true
+					}
+				},
+				messages: {
+					firstname: "Введите ваше имя",
+					lastname: "Введите вашу фамилию",
+					email: {
+						required: "Введите ваш email",
+						email: "Правильно введите ваш email"
+					}
+				},
+				submitHandler: function(form) {
+					$.fancybox({ 
+						href: "#modal_thanks",
+						padding: 0,
+						margin: 10,
+						minHeight: false,
+						autoHeight: true,
+						openEffect: 'fade',
+						closeEffect: 'fade',
+						openSpeed: 400,
+						closeSpeed: 400,
+						helpers: {
+							overlay: {
+								locked: true
+							}
+						}
+					});
+				}
+			});
+
+			$("#modal_login form").validate({
+				rules: {
+					email: {
+						required: true,
+						email: true
+					},
+					pass: { 
+						required: true,
+						minlength: 6
+					}
+					
+				},
+				messages: {
+					email: {
+						required: "Введите ваш email",
+						email: "Правильно введите ваш email"
+					},
+					pass: {
+						required: "Введите пароль",
+						minlength: "Минимум 6 символов"
+					}
+				},
+				submitHandler: function(form) {
+					$.fancybox({ 
+						href: "#modal_thanks",
+						padding: 0,
+						margin: 10,
+						minHeight: false,
+						autoHeight: true,
+						openEffect: 'fade',
+						closeEffect: 'fade',
+						openSpeed: 400,
+						closeSpeed: 400,
+						helpers: {
+							overlay: {
+								locked: true
+							}
+						}
+					});
+				}
+			});
+		});
+	</script>
+	<!-- End Validation -->
+
+	<!--modal -->
+	<div id="modal_login" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Войти через социальные сети</div>
+			<div class="uLogin">
+				<a href="#" class="a_socials vk"><i class="fa fa-vk"></i></a>
+				<a href="#" class="a_socials fb"><i class="fa fa-facebook"></i></a>
+				<a href="#" class="a_socials ok"><i class="fa fa-odnoklassniki"></i></a>
+				<a href="#" class="a_socials go"><i class="fa fa-google-plus"></i></a>
+				<a href="#" class="a_socials tw"><i class="fa fa-twitter"></i></a>
+			</div>
+		</div>
+		<div class="modal_body">
+			<div class="modal_title">Войти через email и пароль</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Email</label>
+						<input type="email" name="email" placeholder="anna@gmail.com" required>
+					</div>
+					<div class="form_group">
+						<label>Пароль</label>
+						<input class="login_pass" type="password" name="pass" placeholder="">
+					</div>
+				</div>
+				<div class="form_button">
+					<button class="a_button a_grad" type="submite">Войти в кабинет</button>
+					<a href="#modal_pass" class="forgot_pass fancybox">Забыли пароль?</a>
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_pass" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Укажите Ваш email</div>
+			<div class="modal_text">
+				<p>Введите Ваш регистрационный email, и мы вышлем на него инструкцию по восстановлению пароля.</p>
+			</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Введите Ваш регистрационный email</label>
+						<input type="email" placeholder="anna@gmail.com">
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#modal_pass_confirm" class="a_button a_grad fancybox">Отправить</a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="modal_pass_confirm" class="modal modal_confirm">
+		<div class="modal_head">
+			<div class="modal_title">Инструкция отправлена</div>
+		</div>
+	</div>
+
+	<div id="modal_reg" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Регистрация через социальные сети</div>
+			<div class="uLogin">
+				<a href="#modal_email" class="a_socials vk fancybox"><i class="fa fa-vk"></i></a>
+				<a href="#modal_email" class="a_socials fb fancybox"><i class="fa fa-facebook"></i></a>
+				<a href="#modal_email" class="a_socials ok fancybox"><i class="fa fa-odnoklassniki"></i></a>
+				<a href="#modal_email" class="a_socials go fancybox"><i class="fa fa-google-plus"></i></a>
+				<a href="#modal_email" class="a_socials tw fancybox"><i class="fa fa-twitter"></i></a>
+			</div>
+		</div>
+		<div class="modal_body">
+			<div class="modal_title">Обычная регистрация</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Имя</label>
+						<input type="text" name="firstname" placeholder="Анастасия" required>
+					</div>
+					<div class="form_group">
+						<label>Фамилия</label>
+						<input type="text" name="lastname" placeholder="Кузнецова" required>
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="form_group">
+						<label>Email</label>
+						<input type="email" name="email" placeholder="anna@gmail.com" required>
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="modal_text">
+						<p>Регистрируясь, я принимаю <a href="#">правила сайта</a></p>
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="form_check">
+						<input id="check1" type="checkbox" checked>
+						<label for="check1">Я хочу получать email письма о мероприятиях и/или иных услугах портала</label>
+					</div>
+					<div class="form_check">
+						<input id="check2" type="checkbox" checked>
+						<label for="check2">Я согласен получать СМС уведомления от администрации портала</label>
+					</div>
+				</div>
+				<div class="form_button">
+					<button class="a_button a_grad" type="submite">зарегистрироваться</button>
+					<!-- <a href="#modal_thanks" class="a_button a_grad fancybox">зарегистрироваться</a> -->
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_email" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Укажите Ваш email</div>
+			<div class="modal_text">
+				<p>Для завершения регистрации Вам необходимо указать email адрес</p>
+			</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Введите Ваш email</label>
+						<input type="email" placeholder="anna@gmail.com">
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#modal_thanks" class="a_button a_grad fancybox">Сохранить</a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="modal_thanks" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Благодарим за регистрацию на портале alrait.by! </div>
+			<div class="modal_text">
+				<p>На указанный Вами адрес электронной почты выслано письмо. Для получения доступа к личному кабинету, Вам необходимо  подтвердить адрес электронной почты - пройти по ссылке указанной в письме.</p>
+			</div>
+			<div class="modal_wishes">
+				<p>Пользуйтесь с удовольствием!</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal_noemail" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Данный email не зарегистрирован</div>
+			<div class="modal_text">
+				<p>Извините, но email <a href="mailto:annanew@gmail.com">annanew@gmail.com</a> не зарегистрирован на портале. Пожалуйста, пройдите процесс регистрации или попробуйте ещё раз.</p>
+			</div>
+			<div class="form_button">
+				<a href="#modal_reg" class="a_button a_grad fancybox">зарегистрироваться</a>
+				<a href="#modal_login" class="forgot_pass fancybox">Попробовать ещё раз</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal_region" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Выберите Ваш регион</div>
+			<div class="modal_text">
+				<p>Основываясь на Вашем регионе, мы сможем показать наиболее подходящий для Вас контент.</p>
+			</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<select>
+							<option>Брестская область</option>
+							<option>Витебская область</option>
+							<option>Гомельская область</option>
+							<option>Гродненская область</option>
+							<option>Минская область</option>
+							<option>Могилёвская область</option>
+						</select>
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#" class="a_button a_grad">Сохранить</a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="modal_change_email" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Изменить email адрес</div>
+			<div class="modal_text">
+				<p>На старый email адрес будет отправлено письмо с просьбой подтвердить изменение email адреса. </p>
+			</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Введите новый email</label>
+						<input type="email" placeholder="anna@gmail.com">
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#modal_change_email_confirm" class="a_button a_grad fancybox">Сохранить</a>
+					<a href="#" class="a_button a_white a_cancel">Отменить</a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="modal_change_email_confirm" class="modal modal_confirm">
+		<div class="modal_head">
+			<div class="modal_title">Ваш email изменен</div>
+		</div>
+	</div>
+
+	<div id="modal_send_article" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Отправить статью в редакцию</div>
+		</div>
+		<div class="modal_body">
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Раздел для статьи<span>*</span></label>
+						<select>
+							<option>Красота </option>
+							<option>Красота 1</option>
+							<option>Красота 2</option>
+							<option>Красота 3</option>
+							<option>Красота 4</option>
+							<option>Красота 5</option>
+						</select>
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="form_group group_lg">
+						<label>Название статьи<span>*</span></label>
+						<input type="text" placeholder="">
+					</div>
+				</div>
+				<div class="form_file">
+					<div class="file_list"></div>
+					<div class="file_load">
+						<div class="file_button">
+							<span class="a_button a_white a_xs"><i class="fa fa-plus"></i>Прикрепить файл<input type="file"></span>
+						</div>
+						<div class="file_format">Доступные форматы файлов: .doc .jpg .png .txt</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal_footer">
+			<div class="form_button">
+				<a href="#modal_article_confirm" class="a_button a_grad fancybox">Отправить</a>
+				<a href="#" class="a_button a_white a_cancel">Отменить</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal_article_confirm" class="modal modal_confirm">
+		<div class="modal_head">
+			<div class="modal_title">Статья отправлена</div>
+		</div>
+	</div>
+
+	<div id="modal_popular_spec_org" class="modal">
+		<div class="modal_head">
+			<div class="popular_spec_org">
+				<div class="popular_box">
+					<div class="popular_image">
+						<div class="popular_img">
+							<img src="img/organization/organization_img1.png" alt="">
+						</div>
+						<span class="pro">pro</span>
+					</div>
+					<div class="popular_organization">Парикмахер</div>
+					<div class="popular_user"><a href="#">Кузнецова Анастасия</a></div>
+					<div class="popular_button">
+						<a href="#" class="a_button a_green">Записаться онлайн</a>
+					</div>
+				</div>
+				<div class="spec_org">
+					<div class="modal_title">Популярные специалисты и организации</div>
+					<div class="spec_org_text">
+						<p>Данная услуга поможет рассказать о Ваших услугах более чем <a href="#">40 000 читателей</a> нашего портала!</p>
+						<p>Стоимость услуги размещения в ленте популярных специалистов и организаций составляет <a href="#">35 баллов.</a> </p>
+					</div>
+					<div class="form_button">
+						<a href="#modal_add_services" class="a_button a_grad fancybox">Добавить услугу</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal_add_services" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Внимание!</div>
+			<div class="modal_text">
+				<p>Вы действительно хотите добавить данную услугу?</p>
+			</div>
+			<div class="form_button">
+				<a href="#modal_spec_org_confirm" class="a_button a_grad fancybox">Да</a>
+				<a href="#modal_popular_spec_org" class="a_button a_white fancybox">Нет</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal_spec_org_confirm" class="modal modal_confirm">
+		<div class="modal_head">
+			<div class="modal_title">Услуга добавлена</div>
+		</div>
+	</div>
+
+	<div id="modal_reg_business" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Уважаемый пользователь</div>
+			<div class="modal_text">
+				<p>Чтобы иметь возможность разместиться в ленте популярных специалистов и организаций, Вам необходимо зарегистрировать Ваш бизнес на портале alrait.by.</p>
+			</div>
+			<div class="form_button">
+				<a href="#modal_reg" class="a_button a_grad fancybox">Зарегистрировать бизнес</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal_create_share" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Уважаемый пользователь</div>
+			<div class="modal_text">
+				<p>У Вас пока нет акций для размещения в ленте популярных акций. Пройдите в личный кабинет и создайте акцию для размещения.</p>
+			</div>
+			<div class="form_button">
+				<a href="#modal_reg" class="a_button a_grad fancybox">Создать акцию</a>
+			</div>
+		</div>
+	</div>
+	<!-- END OF modal -->
+	
+	<div id="overlay"></div>
+</body>
+</html>

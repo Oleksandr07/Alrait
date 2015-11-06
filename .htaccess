@@ -1,0 +1,3 @@
+Options +Indexes
+DirectoryIndex mypage.html
+AddDefaultCharset UTF-8
