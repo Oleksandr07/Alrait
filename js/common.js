@@ -750,4 +750,9 @@ $(function(){
 		$('.business_box[data-attr="'+$(this).attr('data-attr')+'"]').addClass('active')
 	});
 
+	$('#passport_date').datepick({
+		showTrigger: '#calImg',
+		dateFormat:  'dd/mm/yyyy'
+	});
+
 });

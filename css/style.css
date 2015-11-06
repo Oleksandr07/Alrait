@@ -4752,5 +4752,16 @@ body .select2-container--open .select2-selection {
 	.form_group.main_profession{
 		width: 260px;
 	}
+.icon_calendar{
+	position: relative;
+	display: none;
+}
+	img.trigger {
+		position: relative;
+		top: 0;
+		left: -25px;
+	    margin: 0;
+	    vertical-align: middle;
+	}
 
 		
