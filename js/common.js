@@ -742,4 +742,12 @@ $(function(){
 	});
 
 
+
+	/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -         Этап 2        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+	$('.business_tabs input').click(function(){
+		$('.business_box').removeClass('active');
+		$('.business_box[data-attr="'+$(this).attr('data-attr')+'"]').addClass('active')
+	});
+
 });

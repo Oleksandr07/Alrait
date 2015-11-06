@@ -3087,7 +3087,7 @@ footer{
 					font-size: 13px;
 					margin-bottom: 15px;
 				}
-					.form_group label span{
+					.form_help{
 						color: #eb4e9b;
 						margin-left: 3px;
 					}
@@ -4663,3 +4663,94 @@ body .select2-container--open .select2-selection {
 						.ref_cel a:hover{
 							text-decoration: underline;
 						}
+.business_tabs{
+	position: relative;
+	overflow: hidden;
+}
+	.business_tabs .form_radio{
+		float: left;
+		margin-right: 30px;
+	}
+.business_box{
+	position: relative;
+	display: none;
+}
+	.business_box.active{
+		display: block;
+	}
+	.reg_business{
+		position: relative;
+	}
+		.reg_business .form_group{
+			width: auto;
+		}
+		.reg_business .select_business{
+			width: 220px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		#company{
+			width: 250px;
+		}
+		#number_company{
+			width: 130px;
+		}
+		#url_company{
+			width: 200px;
+		}
+		.domain_company{
+			position: relative;
+			float: left;
+			line-height: 40px;
+			padding-top: 28px;
+			padding-right: 20px;
+		}
+		.domain_required{
+			position: relative;
+			float: left;
+			line-height: 40px;
+			padding-top: 28px;
+		}
+			.free_domain{
+				position: relative;
+				color: #95cc2c;
+			}
+			.busy_domain{
+				position: relative;
+				display: none;
+				color: #f46d4f;
+			}
+		.reg_rules{
+			position: relative;
+			max-width: 400px;
+			margin-bottom: 20px;
+		}
+			.reg_rules p{
+				color: #555
+			}
+			.reg_rules a{
+				color: #eb4e9b;
+				text-decoration: none;
+			}
+				.reg_rules a:hover{
+					text-decoration: underline;
+				}
+		.reg_business button{
+			width: auto;
+			padding: 0 30px;
+		}
+	#passport_number{
+		width: 160px;
+	}
+	#passport_date{
+		width: 130px;
+	}
+	#passport_issued_by{
+		width: 300px;
+	}
+	.form_group.main_profession{
+		width: 260px;
+	}
+
+		
