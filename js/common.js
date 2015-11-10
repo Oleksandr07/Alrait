@@ -745,14 +745,40 @@ $(function(){
 
 	/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -         Этап 2        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
-	$('.business_tabs input').click(function(){
-		$('.business_box').removeClass('active');
-		$('.business_box[data-attr="'+$(this).attr('data-attr')+'"]').addClass('active')
-	});
 
-	$('#passport_date').datepick({
-		showTrigger: '#calImg',
-		dateFormat:  'dd/mm/yyyy'
+	// $('#passport_date').datepick({
+	// 	showTrigger: '#calImg',
+	// 	dateFormat:  'dd/mm/yyyy',
+	// });
+
+	var unavailableDates = ["1/11/2015","2/11/2015","6/11/2015","7/11/2015","8/11/2015","19/11/2015"];
+	function unavailable(date) {
+	    dmy = date.getDate() + "/" + (date.getMonth()+1) + "/" +date.getFullYear();
+	    if ($.inArray(dmy, unavailableDates) < 0) {
+	        return [true,"","Book Now"];
+	    } else {
+	        return [false,"","Booked Out"];
+	    }
+
+	    
+	}
+
+	var selectedDates = ["4/11/2015","18/11/2015","19/11/2015","20/11/2015","26/11/2015","27/11/2015"];
+	function selected(date) {
+		dmy = date.getDate() + "/" + (date.getMonth()+1) + "/" +date.getFullYear();
+		if ($.inArray(dmy, selectedDates) < 0) {
+	        return [true,"",""];
+	    } else {
+	        return [true,"selected-date",""];
+	    }
+	}
+
+	$( "#passport_date").datepicker({
+		dateFormat: "dd/mm/yy",
+		showOn: "button",
+      	buttonImage: "img/calendar_icon_32.png",
+      	buttonImageOnly: true,
+      	beforeShowDay: selected,
 	});
 
 });
