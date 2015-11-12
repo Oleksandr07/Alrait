@@ -227,7 +227,7 @@
 				<br/>
 				<div class="business_tabs">
 					<div class="form_radio">
-						<input id="radio1" type="radio" name="radio_business" checked="" data-attr="business_spec">
+						<input id="radio1" type="radio" name="radio_business" data-attr="business_spec" checked="checked">
 						<label for="radio1">Частный специалист</label>
 					</div>
 					<div class="form_radio">
@@ -240,18 +240,18 @@
 					<form class="reg_business" action="">
 						<div class="form_row">
 							<div class="form_group">
-								<label>Имя</label>
+								<label>Имя<span class="required">*</span></label>
 								<input type="text" name="firstname" placeholder="Анастасия" required>
 							</div>
 							<div class="form_group">
-								<label>Фамилия</label>
+								<label>Фамилия<span class="required">*</span></label>
 								<input type="text" name="lastname" placeholder="Кузнецова" required>
 							</div>
 						</div>
 						<div class="form_row">
 							<div class="form_group">
-								<label>УНН специалиста<span class="required">*</span></label>
-								<input id="number_company" type="text" name="number_company" placeholder="" required>
+								<label>УНН специалиста</label>
+								<input id="number_company" type="text" name="number_company" placeholder="">
 							</div>
 							<div class="form_or">или введите паспортные данные <span class="form_help tooltip" title="Вы можете создавать различные альбомы с фотографиями Ваших работ.Кроме того, у Вас есть возможность создать альбомы типа «интерьер», «оборудование», «дипломы и сертификаты» разместив в них соответствующие фотографии">?</span></div>
 						</div>

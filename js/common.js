@@ -86,14 +86,6 @@ $(function(){
 	$('.photo_upload_inner input').change(function(){
 		$('.photo_upload').removeClass('error')
 	});
-
-	/*$('select').selectric({
-		maxHeight: 120,
-		disableOnMobile: false,
-		onChange: function(element) {
-			$(this).parents('.selectric-wrapper').find('.selectric .label').addClass('selected');
-		}
-	});*/
 	
 	$('.tooltip').tooltipster({
 		position: 'bottom'
@@ -101,8 +93,8 @@ $(function(){
 
 	jQuery('.scrollbar').scrollbar();
 	jQuery('.scrollbar').not('.scroll-wrapper').on("update", function(){
-		    console.log('content is update');
-		});
+	    console.log('content is update');
+	});
 
 
 
@@ -745,11 +737,13 @@ $(function(){
 
 	/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -         Этап 2        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
-
-	// $('#passport_date').datepick({
-	// 	showTrigger: '#calImg',
-	// 	dateFormat:  'dd/mm/yyyy',
-	// });
+	$('.business_tabs input').click(function(){
+		//$('.business_tabs input').removeAttr('checked');
+		$(this).attr('checked', 'checked');
+		$('.business_box').removeClass('active');
+		$('.business_box[data-attr="'+$(this).attr('data-attr')+'"]').addClass('active');
+	});
+	
 
 	var unavailableDates = ["1/11/2015","2/11/2015","6/11/2015","7/11/2015","8/11/2015","19/11/2015"];
 	function unavailable(date) {
@@ -773,12 +767,36 @@ $(function(){
 	    }
 	}
 
+	// Календарь
 	$( "#passport_date").datepicker({
 		dateFormat: "dd/mm/yy",
-		showOn: "button",
+		/*showOn: "button",
       	buttonImage: "img/calendar_icon_32.png",
-      	buttonImageOnly: true,
+      	buttonImageOnly: true,*/
       	beforeShowDay: selected,
+	});
+
+	$('.catalog_filter_tabs .a_button').click(function(){
+		if ($(this).hasClass('a_grey')) {
+			$('.catalog_filter_tabs .a_button').addClass('a_grey');
+			$(this).removeClass('a_grey');
+			return false;
+		};
+	});
+
+	// Сайдбар фильтра каталога
+	function catalog_filter(){
+		$('.catalog_filter').css({
+			'height': $(window).height() - $('header').height() - $('.content_menu .menu_pc').height() - $('.content_menu .block_mobile').height()
+		});
+
+		$('.catalog_filter_body').css({
+			'height': $('.catalog_filter').height() - $('.catalog_filter_head').innerHeight()
+		})
+	};
+	catalog_filter();
+	$(window).resize(function(){
+		catalog_filter();
 	});
 
 });
