@@ -40,12 +40,20 @@
 			<script src="js/airStickyBlock/jquery.airStickyBlock.js"></script>
 			<script>
 			    jQuery(document).ready(function($){
-			        window.onload = function() {
-			            $('.catalog_filter').airStickyBlock({
-			            	debug: false,
-			                stopBlock: '.airSticky__stop-block'
-			            });
-			        };
+			    	function catalogFilterPosition(){
+				        if ($(window).width() >= 1024) {
+				            $('.catalog_filter').airStickyBlock({
+				            	debug: false,
+				                stopBlock: '.airSticky__stop-block'
+				            });
+				        };
+			    	}
+			    	window.onload = function() {
+			    		catalogFilterPosition();
+				    };
+			    	$(window).resize(function(){
+			    		catalogFilterPosition();
+			    	});
 			    });
 			</script>
 
@@ -76,13 +84,14 @@
 				</ul>
 			</div>
 		</div>
-		<div class="menu_close"><i class="fa fa-times"></i></div>
 	</div>
 	<div id="menu_overlay"></div>
 	<!-- END OF menu_mobile -->
 
+	<div id="filter_overlay"></div>
+
 	<!--header -->
-	<header>
+	<header class="header">
 		<div class="inner">
 			<div class="logo">
 				<a href="/" title="">
@@ -251,9 +260,18 @@
 			<div class="all_category">Все категории<i class="fa fa-bars"></i></div>
 			<div class="block_mobile">
 				<div class="menu_change"><i class="fa fa-list-ul"></i></div>
+				<div class="filter_change"><i class="fa fa-sliders"></i></div>
 				<div class="page_title">Все статьи</div>
 			</div>
 		</div>
+	</div>
+	<div class="catalog_sharing">
+		<a href="#" class="share_all"><i class="fa fa-share-alt"></i></a>
+		<a href="#" class="vk"><i class="fa fa-vk"></i></a>
+		<a href="#" class="fb"><i class="fa fa-facebook"></i></a>
+		<a href="#" class="ok"><i class="fa fa-odnoklassniki"></i></a>
+		<a href="#" class="go"><i class="fa fa-google-plus"></i></a>
+		<a href="#" class="tw"><i class="fa fa-twitter"></i></a>
 	</div>
 	<div id="main" class="airSticky__stop-block">
 		<div class="inner">
@@ -447,7 +465,7 @@
 								<div class="catalog_org_category">Салон красоты</div>
 								<div class="catalog_org_title">Шамони<span class="pro">pro</span></div>
 								<div class="catalog_org_address">
-									<p><a href="#">г. Минск, ул. Сухаревская, 6</a></p>
+									<p>г. Минск, ул. Сухаревская, 6</p>
 									<p>www.shamoni.by</p>
 								</div>
 								<div class="catalog_org_phone">
@@ -550,7 +568,7 @@
 						<div class="catalog_spec_content">
 							<div class="catalog_spec_body">
 								<div class="catalog_spec_category">Парикмахер</div>
-								<div class="catalog_spec_title">Кузнецова Анастасия<span class="pro">pro</span></div>
+								<div class="catalog_spec_title">Кузнецова Анастасия</div>
 								<div class="catalog_spec_address">
 									<p><a href="#">г. Минск, пр-т Независимости, 187</a></p>
 								</div>

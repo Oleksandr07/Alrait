@@ -240,6 +240,21 @@
 		width: 100%;
 		margin-bottom: 20px;
 	}
+
+	.catalog_filter{
+		position: fixed;
+		top: 0;
+		right: -300px;
+		z-index: 100;
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+	.catalog_content{
+		float: none;
+		margin: 0 auto;
+	}
 }
 @media only screen and (max-width:759px) {
 	body{
@@ -782,6 +797,123 @@
 	}
 	.wrapper{
 		margin-top: -40px;
+	}
+
+	.catalog_content{
+		width: auto;
+	}
+	.catalog_org_box{
+		padding: 15px 20px 20px;
+	}
+	.catalog_org_avatar{
+		width: 60px;
+		height: 60px;
+		margin-right: 15px;
+	}
+	.catalog_org_body{
+		width: auto;
+		float: none;
+	}
+	.catalog_org_category{
+		font-size: 15px;
+	}
+	.catalog_org_title{
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+	.catalog_org_title .pro{
+		padding: 3px 8px;
+	}
+	.catalog_org_link{
+		padding-top: 10px;
+		margin-bottom: 10px;
+	}
+	.catalog_org_link .a_button{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.org_gallery_img{
+		width: 135px;
+		height: 135px;
+		margin-left: 10px;
+		margin-bottom: 10px;
+	}
+	.org_gallery_img:nth-child(2n+1){
+		margin-left: 0;
+	}
+	.org_gallery_video{
+		width: 280px;
+		height: 210px;
+		margin-left: 0;
+		margin-bottom: 10px;
+	}
+	.catalog_spec_box{
+		padding: 15px 20px 20px;
+	}
+	.catalog_spec_avatar{
+		width: 60px;
+		height: 60px;
+		margin-right: 15px;
+	}
+	.catalog_spec_body{
+		width: auto;
+		float: none;
+	}
+	.catalog_spec_category{
+		font-size: 15px;
+	}
+	.catalog_spec_title{
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+	.catalog_spec_title .pro{
+		padding: 3px 8px;
+	}
+	.catalog_spec_link{
+		padding-top: 10px;
+		margin-bottom: 10px;
+	}
+	.catalog_spec_link .a_button{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.spec_gallery_img{
+		width: 135px;
+		height: 135px;
+		margin-left: 10px;
+		margin-bottom: 10px;
+	}
+	.spec_gallery_img:nth-child(2n+1){
+		margin-left: 0;
+	}
+	.spec_gallery_video{
+		width: 280px;
+		height: 210px;
+		margin-left: 0;
+		margin-bottom: 10px;
+	}
+	.catalog_content_about{
+		padding: 20px 20px;
+	}
+	.catalog_filter{
+		width: 280px;
+	}
+	.catalog_filter_head{
+		padding: 25px 30px 20px;
+	}
+	.catalog_filter_head .form_group{
+		margin-bottom: 0;
+	}
+	.catalog_filter_body .scroll-wrapper > .scroll-content{
+		padding-left: 30px;
+		padding-right: 30px !important;
+	}
+	.catalog_filter_body .scrollbar > .scroll-element.scroll-y.scroll-scrolly_visible{
+		right: 12px;
+		width: 5px;
+	}
+	.aside_catalog .form_row{
+		margin-bottom: 0;
 	}
 }
 
