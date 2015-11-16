@@ -255,6 +255,9 @@
 		float: none;
 		margin: 0 auto;
 	}
+	.catalog_sharing{
+		display: none;
+	}
 }
 @media only screen and (max-width:759px) {
 	body{
