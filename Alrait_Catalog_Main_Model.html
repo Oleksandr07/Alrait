@@ -34,6 +34,27 @@
 			<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4.datepicker/jquery-ui.css"> 
 			<script src="js/jquery-ui-1.11.4.datepicker/jquery-ui.js"></script>
 			<script src="js/jquery-ui-1.11.4.datepicker/datepicker-ru.js"></script>
+
+			<script src="js/airStickyBlock/jquery.airStickyBlock.js"></script>
+			<script>
+			    jQuery(document).ready(function($){
+			    	function catalogFilterPosition(){
+				        if ($(window).width() >= 1024) {
+				            $('.catalog_filter').airStickyBlock({
+				            	debug: false,
+				                stopBlock: '.airSticky__stop-block'
+				            });
+				        };
+			    	}
+			    	window.onload = function() {
+			    		catalogFilterPosition();
+				    };
+			    	$(window).resize(function(){
+			    		catalogFilterPosition();
+			    	});
+			    });
+			</script>
+
 			
 			<script src="js/jquery.mobile-events.min.js"></script>
 			<script src="js/common.js"></script>
@@ -43,28 +64,32 @@
 		<!-- END OF SCRIPT -->
 	</head>
 <body>
-<div class="wrapper">
 	<!--menu_mobile -->
 	<div class="menu_mobile">
 		<div class="content_menu">
 			<div class="scrollbar">
 				<ul>
-					<li class="active"><a href="#">Страница пользователя</a></li>
-					<li><a href="#">Анкета модели</a></li>
-					<li><a href="#">Уведомления<span>3</span></a></li>
-					<li><a href="#">Сообщения<span>2</span></a></li>
-					<li><a href="#">Баланс</a></li>
-					<li><a href="#">Правила</a></li>
+					<li class="active"><a href="#">Все салоны и специалисты</a></li>
+					<li><a href="#">Уход за лицом</a></li>
+					<li><a href="#">Уход за волосами</a></li>
+					<li><a href="#">Уход за руками и ногами</a></li>
+					<li><a href="#">Мероприятия и праздники</a></li>
+					<li><a href="#">Здоровье</a></li>
+					<li><a href="#">Искусство и творчество</a></li>
+					<li><a href="#">Аренда</a></li>
+					<li><a href="#">Акции</a></li>
+					<li><a href="#">Модели</a></li>
 				</ul>
 			</div>
 		</div>
-		<div class="menu_close"><i class="fa fa-times"></i></div>
 	</div>
 	<div id="menu_overlay"></div>
 	<!-- END OF menu_mobile -->
 
+	<div id="filter_overlay"></div>
+
 	<!--header -->
-	<header>
+	<header class="header">
 		<div class="inner">
 			<div class="logo">
 				<a href="/" title="">
@@ -198,52 +223,360 @@
 					</div>
 				</div>
 			</div>
-			<div class="entrance">
-				<div class="entrance_lock"><i class="fa fa-lock"></i></div>
-				<div class="entrance_box">
-					<div class="login">
-						<a href="#modal_login" class="open_modal"><i class="fa fa-lock"></i>Войти</a>
-					</div>
-					<div class="reg">
-						<a href="#modal_reg" class="a_button a_grad open_modal">Зарегистрироваться</a>
-					</div>
+			<a href="" class="user_box">
+				<div class="user_img">
+					<img src="img/organization/organization_img1.png" alt="">
 				</div>
-			</div>
+				<div class="user_title">
+					Екатерина Мельникова <span class="user_exit"><img src="img/exit.png" alt=""></span>
+				</div>
+			</a>
 			<div class="clear"></div>
 		</div>
 	</header>
 	<!-- END OF header -->
 	<!--main -->
-	<div id="main">
+	<div class="content_menu">
 		<div class="inner">
-			<div class="content content_login content_right_internal no_nav">
-				<div class="password_box">
+			<div class="menu_pc">
+				<ul>
+					<li class="active"><a href="#">Все салоны и специалисты</a></li>
+					<li><a href="#">Уход за лицом</a></li>
+					<li><a href="#">Уход за волосами</a></li>
+					<li><a href="#">Уход за руками и ногами</a></li>
+					<li><a href="#">Мероприятия и праздники</a></li>
+					<li><a href="#">Здоровье</a></li>
+					<li><a href="#">Искусство и творчество</a></li>
+					<li><a href="#">Аренда</a></li>
+					<li><a href="#">Акции</a></li>
+					<li><a href="#">Модели</a></li>
+				</ul>
+			</div>
+			<div class="all_category">Все категории<i class="fa fa-bars"></i></div>
+			<div class="block_mobile">
+				<div class="menu_change"><i class="fa fa-list-ul"></i></div>
+				<div class="filter_change"><i class="fa fa-sliders"></i></div>
+				<div class="page_title">Все статьи</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="catalog_sharing">
+			<a href="#" class="share_all"><i class="fa fa-share-alt"></i></a>
+			<a href="#" class="vk"><i class="fa fa-vk"></i></a>
+			<a href="#" class="fb"><i class="fa fa-facebook"></i></a>
+			<a href="#" class="ok"><i class="fa fa-odnoklassniki"></i></a>
+			<a href="#" class="go"><i class="fa fa-google-plus"></i></a>
+			<a href="#" class="tw"><i class="fa fa-twitter"></i></a>
+		</div>
+	</div>
+	<div id="main" class="airSticky__stop-block">
+		<div class="inner">
+			<div class="aside_catalog">
+				<div class="catalog_filter">
 					<form action="#">
-						<h1>Запрос пароля</h1>
-						<div class="password_text">
-							<p>Если вы забыли пароль, введите email. <br/> Контрольная строка для смены пароля, а также ваши <br/> регистрационные данные, будут высланы вам по email.</p>
-						</div>
-						<div class="form_row">
-							<div class="form_group">
-								<label>E-mail</label>
-								<input type="email" placeholder="anna@gmail.com">
+						<div class="catalog_filter_head">
+							<div class="catalog_filter_title"><span>150</span> моделей</div>
+							<div class="form_row">
+								<div class="form_group">
+									<label>Укажите город (область или регион)</label>
+									<select multiple>
+										<option>Брестск</option>
+										<option>Витебск</option>
+										<option>Гомельск</option>
+										<option>Гродненск</option>
+										<option>Минск</option>
+										<option>Могилёвск</option>
+									</select>
+								</div>
 							</div>
 						</div>
-						<div class="form_button">
-							<a href="#modal_pass_confirm" class="a_button a_sm fancybox">Отправить данные на почту</a>
+						<div class="catalog_filter_body">
+							<div class="scrollbar">
+								<div class="form_row">
+									<div class="form_group">
+										<label>Пол</label>
+										<select>
+											<option>Женский</option>
+											<option>Мужской</option>
+										</select>
+									</div>
+								</div>
+								<div class="form_row">
+									<div class="form_group">
+										<label>Возраст</label>
+										<div class="form_field">
+											<span>от</span>
+											<input id="age_from" type="text" placeholder="">
+											<span>до</span>
+											<input id="age_to" type="text" placeholder="">
+										</div>
+									</div>
+								</div>
+								<hr/>
+								<div class="form_main">
+									<div class="form_title expand-tool">Метрики</div>
+									<div class="form_body expand-subject">
+										<div class="form_group">
+											<label>Рост</label>
+											<div class="form_field">
+												<span>от</span>
+												<input type="text" placeholder="">
+												<span>до</span>
+												<input type="text" placeholder="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<hr/>
+								<div class="form_main">
+									<div class="form_title expand-tool">Внешность</div>
+									<div class="form_body expand-subject">
+										<label>Внешность</label>
+									</div>
+								</div>
+								<hr/>
+								<div class="form_main">
+									<div class="form_title expand-tool">Особенности внешности</div>
+									<div class="form_body expand-subject">
+										<div class="form_row">
+											<div class="form_group">
+												<label>Комплекция тела</label>
+												<select>
+													<option>Стройное</option>
+													<option>Другое</option>
+												</select>
+											</div>
+										</div>
+										<div class="form_row">
+											<div class="form_group">
+												<label>Типаж внешности</label>
+												<select>
+													<option>Европейский</option>
+													<option>Другой</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<hr/>
+								<div class="form_main">
+									<div class="form_title expand-tool">Дополнительно</div>
+									<div class="form_body expand-subject">
+										<label>Дополнительно</label>
+									</div>
+								</div>
+								<hr/>
+								<div class="form_main">
+									<div class="form_title expand-tool">Интересует работа</div>
+									<div class="form_body expand-subject">
+										<label>Интересует работа</label>
+									</div>
+								</div>
+								<hr/>
+								<div class="form_main">
+									<div class="form_title expand-tool">Желаемый уровень оплаты</div>
+									<div class="form_body expand-subject">
+										<div class="form_row">
+											<div class="form_check">
+												<input id="pay1" type="checkbox" checked>
+												<label for="pay1">Готов участвовать в некомерческих проектах (на условиях TFP)</label>
+											</div>
+											<div class="form_check">
+												<input id="pay2" type="checkbox" >
+												<label for="pay2">Готов работать за символический гонорар</label>
+											</div>
+											<div class="form_check">
+												<input id="pay3" type="checkbox">
+												<label for="pay3">Готов работать от 20$</label>
+											</div>
+											<div class="form_check">
+												<input id="pay4" type="checkbox">
+												<label for="pay4">Готов работать от 50$</label>
+											</div>
+											<div class="form_check">
+												<input id="pay5" type="checkbox">
+												<label for="pay5">Готов работать от 100$</label>
+											</div>
+											<div class="form_check">
+												<input id="pay6" type="checkbox">
+												<label for="pay6">Готов работать от 200$</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<hr/>
+								<div class="form_main">
+									<div class="form_title expand-tool">Жанры фотосъемки</div>
+									<div class="form_body expand-subject">
+										<label>Жанры фотосъемки</label>
+									</div>
+								</div>
+								<hr/>
+								<div class="form_main">
+									<div class="form_title expand-tool">Возможное участие в проектах</div>
+									<div class="form_body expand-subject">
+										<label>Возможное участие в проектах</label>
+									</div>
+								</div>
+								<hr/>
+								<div class="form_main">
+									<div class="form_title expand-tool">Другая информация</div>
+									<div class="form_body expand-subject">
+										<label>Другая информация</label>
+									</div>
+								</div>								
+							</div>
 						</div>
 					</form>
 				</div>
-				<hr/>
-				<div class="password_box">
-					<h1>Произошла ошибка?</h1>
-					<div class="password_text">Вы знаете свои данные? Тогда Вы можете просто <a href="#">авторизоваться</a></div>
+			</div>
+			<div class="catalog_content">
+				<div class="catalog_content_inner">
+					<div class="catalog_org_box catalog_org_hot">
+						<div class="catalog_org_content">
+							<div class="catalog_org_avatar">
+								<a href="#"><img src="img/organization/organization_img6.png" alt=""></a>
+							</div>
+							<div class="catalog_org_body">
+								<div class="catalog_org_category">Модель, 21 год, Минск</div>
+								<div class="catalog_org_title"><a href="#">Маргарита Т.</a> <span class="pro">pro</span></div>
+								<div class="catalog_org_phone inline-block">
+									<p>+375 29 633-14-48</p>
+								</div>
+								<div class="catalog_org_email inline-block">
+									<p>margot@gmail.com</p>
+								</div>
+								<div class="catalog_org_link">
+									<a href="#" class="a_button a_green_no_bg a_sm">Пригласить в проект</a>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="catalog_org_gallery">
+							<div class="org_gallery_img">
+								<img src="img/org_gallery_img.jpg" alt="">
+							</div>
+							<div class="org_gallery_img">
+								<img src="img/org_gallery_img.jpg" alt="">
+							</div>
+							<div class="org_gallery_img">
+								<img src="img/org_gallery_img.jpg" alt="">
+							</div>
+							<div class="org_gallery_img">
+								<img src="img/org_gallery_img.jpg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="catalog_org_box">
+						<div class="catalog_org_content">
+							<div class="catalog_org_avatar">
+								<a href="#"><img src="img/organization/organization_img6.png" alt=""></a>
+							</div>
+							<div class="catalog_org_body">
+								<div class="catalog_org_category">Модель, 24 год, Минск</div>
+								<div class="catalog_org_title"><a href="#">Наталья М.</a> <span class="pro">pro</span></div>
+								<div class="catalog_org_phone inline-block">
+									<p>+375 29 633-14-48</p>
+								</div>
+								<div class="catalog_org_email inline-block">
+									<p>margot@gmail.com</p>
+								</div>
+								<div class="catalog_org_link">
+									<a href="#" class="a_button a_green_no_bg a_sm">Пригласить в проект</a>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="catalog_org_gallery">
+							<div class="org_gallery_img">
+								<img src="img/org_gallery_img.jpg" alt="">
+							</div>
+							<div class="org_gallery_img">
+								<img src="img/org_gallery_img.jpg" alt="">
+							</div>
+							<div class="org_gallery_img">
+								<img src="img/org_gallery_img.jpg" alt="">
+							</div>
+							<div class="org_gallery_img">
+								<img src="img/org_gallery_img.jpg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="catalog_org_box">
+						<div class="catalog_org_content">
+							<div class="catalog_org_avatar">
+								<a href="#"><img src="img/organization/organization_img6.png" alt=""></a>
+							</div>
+							<div class="catalog_org_body">
+								<div class="catalog_org_category">Модель, 22 года, Минск</div>
+								<div class="catalog_org_title"><a href="#">Вероника С.</a> <span class="pro">pro</span></div>
+								<div class="catalog_org_link">
+									<a href="#" class="a_button a_green_no_bg a_sm">Пригласить в проект</a>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="catalog_org_gallery">
+							<div class="org_gallery_img">
+								<img src="img/org_gallery_img.jpg" alt="">
+							</div>
+							<div class="org_gallery_img">
+								<img src="img/org_gallery_img.jpg" alt="">
+							</div>
+							<div class="org_gallery_img">
+								<img src="img/org_gallery_img.jpg" alt="">
+							</div>
+							<div class="org_gallery_img">
+								<img src="img/org_gallery_img.jpg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="catalog_org_box">
+						<div class="catalog_org_content">
+							<div class="catalog_org_body-left">
+								<div class="catalog_org_category">Модель, 20 лет, Минск</div>
+								<div class="catalog_org_title"><a href="#">Евгения Н.</a></div>
+							</div>
+							<div class="catalog_org_body-right">
+								<a href="#" class="a_button a_green_no_bg a_sm">Пригласить в проект</a>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="catalog_org_box">
+						<div class="catalog_org_content">
+							<div class="catalog_org_body-left">
+								<div class="catalog_org_category">Модель, 20 лет, Минск</div>
+								<div class="catalog_org_title"><a href="#">Полина К.</a></div>
+							</div>
+							<div class="catalog_org_body-right">
+								<a href="#" class="a_button a_green_no_bg a_sm">Пригласить в проект</a>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+				<div class="catalog_more">
+					<a href="#" class="load"><img src="img/uploadmore_icon_x2.png" alt=""><div class="more_text">Загрузить ещё</div></a>
+				</div>
+				<div class="pagers">
+					<ul>
+						<li class="active">1</li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li class="pager_dot"><a href="#">...</a></li>
+						<li><a href="#">17</a></li>
+					</ul>
+				</div>
+				<div class="catalog_content_about">
+					<p>Что значат салоны красоты в жизни настоящих женщин? Конечно, не все, но очень многое. Ведь именно в этих заведениях подчеркиваются и сохраняются внешние данные, которые каждая девочка получает от природы при рождении. Информационно-развлекательный портал alrait.by предлагает своим пользователям максимально полный список заведений Минска, в которых ваша природная красота получит достойный уход и внимание.</p>
 				</div>
 			</div>
+			<div class="clear"></div>
 		</div>
 	</div>
 	<!-- END OF main -->
-</div>
+	<!--footer -->
 	<div class="top">
 		<a href="#main" class="a_button a_sm">Вверх <i class="fa fa-angle-up"></i></a>
 	</div>
@@ -399,6 +732,7 @@
 				</div>
 			</form>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_pass" class="modal">
@@ -478,6 +812,7 @@
 				</div>
 			</form>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_email" class="modal">
@@ -701,6 +1036,7 @@
 		</div>
 	</div>
 	<!-- END OF modal -->
+	
 	<div id="overlay"></div>
 </body>
 </html>

@@ -20,16 +20,12 @@
 			<script src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
 			<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
 			<script type="text/javascript" src="js/slick/slick.min.js"></script>
-			<link rel="stylesheet" href="js/selectric/public/selectric.css">
-			<script src="js/selectric/public/jquery.selectric.min.js"></script>
 			<link rel="stylesheet" href="js/fotorama/fotorama.css">
 			<script src="js/fotorama/fotorama.js"></script>
 			<link rel="stylesheet" type="text/css" href="js/tooltipster-master/css/tooltipster.css" />
 			<script type="text/javascript" src="js/tooltipster-master/js/jquery.tooltipster.min.js"></script>
 			<link rel="stylesheet" href="js/scrollbar/jquery.scrollbar.css">
 			<script src="js/scrollbar/jquery.scrollbar.js"></script>
-			<script src="js/isotope.pkgd.min.js"></script>
-			<script src="js/masonry.pkgd.min.js"></script>
 			
 			<link href="js/select2/select2.css" rel="stylesheet" />
 			<script src="js/select2/select2.js"></script>
@@ -47,6 +43,7 @@
 		<!-- END OF SCRIPT -->
 	</head>
 <body class="page_catalog">
+<div class="wrapper">
 	<!--menu_mobile -->
 	<div class="menu_mobile">
 		<div class="content_menu">
@@ -236,15 +233,18 @@
 				<div class="menu_change"><i class="fa fa-list-ul"></i></div>
 				<div class="page_title">Все статьи</div>
 			</div>
+			<div class="clear"></div>
 		</div>
 	</div>
 	<div id="main">
 		<div class="catalog">
 			<div class="catalog_block">
-				<div class="grid-item grid1">
+				<div class="catalog_box">
 					<div class="catalog_img">
-						<img class="grid_img1" src="img/catalog/catalog_img1.jpg" alt="">
-						<img class="grid_img2" src="img/catalog/catalog_img2.jpg" alt="">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img1.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img2.jpg" alt="">
+						</a>
 					</div>
 					<div class="catalog_body">
 						<div class="catalog_info">
@@ -260,10 +260,12 @@
 						<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
 					</div>
 				</div>
-				<div class="grid-item grid2">
+				<div class="catalog_box">
 					<div class="catalog_img">
-						<img class="grid_img1" src="img/catalog/catalog_img1.jpg" alt="">
-						<img class="grid_img2" src="img/catalog/catalog_img2.jpg" alt="">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
 					</div>
 					<div class="catalog_body">
 						<div class="catalog_info">
@@ -279,10 +281,12 @@
 						<div class="catalog_user"><i class="fa fa-user"></i>Екатерина Мельникова</div>
 					</div>
 				</div>
-				<div class="grid-item grid1">
+				<div class="catalog_box">
 					<div class="catalog_img">
-						<img class="grid_img1" src="img/catalog/catalog_img1.jpg" alt="">
-						<img class="grid_img2" src="img/catalog/catalog_img2.jpg" alt="">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img1.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img2.jpg" alt="">
+						</a>
 					</div>
 					<div class="catalog_body">
 						<div class="catalog_info">
@@ -298,10 +302,12 @@
 						<div class="catalog_user"><i class="fa fa-user"></i>Воронена Екатерина</div>
 					</div>
 				</div>
-				<div class="grid-item grid2">
+				<div class="catalog_box">
 					<div class="catalog_img">
-						<img class="grid_img1" src="img/catalog/catalog_img1.jpg" alt="">
-						<img class="grid_img2" src="img/catalog/catalog_img2.jpg" alt="">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
 					</div>
 					<div class="catalog_body">
 						<div class="catalog_info">
@@ -317,76 +323,12 @@
 						<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
 					</div>
 				</div>
-				<div class="grid-item grid1 catalog_request">
-					<div class="request_body">
-						<div class="request_title">Хотите стать <b>АВТОРОМ?</b></div>
-						<div class="request_text">Отправьте нам Вашу статью и её опубликуют!</div>
-						<div class="request_button">
-							<a href="#modal_send_article" class="a_button fancybox"><i class="fa fa-envelope-o"></i>Отправить статью</a>
-						</div>
-					</div>
-				</div>
-				<div class="grid-item grid2">
+				<div class="catalog_box">
 					<div class="catalog_img">
-						<img class="grid_img1" src="img/catalog/catalog_img1.jpg" alt="">
-						<img class="grid_img2" src="img/catalog/catalog_img2.jpg" alt="">
-					</div>
-					<div class="catalog_body">
-						<div class="catalog_info">
-							<div class="catalog_category">
-								<a href="#">Красота</a>
-							</div>
-							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
-							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
-						</div>
-						<div class="catalog_title">
-							<a href="#">Бьюти-дайджест: электронный макияж, красота в Сети и не только</a>
-						</div>
-						<div class="catalog_user"><i class="fa fa-user"></i>Екатерина Мельникова</div>
-					</div>
-				</div>
-				<div class="grid-item grid1">
-					<div class="catalog_img">
-						<img class="grid_img1" src="img/catalog/catalog_img1.jpg" alt="">
-						<img class="grid_img2" src="img/catalog/catalog_img2.jpg" alt="">
-					</div>
-					<div class="catalog_body">
-						<div class="catalog_info">
-							<div class="catalog_category">
-								<a href="#">Красота</a>
-							</div>
-							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
-							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
-						</div>
-						<div class="catalog_title">
-							<a href="#">В Москве откроется обувной магазин Louis Vuitton</a>
-						</div>
-						<div class="catalog_user"><i class="fa fa-user"></i>Воронена Екатерина</div>
-					</div>
-				</div>
-				<div class="grid-item grid2">
-					<div class="catalog_img">
-						<img class="grid_img1" src="img/catalog/catalog_img1.jpg" alt="">
-						<img class="grid_img2" src="img/catalog/catalog_img2.jpg" alt="">
-					</div>
-					<div class="catalog_body">
-						<div class="catalog_info">
-							<div class="catalog_category">
-								<a href="#">Красота</a>
-							</div>
-							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
-							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
-						</div>
-						<div class="catalog_title">
-							<a href="#">H&amp;M показал видео рождественской кампании c Леди Гагой</a>
-						</div>
-						<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
-					</div>
-				</div>
-				<div class="grid-item grid1">
-					<div class="catalog_img">
-						<img class="grid_img1" src="img/catalog/catalog_img1.jpg" alt="">
-						<img class="grid_img2" src="img/catalog/catalog_img2.jpg" alt="">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img1.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img2.jpg" alt="">
+						</a>
 					</div>
 					<div class="catalog_body">
 						<div class="catalog_info">
@@ -402,10 +344,12 @@
 						<div class="catalog_user"><i class="fa fa-user"></i>Кузницова Анастасия</div>
 					</div>
 				</div>
-				<div class="grid-item grid2">
+				<div class="catalog_box">
 					<div class="catalog_img">
-						<img class="grid_img1" src="img/catalog/catalog_img1.jpg" alt="">
-						<img class="grid_img2" src="img/catalog/catalog_img2.jpg" alt="">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
 					</div>
 					<div class="catalog_body">
 						<div class="catalog_info">
@@ -416,15 +360,17 @@
 							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
 						</div>
 						<div class="catalog_title">
-							<a href="#">Практикуем Фен-Шуй в переговорах: как достичь успеха?</a>
+							<a href="#">Бьюти-дайджест: электронный макияж, красота в Сети и не только</a>
 						</div>
 						<div class="catalog_user"><i class="fa fa-user"></i>Екатерина Мельникова</div>
 					</div>
 				</div>
-				<div class="grid-item grid1">
+				<div class="catalog_box">
 					<div class="catalog_img">
-						<img class="grid_img1" src="img/catalog/catalog_img1.jpg" alt="">
-						<img class="grid_img2" src="img/catalog/catalog_img2.jpg" alt="">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img1.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img2.jpg" alt="">
+						</a>
 					</div>
 					<div class="catalog_body">
 						<div class="catalog_info">
@@ -440,10 +386,12 @@
 						<div class="catalog_user"><i class="fa fa-user"></i>Воронена Екатерина</div>
 					</div>
 				</div>
-				<div class="grid-item grid2">
+				<div class="catalog_box">
 					<div class="catalog_img">
-						<img class="grid_img1" src="img/catalog/catalog_img1.jpg" alt="">
-						<img class="grid_img2" src="img/catalog/catalog_img2.jpg" alt="">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
 					</div>
 					<div class="catalog_body">
 						<div class="catalog_info">
@@ -459,10 +407,75 @@
 						<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
 					</div>
 				</div>
-				<div class="grid-item grid1">
+				<div class="catalog_box">
 					<div class="catalog_img">
-						<img class="grid_img1" src="img/catalog/catalog_img1.jpg" alt="">
-						<img class="grid_img2" src="img/catalog/catalog_img2.jpg" alt="">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img1.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img2.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">Практикуем Фен-Шуй в переговорах: как достичь успеха?</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Екатерина Мельникова</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">В Москве откроется обувной магазин Louis Vuitton</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Воронена Екатерина</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img1.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img2.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">H&amp;M показал видео рождественской кампании c Леди Гагой</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
 					</div>
 					<div class="catalog_body">
 						<div class="catalog_info">
@@ -478,10 +491,84 @@
 						<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
 					</div>
 				</div>
-				<div class="grid-item grid2">
+				<div class="catalog_box catalog_request">
+					<div class="request_body">
+						<div class="request_title">Хотите стать <b>АВТОРОМ?</b></div>
+						<div class="request_text">Отправьте нам Вашу статью и её опубликуют!</div>
+						<div class="request_button">
+							<a href="#modal_send_article" class="a_button open_modal"><i class="fa fa-envelope-o"></i>Отправить статью</a>
+						</div>
+					</div>
+				</div>
+				<div class="catalog_box">
 					<div class="catalog_img">
-						<img class="grid_img1" src="img/catalog/catalog_img1.jpg" alt="">
-						<img class="grid_img2" src="img/catalog/catalog_img2.jpg" alt="">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">H&amp;M показал видео рождественской кампании c Леди Гагой</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img1.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img2.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">Бьюти-дайджест: электронный макияж, красота в Сети и не только</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Екатерина Мельникова</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">В Москве откроется обувной магазин Louis Vuitton</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Воронена Екатерина</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img1.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img2.jpg" alt="">
+						</a>
 					</div>
 					<div class="catalog_body">
 						<div class="catalog_info">
@@ -495,6 +582,405 @@
 							<a href="#">Практикуем Фен-Шуй в переговорах: как достичь успеха?</a>
 						</div>
 						<div class="catalog_user"><i class="fa fa-user"></i>Екатерина Мельникова</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">В Москве откроется обувной магазин Louis Vuitton</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Воронена Екатерина</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img1.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img2.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">H&amp;M показал видео рождественской кампании c Леди Гагой</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">Бьюти-дайджест: электронный макияж, красота в Сети и не только</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img1.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img2.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">Бьюти-дайджест: электронный макияж, красота в Сети и не только</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">Практикуем Фен-Шуй в переговорах: как достичь успеха?</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Екатерина Мельникова</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img1.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img2.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">В Москве откроется обувной магазин Louis Vuitton</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Воронена Екатерина</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">H&amp;M показал видео рождественской кампании c Леди Гагой</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img1.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img2.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">Бьюти-дайджест: электронный макияж, красота в Сети и не только</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">Практикуем Фен-Шуй в переговорах: как достичь успеха?</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Екатерина Мельникова</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img1.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img2.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">В Москве откроется обувной магазин Louis Vuitton</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Воронена Екатерина</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">H&amp;M показал видео рождественской кампании c Леди Гагой</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img1.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img2.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">Бьюти-дайджест: электронный макияж, красота в Сети и не только</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">Практикуем Фен-Шуй в переговорах: как достичь успеха?</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Екатерина Мельникова</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img1.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img2.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">В Москве откроется обувной магазин Louis Vuitton</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Воронена Екатерина</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">H&amp;M показал видео рождественской кампании c Леди Гагой</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img1.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img2.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">Дом Guerlain представляет парфюм French Kiss</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Кузницова Анастасия</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">Бьюти-дайджест: электронный макияж, красота в Сети и не только</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Екатерина Мельникова</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img1.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img2.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">В Москве откроется обувной магазин Louis Vuitton</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Воронена Екатерина</div>
+					</div>
+				</div>
+				<div class="catalog_box">
+					<div class="catalog_img">
+						<a href="#">
+							<img class="box_h_img" src="img/catalog/catalog_img3.jpg" alt="">
+							<img class="box_w_img" src="img/catalog/catalog_img4.jpg" alt="">
+						</a>
+					</div>
+					<div class="catalog_body">
+						<div class="catalog_info">
+							<div class="catalog_category">
+								<a href="#">Красота</a>
+							</div>
+							<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+							<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+						</div>
+						<div class="catalog_title">
+							<a href="#">H&amp;M показал видео рождественской кампании c Леди Гагой</a>
+						</div>
+						<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
 					</div>
 				</div>
 			</div>
@@ -1060,6 +1546,7 @@
 		<a href="#main" class="a_button a_sm">Вверх <i class="fa fa-angle-up"></i></a>
 	</div>
 	<!--footer -->
+</div>
 	<footer>
 		<div class="footer_nav">
 			<div class="inner">
@@ -1323,24 +1810,37 @@
 					</div>
 				</div>
 				<div class="form_file">
-					<div class="file_list"></div>
 					<div class="file_load">
-						<div class="file_button">
-							<span class="a_button a_white a_xs"><i class="fa fa-plus"></i>Прикрепить файл<input type="file"></span>
+						<div class="file_load_box">
+							<div class="file_button">
+								<span class="a_button a_white a_xs"><i class="fa fa-plus"></i>Прикрепить файл<input type="file"></span>
+							</div>
+							<div class="file_format">Доступные форматы файлов: .doc .jpg .png .txt</div>
 						</div>
-						<div class="file_format">Доступные форматы файлов: .doc .jpg .png .txt</div>
 					</div>
-				</div>
-			</div>
-			<div class="modal_body">
-				<div class="form_row">
-					<div class="form_group">
-						<label>Контактный еmail<span>*</span></label>
-						<input type="text" placeholder="anna@gmail.com">
+					<div class="file_load">
+						<div class="file_load_box">
+							<div class="file_button">
+								<span class="a_button a_white a_xs"><i class="fa fa-plus"></i>Прикрепить файл<input type="file"></span>
+							</div>
+							<div class="file_format">Доступные форматы файлов: .doc .jpg .png .txt</div>
+						</div>
 					</div>
-					<div class="form_group">
-						<label>Ваше имя<span>*</span></label>
-						<input type="text" placeholder="Анастасия">
+					<div class="file_load">
+						<div class="file_load_box">
+							<div class="file_button">
+								<span class="a_button a_white a_xs"><i class="fa fa-plus"></i>Прикрепить файл<input type="file"></span>
+							</div>
+							<div class="file_format">Доступные форматы файлов: .doc .jpg .png .txt</div>
+						</div>
+					</div>
+					<div class="file_load">
+						<div class="file_load_box">
+							<div class="file_button">
+								<span class="a_button a_white a_xs"><i class="fa fa-plus"></i>Прикрепить файл<input type="file"></span>
+							</div>
+							<div class="file_format">Доступные форматы файлов: .doc .jpg .png .txt</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -1351,6 +1851,7 @@
 				<a href="#" class="a_button a_white a_cancel">Отменить</a>
 			</div>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_article_confirm" class="modal">

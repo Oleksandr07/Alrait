@@ -34,6 +34,27 @@
 			<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4.datepicker/jquery-ui.css"> 
 			<script src="js/jquery-ui-1.11.4.datepicker/jquery-ui.js"></script>
 			<script src="js/jquery-ui-1.11.4.datepicker/datepicker-ru.js"></script>
+
+			<script src="js/airStickyBlock/jquery.airStickyBlock.js"></script>
+			<script>
+			    jQuery(document).ready(function($){
+			    	function catalogFilterPosition(){
+				        if ($(window).width() >= 1024) {
+				            $('.catalog_filter').airStickyBlock({
+				            	debug: false,
+				                stopBlock: '.airSticky__stop-block'
+				            });
+				        };
+			    	}
+			    	window.onload = function() {
+			    		catalogFilterPosition();
+				    };
+			    	$(window).resize(function(){
+			    		catalogFilterPosition();
+			    	});
+			    });
+			</script>
+
 			
 			<script src="js/jquery.mobile-events.min.js"></script>
 			<script src="js/common.js"></script>
@@ -43,28 +64,32 @@
 		<!-- END OF SCRIPT -->
 	</head>
 <body>
-<div class="wrapper">
 	<!--menu_mobile -->
 	<div class="menu_mobile">
 		<div class="content_menu">
 			<div class="scrollbar">
 				<ul>
-					<li class="active"><a href="#">Страница пользователя</a></li>
-					<li><a href="#">Анкета модели</a></li>
-					<li><a href="#">Уведомления<span>3</span></a></li>
-					<li><a href="#">Сообщения<span>2</span></a></li>
-					<li><a href="#">Баланс</a></li>
-					<li><a href="#">Правила</a></li>
+					<li class="active"><a href="#">Все салоны и специалисты</a></li>
+					<li><a href="#">Уход за лицом</a></li>
+					<li><a href="#">Уход за волосами</a></li>
+					<li><a href="#">Уход за руками и ногами</a></li>
+					<li><a href="#">Мероприятия и праздники</a></li>
+					<li><a href="#">Здоровье</a></li>
+					<li><a href="#">Искусство и творчество</a></li>
+					<li><a href="#">Аренда</a></li>
+					<li><a href="#">Акции</a></li>
+					<li><a href="#">Модели</a></li>
 				</ul>
 			</div>
 		</div>
-		<div class="menu_close"><i class="fa fa-times"></i></div>
 	</div>
 	<div id="menu_overlay"></div>
 	<!-- END OF menu_mobile -->
 
+	<div id="filter_overlay"></div>
+
 	<!--header -->
-	<header>
+	<header class="header">
 		<div class="inner">
 			<div class="logo">
 				<a href="/" title="">
@@ -214,36 +239,226 @@
 	</header>
 	<!-- END OF header -->
 	<!--main -->
-	<div id="main">
+	<div class="content_menu">
 		<div class="inner">
-			<div class="content content_login content_right_internal no_nav">
-				<div class="password_box">
+			<div class="menu_pc">
+				<ul>
+					<li class="active"><a href="#">Акции</a></li>
+					<li><a href="#">Уход за волосами</a></li>
+					<li><a href="#">Уход за руками и ногами</a></li>
+					<li><a href="#">Мероприятия и праздники</a></li>
+					<li><a href="#">Здоровье</a></li>
+					<li><a href="#">Искусство и творчество</a></li>
+					<li><a href="#">Аренда</a></li>
+					<li><a href="#">Акции</a></li>
+					<li><a href="#">Модели</a></li>
+				</ul>
+			</div>
+			<div class="all_category">Все категории<i class="fa fa-bars"></i></div>
+			<div class="block_mobile">
+				<div class="menu_change"><i class="fa fa-list-ul"></i></div>
+				<div class="filter_change"><i class="fa fa-sliders"></i></div>
+				<div class="page_title">Все статьи</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="catalog_sharing">
+			<a href="#" class="share_all"><i class="fa fa-share-alt"></i></a>
+			<a href="#" class="vk"><i class="fa fa-vk"></i></a>
+			<a href="#" class="fb"><i class="fa fa-facebook"></i></a>
+			<a href="#" class="ok"><i class="fa fa-odnoklassniki"></i></a>
+			<a href="#" class="go"><i class="fa fa-google-plus"></i></a>
+			<a href="#" class="tw"><i class="fa fa-twitter"></i></a>
+		</div>
+	</div>
+	<div id="main" class="airSticky__stop-block">
+		<div class="inner">
+			<div class="aside_catalog">
+				<div class="catalog_filter">
 					<form action="#">
-						<h1>Запрос пароля</h1>
-						<div class="password_text">
-							<p>Если вы забыли пароль, введите email. <br/> Контрольная строка для смены пароля, а также ваши <br/> регистрационные данные, будут высланы вам по email.</p>
-						</div>
-						<div class="form_row">
-							<div class="form_group">
-								<label>E-mail</label>
-								<input type="email" placeholder="anna@gmail.com">
+						<div class="catalog_filter_head">
+							<div class="catalog_filter_title"><span>450</span> Акций</div>
+							<div class="form_row">
+								<div class="form_group">
+									<label>Укажите город (область или регион)</label>
+									<select multiple>
+										<option>Брестск</option>
+										<option>Витебск</option>
+										<option>Гомельск</option>
+										<option>Гродненск</option>
+										<option>Минск</option>
+										<option>Могилёвск</option>
+									</select>
+								</div>
 							</div>
 						</div>
-						<div class="form_button">
-							<a href="#modal_pass_confirm" class="a_button a_sm fancybox">Отправить данные на почту</a>
+						<div class="catalog_filter_body">
+							<div class="scrollbar">
+								<div class="form_row">
+									<div class="form_group">
+										<select>
+											<option>Раздел</option>
+											<option>Раздел 1</option>
+											<option>Раздел 2</option>
+											<option>Раздел 3</option>
+											<option>Раздел 4</option>
+											<option>Раздел 5</option>
+										</select>
+									</div>
+								</div>
+								<hr/>
+								<div class="form_row">
+									<div class="form_group">
+										<label>Дата</label>
+										<input id="action_date" type="text" name="action_date" placeholder="">
+									</div>
+								</div>
+								<div class="form_row">
+									<div class="form_group">
+										<label>Время действия</label>
+										<select>
+											<option>Утро с 8.00 до 11.59</option>
+											<option>день с 12.00 до 17.59</option>
+											<option>Вечер с 18.00 до 23.59</option>
+										</select>
+									</div>
+								</div>
+								<hr/>
+								<div class="form_row">
+									<div class="form_check">
+										<input id="catcheck2" type="checkbox" >
+										<label for="catcheck2">Только частные специалисты</label>
+									</div>
+									<div class="form_check">
+										<input id="catcheck3" type="checkbox">
+										<label for="catcheck3">Только организации</label>
+									</div>
+								</div>
+							</div>
 						</div>
 					</form>
 				</div>
-				<hr/>
-				<div class="password_box">
-					<h1>Произошла ошибка?</h1>
-					<div class="password_text">Вы знаете свои данные? Тогда Вы можете просто <a href="#">авторизоваться</a></div>
+			</div>
+			<div class="catalog_content">
+				<div class="catalog_content_inner">
+					<div class="catalog_action_box catalog_action_hot">
+						<div class="catalog_action_body">
+							<div class="catalog_action_img">
+								<img src="img/catalog/catalog_img2.jpg" alt="">
+							</div>
+							<div class="catalog_action_content">
+								<div class="catalog_action_title">Выпрямление волос со скидкой 70%!</div>
+								<div class="catalog_action_date">с 01.10.2014 по 01.01.2015</div>
+								<div class="catalog_action_text">
+									<p>В период действия акции, бразильское выпрямление волос в нашем салоне со скидкой 70%!</p>
+								</div>
+								<div class="catalog_action_day">
+									<span class="disable">Пн.</span>
+									<span class="disable">Вт.</span>
+									<span>Ср.</span>
+									<span>Чт.</span>
+									<span>Пт.</span>
+									<span>Сб.</span>
+									<span>Вс.</span>
+								</div>
+								<div class="catalog_action_time">c 06:00 до 11:59 и с 23:00 до 05:59</div>
+								<div class="catalog_action_button">
+									<a href="#" class="a_button a_sm">Записаться по акции</a>
+								</div>
+							</div>
+						</div>
+						<div class="catalog_action_head">
+							<div class="catalog_action_company">
+								<div class="catalog_action_company_img">
+									<a href="#">
+										<img src="img/organization/organization_img2.png" alt="">
+									</a>
+								</div>
+								<div class="catalog_action_company_name">
+									<div class="catalog_action_company_title">
+										<a href="#">Incanto (Инканто)</a>
+									</div>
+									<div class="catalog_action_company_category">Салон красоты</div>
+								</div>
+							</div>
+							<div class="catalog_action_contacts">
+								<div class="catalog_action_address">
+									<a href="#">г. Минск, пр-т Независимости, 177</a>
+								</div>
+								<div class="catalog_action_phone">+375 17 394-40-50;  +375 29 390-16-66</div>
+							</div>
+						</div>
+					</div>
+					<div class="catalog_action_box">
+						<div class="catalog_action_body">
+							<div class="catalog_action_img">
+								<img src="img/catalog/catalog_img2.jpg" alt="">
+							</div>
+							<div class="catalog_action_content">
+								<div class="catalog_action_title">Выпрямление волос со скидкой 70%!</div>
+								<div class="catalog_action_date">с 01.10.2014 по 01.01.2015</div>
+								<div class="catalog_action_text">
+									<p>В период действия акции, бразильское выпрямление волос в нашем салоне со скидкой 70%!</p>
+								</div>
+								<div class="catalog_action_day">
+									<span class="disable">Пн.</span>
+									<span class="disable">Вт.</span>
+									<span>Ср.</span>
+									<span>Чт.</span>
+									<span>Пт.</span>
+									<span>Сб.</span>
+									<span>Вс.</span>
+								</div>
+								<div class="catalog_action_time">c 06:00 до 11:59 и с 23:00 до 05:59</div>
+								<div class="catalog_action_button">
+									<a href="#" class="a_button a_sm">Записаться по акции</a>
+								</div>
+							</div>
+						</div>
+						<div class="catalog_action_head">
+							<div class="catalog_action_company">
+								<div class="catalog_action_company_img">
+									<a href="#">
+										<img src="img/organization/organization_img2.png" alt="">
+									</a>
+								</div>
+								<div class="catalog_action_company_name">
+									<div class="catalog_action_company_title">
+										<a href="#">Incanto (Инканто)</a>
+									</div>
+									<div class="catalog_action_company_category">Салон красоты</div>
+								</div>
+							</div>
+							<div class="catalog_action_contacts">
+								<div class="catalog_action_address">
+									<a href="#">г. Минск, пр-т Независимости, 177</a>
+								</div>
+								<div class="catalog_action_phone">+375 17 394-40-50;  +375 29 390-16-66</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="catalog_more">
+					<a href="#" class="load"><img src="img/uploadmore_icon_x2.png" alt=""><div class="more_text">Загрузить ещё</div></a>
+				</div>
+				<div class="pagers">
+					<ul>
+						<li class="active">1</li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li class="pager_dot"><a href="#">...</a></li>
+						<li><a href="#">17</a></li>
+					</ul>
+				</div>
+				<div class="catalog_content_about">
+					<p>Что значат салоны красоты в жизни настоящих женщин? Конечно, не все, но очень многое. Ведь именно в этих заведениях подчеркиваются и сохраняются внешние данные, которые каждая девочка получает от природы при рождении. Информационно-развлекательный портал alrait.by предлагает своим пользователям максимально полный список заведений Минска, в которых ваша природная красота получит достойный уход и внимание.</p>
 				</div>
 			</div>
+			<div class="clear"></div>
 		</div>
 	</div>
 	<!-- END OF main -->
-</div>
+	<!--footer -->
 	<div class="top">
 		<a href="#main" class="a_button a_sm">Вверх <i class="fa fa-angle-up"></i></a>
 	</div>
@@ -399,6 +614,7 @@
 				</div>
 			</form>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_pass" class="modal">
@@ -478,6 +694,7 @@
 				</div>
 			</form>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_email" class="modal">
@@ -701,6 +918,7 @@
 		</div>
 	</div>
 	<!-- END OF modal -->
+	
 	<div id="overlay"></div>
 </body>
 </html>

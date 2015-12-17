@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<title>alrait</title>
+		<!-- CSS -->
+			<link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.5" media="screen" >
+			<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,400italic,500italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+			<link href="fonts/awesome/css/font-awesome.min.css" rel="stylesheet" media="screen">
+			<link href="css/style.css" rel="stylesheet" media="screen">
+			<link href="css/media.css" rel="stylesheet" media="screen">
+		<!-- END OF CSS -->
+		<!--SCRIPT -->
+			<script src="js/jquery-1.11.1.min.js"></script>
+			<script src="js/jquery.placeholder.js"></script>
+			<script src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
+			<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+			<script type="text/javascript" src="js/slick/slick.min.js"></script>
+			<link rel="stylesheet" href="js/fotorama/fotorama.css">
+			<script src="js/fotorama/fotorama.js"></script>
+			<link rel="stylesheet" type="text/css" href="js/tooltipster-master/css/tooltipster.css" />
+			<script type="text/javascript" src="js/tooltipster-master/js/jquery.tooltipster.min.js"></script>
+			<link rel="stylesheet" href="js/scrollbar/jquery.scrollbar.css">
+			<script src="js/scrollbar/jquery.scrollbar.js"></script>
+			
+			<link href="js/select2/select2.css" rel="stylesheet" />
+			<script src="js/select2/select2.js"></script>
+			<script src="js/select2/select2_locale_ru.js"></script>
+
+			<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4.datepicker/jquery-ui.css"> 
+			<script src="js/jquery-ui-1.11.4.datepicker/jquery-ui.js"></script>
+			<script src="js/jquery-ui-1.11.4.datepicker/datepicker-ru.js"></script>
+			
+			<script src="js/jquery.mobile-events.min.js"></script>
+			<script src="js/common.js"></script>
+			<!--[if IE]>  
+				<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>  
+			<![endif]--> 
+		<!-- END OF SCRIPT -->
+	</head>
+<body>
+	<!--menu_mobile -->
+	<div class="menu_mobile">
+		<div class="content_menu">
+			<div class="scrollbar">
+				<ul>
+					<li class="active"><a href="#">Страница пользователя</a></li>
+					<li><a href="#">Анкета модели</a></li>
+					<li><a href="#">Уведомления<span>3</span></a></li>
+					<li><a href="#">Сообщения<span>2</span></a></li>
+					<li><a href="#">Баланс</a></li>
+					<li><a href="#">Правила</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu_close"><i class="fa fa-times"></i></div>
+	</div>
+	<div id="menu_overlay"></div>
+	<!-- END OF menu_mobile -->
+
+	<!--header -->
+	<header>
+		<div class="inner">
+			<div class="logo">
+				<a href="/" title="">
+					<img src="img/logo_x2.png" alt="">
+				</a>
+			</div>
+			<div class="nav">
+				<div class="nav_head">
+					<div class="nav_icon">
+						<span class="icon_bar"></span>
+						<span class="icon_bar"></span>
+						<span class="icon_bar"></span>
+					</div>
+					<div class="nav_title">Меню</div>
+				</div>
+				<div class="nav_body">
+					<div class="inner">
+					
+					</div>
+				</div>
+				<div id="nav_overlay"></div>
+			</div>
+			<div class="search">
+				<div class="search_head">
+					<form action="#">
+						<input type="text" placeholder="Найти специалиста, организацию или что-нибудь ещё">
+						<button class="search_submit" type="button"><i class="fa fa-search"></i></button>
+						<button class="search_close" type="reset"><i class="fa fa-times"></i></button>
+					</form>
+					<div class="search_result">
+						<div class="scrollbar">
+							<div class="search_section">
+								<div class="search_section_title">Специалисты</div>
+								<div class="search_row">
+									<div class="search_col">
+										<a href="#" class="search_img">
+											<img src="img/organization/organization_img1.png" alt="">
+										</a>
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Кузнецова Анастасия</a>
+											<span class="pro">pro</span>
+										</div>
+										<div class="search_organization">Парикмахер</div>
+									</div>
+								</div>
+								<div class="search_row">
+									<div class="search_col">
+										<a href="#" class="search_img">
+											<img src="img/organization/organization_img1.png" alt="">
+										</a>
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Кузнецова Анастасия</a>
+											<span class="pro">pro</span>
+										</div>
+										<div class="search_organization">Парикмахер</div>
+									</div>
+								</div>
+								<div class="search_more">
+									<a href="#">Показать ещё 69 специалистов</a>
+								</div>
+							</div>
+							<div class="search_section">
+								<div class="search_section_title">Организации</div>
+								<div class="search_row">
+									<div class="search_col">
+										<a href="#" class="search_img">
+											<img src="img/organization/organization_img2.png" alt="">
+										</a>
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Incanto (Инканто)</a>
+											<span class="pro">pro</span>
+										</div>
+										<div class="search_organization">Салон красоты</div>
+									</div>
+								</div>
+								<div class="search_row">
+									<div class="search_col">
+										<a href="#" class="search_img">
+											<img src="img/organization/organization_img2.png" alt="">
+										</a>
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Incanto (Инканто)</a>
+											<span class="pro">pro</span>
+										</div>
+										<div class="search_organization">Салон красоты</div>
+									</div>
+								</div>
+								<div class="search_more">
+									<a href="#">Показать ещё 53 организаций</a>
+								</div>
+							</div>
+							<div class="search_section">
+								<div class="search_section_title">И так каждая категория</div>
+								<div class="search_row">
+									<div class="search_col">
+										<a href="#" class="search_img">
+											<img src="img/organization/organization_img1.png" alt="">
+										</a>
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Кузнецова Анастасия</a>
+										</div>
+										<div class="search_organization">Парикмахер</div>
+									</div>
+								</div>
+								<div class="search_row">
+									<div class="search_col">
+
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Incanto (Инканто)</a>
+										</div>
+										<div class="search_organization">Салон красоты</div>
+									</div>
+								</div>
+								<div class="search_more">
+									<a href="#">Показать ещё 100 результатов</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="entrance">
+				<div class="entrance_lock"><i class="fa fa-lock"></i></div>
+				<div class="entrance_box">
+					<div class="login">
+						<a href="#modal_login" class="open_modal"><i class="fa fa-lock"></i>Войти</a>
+					</div>
+					<div class="reg">
+						<a href="#modal_reg" class="a_button a_grad open_modal">Зарегистрироваться</a>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</header>
+	<!-- END OF header -->
+	<!--main -->
+	<div class="content_menu">
+		<div class="inner">
+			<div class="menu_pc">
+				<ul>
+					<li class="active"><a href="#">Страница пользователя</a></li>
+					<li><a href="#">Анкета модели</a></li>
+					<li><a href="#">Уведомления<span>3</span></a></li>
+					<li><a href="#">Сообщения<span>2</span></a></li>
+					<li><a href="#">Баланс</a></li>
+					<li><a href="#">Правила</a></li>
+				</ul>
+			</div>
+			<div class="all_category">Все категории<i class="fa fa-bars"></i></div>
+			<div class="block_mobile">
+				<div class="menu_change"><i class="fa fa-list-ul"></i></div>
+				<div class="page_title">Все статьи</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="main">
+		<div class="inner">
+			<div class="content">
+				<div class="all_modal_window">
+					<h2>Модальные окна</h2>
+					<h4>Alrait_Catalog_OrgPage_Main</h4>
+					<p>
+						<a href="#modal_map" class="open_modal a_button">Map</a>
+						<a href="#modal_send_message" class="open_modal a_button">SendMessage</a>
+						<a href="#modal_alert" class="open_modal a_button">Alert</a>
+						<a href="#modal_alert_not_login" class="open_modal a_button">AlertNotLogin</a>
+						<a href="#modal_confirm" class="open_modal a_button">Confirm</a>
+						<a href="#modal_confirm_order" class="open_modal a_button">ConfirmOrder</a>
+						<a href="#modal_online_order_emp" class="open_modal a_button">OnlineOrderEmp</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END OF main -->
+
+	<!--footer -->
+	<div class="top">
+		<a href="#main" class="a_button a_sm">Вверх <i class="fa fa-angle-up"></i></a>
+	</div>
+	<!--footer -->
+	<footer>
+		<div class="footer_nav">
+			<div class="inner">
+				<div class="top">
+					<a href="#main" class="a_button a_sm">Вверх <i class="fa fa-angle-up"></i></a>
+				</div>
+				<ul>
+					<li class="active"><a href="#">О проекте</a></li>
+					<li><a href="#">Правила</a></li>
+					<li><a href="#">Частые вопросы</a></li>
+					<li><a href="#">Обратная связь</a></li>
+					<li><a href="#">Реклама на сайте</a></li>
+					<li><a href="#">Оплата услуг</a></li>
+					<li><a href="#">Договор оферты</a></li>
+				</ul>
+				<span class="nav_active"></span>
+			</div>
+		</div>
+		<div class="footer_bottom">
+			<div class="inner">
+				<div class="copyright">2015 © alrait.by. Все права защищены, копирование материалов только с разрешения редакции.</div>
+			</div>
+		</div>
+	</footer>
+	<!-- END OF footer -->
+
+
+	<!-- Validation -->
+	<script src="js/validation/dist/jquery.validate.js"></script>
+	<script>
+		// $.validator.setDefaults({
+		// 	submitHandler: function() {
+		// 		alert("submitted!");
+		// 	}
+		// });
+		
+		$().ready(function() {
+			// validate signup form on keyup and submit
+			$("#modal_reg form").validate({
+				rules: {
+					firstname: "required",
+					lastname: "required",
+					email: {
+						required: true,
+						email: true
+					}
+				},
+				messages: {
+					firstname: "Введите ваше имя",
+					lastname: "Введите вашу фамилию",
+					email: {
+						required: "Введите ваш email",
+						email: "Правильно введите ваш email"
+					}
+				},
+				submitHandler: function(form) {
+					$.fancybox({ 
+						href: "#modal_thanks",
+						padding: 0,
+						margin: 10,
+						minHeight: false,
+						autoHeight: true,
+						openEffect: 'fade',
+						closeEffect: 'fade',
+						openSpeed: 400,
+						closeSpeed: 400,
+						helpers: {
+							overlay: {
+								locked: true
+							}
+						}
+					});
+				}
+			});
+
+			$("#modal_login form").validate({
+				rules: {
+					email: {
+						required: true,
+						email: true
+					},
+					pass: { 
+						required: true,
+						minlength: 6
+					}
+					
+				},
+				messages: {
+					email: {
+						required: "Введите ваш email",
+						email: "Правильно введите ваш email"
+					},
+					pass: {
+						required: "Введите пароль",
+						minlength: "Минимум 6 символов"
+					}
+				},
+				submitHandler: function(form) {
+					$.fancybox({ 
+						href: "#modal_thanks",
+						padding: 0,
+						margin: 10,
+						minHeight: false,
+						autoHeight: true,
+						openEffect: 'fade',
+						closeEffect: 'fade',
+						openSpeed: 400,
+						closeSpeed: 400,
+						helpers: {
+							overlay: {
+								locked: true
+							}
+						}
+					});
+				}
+			});
+		});
+	</script>
+	<!-- End Validation -->
+
+	<!--modal -->
+	<div id="modal_login" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Войти через социальные сети</div>
+			<div class="uLogin">
+				<a href="#" class="a_socials vk"><i class="fa fa-vk"></i></a>
+				<a href="#" class="a_socials fb"><i class="fa fa-facebook"></i></a>
+				<a href="#" class="a_socials ok"><i class="fa fa-odnoklassniki"></i></a>
+				<a href="#" class="a_socials go"><i class="fa fa-google-plus"></i></a>
+				<a href="#" class="a_socials tw"><i class="fa fa-twitter"></i></a>
+			</div>
+		</div>
+		<div class="modal_body">
+			<div class="modal_title">Войти через email и пароль</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Email</label>
+						<input type="email" name="email" placeholder="anna@gmail.com" required>
+					</div>
+					<div class="form_group">
+						<label>Пароль</label>
+						<input class="login_pass" type="password" name="pass" placeholder="">
+					</div>
+				</div>
+				<div class="form_button">
+					<button class="a_button a_grad" type="submite">Войти в кабинет</button>
+					<a href="#modal_pass" class="forgot_pass fancybox">Забыли пароль?</a>
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_pass" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Укажите Ваш email</div>
+			<div class="modal_text">
+				<p>Введите Ваш регистрационный email, и мы вышлем на него инструкцию по восстановлению пароля.</p>
+			</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Введите Ваш регистрационный email</label>
+						<input type="email" placeholder="anna@gmail.com">
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#modal_pass_confirm" class="a_button a_grad fancybox">Отправить</a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="modal_pass_confirm" class="modal modal_confirm">
+		<div class="modal_head">
+			<div class="modal_title">Инструкция отправлена</div>
+		</div>
+	</div>
+
+	<div id="modal_reg" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Регистрация через социальные сети</div>
+			<div class="uLogin">
+				<a href="#modal_email" class="a_socials vk fancybox"><i class="fa fa-vk"></i></a>
+				<a href="#modal_email" class="a_socials fb fancybox"><i class="fa fa-facebook"></i></a>
+				<a href="#modal_email" class="a_socials ok fancybox"><i class="fa fa-odnoklassniki"></i></a>
+				<a href="#modal_email" class="a_socials go fancybox"><i class="fa fa-google-plus"></i></a>
+				<a href="#modal_email" class="a_socials tw fancybox"><i class="fa fa-twitter"></i></a>
+			</div>
+		</div>
+		<div class="modal_body">
+			<div class="modal_title">Обычная регистрация</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Имя</label>
+						<input type="text" name="firstname" placeholder="Анастасия" required>
+					</div>
+					<div class="form_group">
+						<label>Фамилия</label>
+						<input type="text" name="lastname" placeholder="Кузнецова" required>
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="form_group">
+						<label>Email</label>
+						<input type="email" name="email" placeholder="anna@gmail.com" required>
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="modal_text">
+						<p>Регистрируясь, я принимаю <a href="#">правила сайта</a></p>
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="form_check">
+						<input id="check1" type="checkbox" checked>
+						<label for="check1">Я хочу получать email письма о мероприятиях и/или иных услугах портала</label>
+					</div>
+					<div class="form_check">
+						<input id="check2" type="checkbox" checked>
+						<label for="check2">Я согласен получать СМС уведомления от администрации портала</label>
+					</div>
+				</div>
+				<div class="form_button">
+					<button class="a_button a_grad" type="submite">зарегистрироваться</button>
+					<!-- <a href="#modal_thanks" class="a_button a_grad fancybox">зарегистрироваться</a> -->
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_email" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Укажите Ваш email</div>
+			<div class="modal_text">
+				<p>Для завершения регистрации Вам необходимо указать email адрес</p>
+			</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Введите Ваш email</label>
+						<input type="email" placeholder="anna@gmail.com">
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#modal_thanks" class="a_button a_grad fancybox">Сохранить</a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="modal_thanks" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Благодарим за регистрацию на портале alrait.by! </div>
+			<div class="modal_text">
+				<p>На указанный Вами адрес электронной почты выслано письмо. Для получения доступа к личному кабинету, Вам необходимо  подтвердить адрес электронной почты - пройти по ссылке указанной в письме.</p>
+			</div>
+			<div class="modal_wishes">
+				<p>Пользуйтесь с удовольствием!</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal_noemail" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Данный email не зарегистрирован</div>
+			<div class="modal_text">
+				<p>Извините, но email <a href="mailto:annanew@gmail.com">annanew@gmail.com</a> не зарегистрирован на портале. Пожалуйста, пройдите процесс регистрации или попробуйте ещё раз.</p>
+			</div>
+			<div class="form_button">
+				<a href="#modal_reg" class="a_button a_grad fancybox">зарегистрироваться</a>
+				<a href="#modal_login" class="forgot_pass fancybox">Попробовать ещё раз</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal_region" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Выберите Ваш регион</div>
+			<div class="modal_text">
+				<p>Основываясь на Вашем регионе, мы сможем показать наиболее подходящий для Вас контент.</p>
+			</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<select>
+							<option>Брестская область</option>
+							<option>Витебская область</option>
+							<option>Гомельская область</option>
+							<option>Гродненская область</option>
+							<option>Минская область</option>
+							<option>Могилёвская область</option>
+						</select>
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#" class="a_button a_grad">Сохранить</a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="modal_change_email" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Изменить email адрес</div>
+			<div class="modal_text">
+				<p>На старый email адрес будет отправлено письмо с просьбой подтвердить изменение email адреса. </p>
+			</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Введите новый email</label>
+						<input type="email" placeholder="anna@gmail.com">
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#modal_change_email_confirm" class="a_button a_grad fancybox">Сохранить</a>
+					<a href="#" class="a_button a_white a_cancel">Отменить</a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="modal_change_email_confirm" class="modal modal_confirm">
+		<div class="modal_head">
+			<div class="modal_title">Ваш email изменен</div>
+		</div>
+	</div>
+
+	<div id="modal_send_article" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Отправить статью в редакцию</div>
+		</div>
+		<div class="modal_body">
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Раздел для статьи<span>*</span></label>
+						<select>
+							<option>Красота </option>
+							<option>Красота 1</option>
+							<option>Красота 2</option>
+							<option>Красота 3</option>
+							<option>Красота 4</option>
+							<option>Красота 5</option>
+						</select>
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="form_group group_lg">
+						<label>Название статьи<span>*</span></label>
+						<input type="text" placeholder="">
+					</div>
+				</div>
+				<div class="form_file">
+					<div class="file_list"></div>
+					<div class="file_load">
+						<div class="file_button">
+							<span class="a_button a_white a_xs"><i class="fa fa-plus"></i>Прикрепить файл<input type="file"></span>
+						</div>
+						<div class="file_format">Доступные форматы файлов: .doc .jpg .png .txt</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal_footer">
+			<div class="form_button">
+				<a href="#modal_article_confirm" class="a_button a_grad fancybox">Отправить</a>
+				<a href="#" class="a_button a_white a_cancel">Отменить</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal_article_confirm" class="modal modal_confirm">
+		<div class="modal_head">
+			<div class="modal_title">Статья отправлена</div>
+		</div>
+	</div>
+
+	<div id="modal_popular_spec_org" class="modal">
+		<div class="modal_head">
+			<div class="popular_spec_org">
+				<div class="popular_box">
+					<div class="popular_image">
+						<div class="popular_img">
+							<img src="img/organization/organization_img1.png" alt="">
+						</div>
+						<span class="pro">pro</span>
+					</div>
+					<div class="popular_organization">Парикмахер</div>
+					<div class="popular_user"><a href="#">Кузнецова Анастасия</a></div>
+					<div class="popular_button">
+						<a href="#" class="a_button a_green">Записаться онлайн</a>
+					</div>
+				</div>
+				<div class="spec_org">
+					<div class="modal_title">Популярные специалисты и организации</div>
+					<div class="spec_org_text">
+						<p>Данная услуга поможет рассказать о Ваших услугах более чем <a href="#">40 000 читателей</a> нашего портала!</p>
+						<p>Стоимость услуги размещения в ленте популярных специалистов и организаций составляет <a href="#">35 баллов.</a> </p>
+					</div>
+					<div class="form_button">
+						<a href="#modal_add_services" class="a_button a_grad fancybox">Добавить услугу</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal_add_services" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Внимание!</div>
+			<div class="modal_text">
+				<p>Вы действительно хотите добавить данную услугу?</p>
+			</div>
+			<div class="form_button">
+				<a href="#modal_spec_org_confirm" class="a_button a_grad fancybox">Да</a>
+				<a href="#modal_popular_spec_org" class="a_button a_white fancybox">Нет</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal_spec_org_confirm" class="modal modal_confirm">
+		<div class="modal_head">
+			<div class="modal_title">Услуга добавлена</div>
+		</div>
+	</div>
+
+	<div id="modal_reg_business" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Уважаемый пользователь</div>
+			<div class="modal_text">
+				<p>Чтобы иметь возможность разместиться в ленте популярных специалистов и организаций, Вам необходимо зарегистрировать Ваш бизнес на портале alrait.by.</p>
+			</div>
+			<div class="form_button">
+				<a href="#modal_reg" class="a_button a_grad fancybox">Зарегистрировать бизнес</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal_create_share" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Уважаемый пользователь</div>
+			<div class="modal_text">
+				<p>У Вас пока нет акций для размещения в ленте популярных акций. Пройдите в личный кабинет и создайте акцию для размещения.</p>
+			</div>
+			<div class="form_button">
+				<a href="#modal_reg" class="a_button a_grad fancybox">Создать акцию</a>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+	<!--  модальные окна  -->
+
+	<div id="modal_map" class="modal">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2348.2268700819136!2d27.681019416051225!3d53.945478037365014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcecaa5b07911%3A0x6d8587840db6812c!2z0L_RgNC-0YHQvy4g0J3QtdC30LDQstC40YHQuNC80L7RgdGC0LggMTc3LCDQnNC40L3RgdC6IDIyMDE0MSwg0JHRltC70L7RgNGD0YHRjA!5e0!3m2!1suk!2sua!4v1447919203584" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_send_message" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Отправить сообщение</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group message_subject">
+						<label>Тема сообщения</label>
+						<select>
+							<option>Вопрос</option>
+							<option>Вопрос 1</option>
+							<option>Вопрос 2</option>
+							<option>Вопрос 3</option>
+							<option>Вопрос 4</option>
+						</select>
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="form_group message_text">
+						<textarea placeholder="Текст Вашего сообщения"></textarea>
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#" class="a_button a_grad">Отправить</a>
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_alert" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Сообщение администрации портала</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group message_subject">
+						<label>Тема сообщения</label>
+						<select>
+							<option>Ошибка в описании</option>
+							<option>Ошибка в описании 1</option>
+							<option>Ошибка в описании 2</option>
+							<option>Ошибка в описании 3</option>
+							<option>Ошибка в описании 4</option>
+						</select>
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="form_group message_text">
+						<textarea placeholder="Текст Вашего сообщения"></textarea>
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#" class="a_button a_grad">Отправить</a>
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_alert_not_login" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Сообщение администрации портала</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Ваш Email <span>*</span></label>
+						<input type="email" placeholder="anna@gmail.com" required>
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="form_group message_subject">
+						<label>Тема сообщения</label>
+						<select>
+							<option>Ошибка в описании</option>
+							<option>Ошибка в описании 1</option>
+							<option>Ошибка в описании 2</option>
+							<option>Ошибка в описании 3</option>
+							<option>Ошибка в описании 4</option>
+						</select>
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="form_group message_text">
+						<textarea placeholder="Текст Вашего сообщения"></textarea>
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#" class="a_button a_grad">Отправить</a>
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_confirm" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Ваша запись направлена администратору</div>
+			<div class="modal_text">
+				<p>Мы так же создали для Вас личный кабинет, чтобы Вы могли контролировать Ваши записи, а так же пользоваться другими услугами нашего портала. Чтобы активировать личный кабинет, Вам надо просто перейти по ссылке в письме, которое мы отправили на Вашу почту.</p>
+			</div>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_confirm_order" class="modal modal_confirm">
+		<div class="modal_head">
+			<div class="modal_title">Ваша запись направлена администратору</div>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_online_order_emp" class="modal online_order">
+		<div class="block_order">
+			<form action="#">
+				<div class="order_head">
+					<div class="order_tabs">
+						<ul>
+							<li class="active" data-attr="order_services">Выберите услугу для записи</li>
+							<li data-attr="order_info">Заполните контактную информацию</li>
+						</ul>
+					</div>
+					<div class="order_clear">
+						<button type="reset">Очистить форму заказа</button>
+					</div>
+					<div class="order_timer">14:45</div>
+				</div>
+				<div class="order_body">
+					<div class="order_services order_body_box active" data-attr="order_services">
+						<div class="order_section">
+							<div class="scrollbar">
+								<ul>
+									<li class="order_services_choice">
+										<a href="#">Уход за лицом</a>
+										<ul>
+											<li><a href="#" data-attr="order_services_1">Маникюр</a></li>
+											<li><a href="#" data-attr="order_services_2">Педикюр</a></li>
+											<li><a href="#" data-attr="order_services_3">Наращивание ногтей</a></li>
+										</ul>
+									</li>
+									<li class="order_services_choice">
+										<a href="#">Уход за волосами</a>
+										<ul>
+											<li><a href="#" data-attr="order_services_1">Маникюр</a></li>
+											<li><a href="#" data-attr="order_services_2">Педикюр</a></li>
+											<li><a href="#" data-attr="order_services_3">Наращивание ногтей</a></li>
+										</ul>
+									</li>
+									<li class="order_services_choice">
+										<a href="#">Уход за руками и ногами</a>
+										<ul>
+											<li><a href="#" data-attr="order_services_1">Маникюр</a></li>
+											<li><a href="#" data-attr="order_services_2">Педикюр</a></li>
+											<li><a href="#" data-attr="order_services_3">Наращивание ногтей</a></li>
+										</ul>
+									</li>
+									<li class="order_services_choice">
+										<a href="#">Здоровье</a>
+										<ul>
+											<li><a href="#" data-attr="order_services_1">Маникюр</a></li>
+											<li><a href="#" data-attr="order_services_2">Педикюр</a></li>
+											<li><a href="#" data-attr="order_services_3">Наращивание ногтей</a></li>
+										</ul>
+									</li>
+									<li class="order_services_choice">
+										<a href="#">Мероприятия и праздники</a>
+										<ul>
+											<li><a href="#" data-attr="order_services_1">Маникюр</a></li>
+											<li><a href="#" data-attr="order_services_2">Педикюр</a></li>
+											<li><a href="#" data-attr="order_services_3">Наращивание ногтей</a></li>
+										</ul>
+									</li>
+									<li class="order_services_choice">
+										<a href="#">Искусство и творчество</a>
+										<ul>
+											<li><a href="#" data-attr="order_services_1">Маникюр</a></li>
+											<li><a href="#" data-attr="order_services_2">Педикюр</a></li>
+											<li><a href="#" data-attr="order_services_3">Наращивание ногтей</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="order_section_services">
+							<div class="order_services_box" data-attr="order_services_1">
+								<div class="scrollbar">
+									<div class="order_services_title">Маникюр</div>
+									<div class="order_services_list">
+										<div class="order_services_option">
+											<input id="serv_opt_1_1" type="checkbox">
+											<label for="serv_opt_1_1">
+												<span class="services_option_left">
+													<span class="services_option_title">Minx-маникюр</span>
+													<span class="services_option_time">Длительность: 60 мин</span>
+												</span>
+												<span class="services_option_right">
+													<span class="services_option_price">200 000 руб.</span>
+												</span>
+											</label>
+										</div>
+										<div class="order_services_option">
+											<input id="serv_opt_1_2" type="checkbox">
+											<label for="serv_opt_1_2">
+												<span class="services_option_left">
+													<span class="services_option_title">Shellac маникюр</span>
+													<span class="services_option_time">Длительность: 75 мин</span>
+												</span>
+												<span class="services_option_right services_option_discount">
+													от <span class="services_option_price">250 000 руб.</span><br/>
+													до <span class="services_option_price">270 000 руб.</span>
+												</span>
+											</label>
+										</div>
+										<div class="order_services_option">
+											<input id="serv_opt_1_3" type="checkbox">
+											<label for="serv_opt_1_3">
+												<span class="services_option_left">
+													<span class="services_option_title">Shellac френч маникюр</span>
+													<span class="services_option_time">Длительность: 1 день</span>
+												</span>
+												<span class="services_option_right">
+													<span class="services_option_price">300 000 руб.</span>
+												</span>
+											</label>
+										</div>
+										<div class="order_services_option">
+											<input id="serv_opt_1_4" type="checkbox">
+											<label for="serv_opt_1_4">
+												<span class="services_option_left">
+													<span class="services_option_title">SPA-маникюр</span>
+													<span class="services_option_time">Длительность: 90 мин</span>
+												</span>
+												<span class="services_option_right services_option_discount">
+													от <span class="services_option_price">370 000 руб.</span><br/>
+													до <span class="services_option_price">370 000 руб.</span>
+												</span>
+											</label>
+										</div>
+										<div class="order_services_option">
+											<input id="serv_opt_1_5" type="checkbox">
+											<label for="serv_opt_1_5">
+												<span class="services_option_left">
+													<span class="services_option_title">Аппаратный маникюр</span>
+													<span class="services_option_time">Длительность: 60 мин</span>
+												</span>
+												<span class="services_option_right">
+													<span class="services_option_price">260 000 руб.</span>
+												</span>
+											</label>
+										</div>
+										<div class="order_services_option">
+											<input id="serv_opt_1_6" type="checkbox">
+											<label for="serv_opt_1_6">
+												<span class="services_option_left">
+													<span class="services_option_title">Детский маникюр гигиенический</span>
+													<span class="services_option_time">Длительность: 45 мин</span>
+												</span>
+												<span class="services_option_right">
+													<span class="services_option_price">120 000 руб.</span>
+												</span>
+											</label>
+										</div>
+										<div class="order_services_option">
+											<input id="serv_opt_1_7" type="checkbox">
+											<label for="serv_opt_1_7">
+												<span class="services_option_left">
+													<span class="services_option_title">Французский маникюр</span>
+													<span class="services_option_time">Длительность: 60 мин</span>
+												</span>
+												<span class="services_option_right">
+													<span class="services_option_price">280 000 руб.</span>
+												</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="order_services_box" data-attr="order_services_2">
+								<div class="scrollbar">
+									<div class="order_services_title">Маникюр</div>
+									<div class="order_services_list">
+										<div class="order_services_option">
+											<input id="serv_opt_2_1" type="checkbox">
+											<label for="serv_opt_2_1">
+												<span class="services_option_left">
+													<span class="services_option_title">Minx-маникюр</span>
+													<span class="services_option_time">Длительность: 60 мин</span>
+												</span>
+												<span class="services_option_right">
+													<span class="services_option_price">200 000 руб.</span>
+												</span>
+											</label>
+										</div>
+										<div class="order_services_option">
+											<input id="serv_opt_2_2" type="checkbox">
+											<label for="serv_opt_2_2">
+												<span class="services_option_left">
+													<span class="services_option_title">Shellac маникюр</span>
+													<span class="services_option_time">Длительность: 75 мин</span>
+												</span>
+												<span class="services_option_right services_option_discount">
+													от <span class="services_option_price">250 000 руб.</span><br/>
+													до <span class="services_option_price">270 000 руб.</span>
+												</span>
+											</label>
+										</div>
+										<div class="order_services_option">
+											<input id="serv_opt_2_3" type="checkbox">
+											<label for="serv_opt_2_3">
+												<span class="services_option_left">
+													<span class="services_option_title">Shellac френч маникюр</span>
+													<span class="services_option_time">Длительность: 1 день</span>
+												</span>
+												<span class="services_option_right">
+													<span class="services_option_price">300 000 руб.</span>
+												</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="order_services_box" data-attr="order_services_3">
+								<div class="scrollbar">
+									<div class="order_services_title">Маникюр</div>
+									<div class="order_services_list">
+										<div class="order_services_option">
+											<input id="serv_opt_3_1" type="checkbox">
+											<label for="serv_opt_3_1">
+												<span class="services_option_left">
+													<span class="services_option_title">Minx-маникюр</span>
+													<span class="services_option_time">Длительность: 60 мин</span>
+												</span>
+												<span class="services_option_right">
+													<span class="services_option_price">200 000 руб.</span>
+												</span>
+											</label>
+										</div>
+										<div class="order_services_option">
+											<input id="serv_opt_3_2" type="checkbox">
+											<label for="serv_opt_3_2">
+												<span class="services_option_left">
+													<span class="services_option_title">Shellac маникюр</span>
+													<span class="services_option_time">Длительность: 75 мин</span>
+												</span>
+												<span class="services_option_right services_option_discount">
+													от <span class="services_option_price">250 000 руб.</span><br/>
+													до <span class="services_option_price">270 000 руб.</span>
+												</span>
+											</label>
+										</div>
+										<div class="order_services_option">
+											<input id="serv_opt_3_3" type="checkbox">
+											<label for="serv_opt_3_3">
+												<span class="services_option_left">
+													<span class="services_option_title">Shellac френч маникюр</span>
+													<span class="services_option_time">Длительность: 1 день</span>
+												</span>
+												<span class="services_option_right">
+													<span class="services_option_price">300 000 руб.</span>
+												</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="order_date_user">
+							<div class="order_date_slider">
+								<div class="order_date_title">октябрь 2014</div>
+								<div class="date_slider">
+									<div class="date_box">
+										<div class="date_day_name">Пн</div>
+										<div class="date_day">1</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Вт</div>
+										<div class="date_day">2</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Ср</div>
+										<div class="date_day">3</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Чт</div>
+										<div class="date_day day_selected">4</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Пт</div>
+										<div class="date_day day_disabled">5</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Сб</div>
+										<div class="date_day">6</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Вс</div>
+										<div class="date_day">7</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Пн</div>
+										<div class="date_day day_disabled">8</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Вт</div>
+										<div class="date_day day_disabled">9</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Ср</div>
+										<div class="date_day day_selected">10</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Чт</div>
+										<div class="date_day day_selected">11</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Пт</div>
+										<div class="date_day">12</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Сб</div>
+										<div class="date_day">13</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Вс</div>
+										<div class="date_day day_disabled">14</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Пн</div>
+										<div class="date_day day_disabled">15</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Вт</div>
+										<div class="date_day day_today">16</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Ср</div>
+										<div class="date_day day_selected">17</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Чт</div>
+										<div class="date_day day_selected">18</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Пт</div>
+										<div class="date_day day_selected">19</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Сб</div>
+										<div class="date_day">20</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Вс</div>
+										<div class="date_day day_disabled">21</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Пн</div>
+										<div class="date_day day_disabled">22</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Вт</div>
+										<div class="date_day day_disabled">23</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Ср</div>
+										<div class="date_day">24</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Чт</div>
+										<div class="date_day">25</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Пт</div>
+										<div class="date_day day_selected">26</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Сб</div>
+										<div class="date_day day_selected">27</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Вс</div>
+										<div class="date_day day_disabled">28</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Пн</div>
+										<div class="date_day day_disabled">29</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Вт</div>
+										<div class="date_day">30</div>
+									</div>
+									<div class="date_box">
+										<div class="date_day_name">Ср</div>
+										<div class="date_day day_selected">31</div>
+									</div>
+								</div>
+							</div>
+							<div class="services_employees_box">
+								<div class="scrollbar">
+									<div class="services_employees">
+										<div class="services_employees_head">
+											<div class="employees_img">
+												<img src="img/organization/organization_img1.png" alt="">
+											</div>
+											<div class="employees_body">
+												<div class="employees_category">Парикмахер</div>
+												<div class="employees_lastname">Кузнецова</div>
+												<div class="employees_firstname">Анастасия</div>
+											</div>
+										</div>
+										<div class="order_date_hour">
+											<div class="part_day">			
+												<span class="hour_disabled">10:00</span>
+												<span class="hour_disabled">10:15</span>
+												<span class="hour_disabled">10:30</span>
+												<span>10:45</span>
+												<span>11:00</span>
+												<span>11:15</span>
+												<span class="hour_selected">11:30</span>
+												<span>11:45</span>
+											</div>
+											<div class="part_day">
+												<span>12:00</span>
+												<span>12:15</span>
+												<span>12:30</span>
+												<span class="hour_disabled">12:45</span>
+												<span class="hour_disabled">13:00</span>
+												<span>13:15</span>
+												<span>13:30</span>
+												<span class="hour_selected">13:45</span>
+												<span class="hour_selected">14:00</span>
+												<span class="hour_selected">14:15</span>
+												<span class="hour_disabled">14:30</span>
+												<span class="hour_disabled">14:45</span>
+												<span>15:00</span>
+												<span>15:15</span>
+												<span class="hour_selected">15:30</span>
+												<span class="hour_selected">15:45</span>
+												<span class="hour_selected">16:00</span>
+												<span class="hour_selected">16:15</span>
+												<span class="hour_disabled">16:30</span>
+												<span class="hour_disabled">16:45</span>
+												<span>17:00</span>
+												<span>17:15</span>
+												<span>17:30</span>
+												<span class="hour_selected">17:45</span>
+											</div>
+											<div class="part_day">
+												<span>18:00</span>
+												<span class="hour_selected">18:15</span>
+												<span class="hour_selected">18:30</span>
+												<span class="hour_disabled">18:45</span>
+												<span class="hour_disabled">19:00</span>
+												<span class="hour_disabled">19:15</span>
+												<span>19:30</span>
+												<span>19:45</span>
+											</div>
+										</div>
+									</div>
+									<div class="services_employees">
+										<div class="services_employees_head">
+											<div class="employees_img">
+												<img src="img/organization/organization_img3.png" alt="">
+											</div>
+											<div class="employees_body">
+												<div class="employees_category">Парикмахер</div>
+												<div class="employees_lastname">Кузнецова</div>
+												<div class="employees_firstname">Анастасия</div>
+											</div>
+										</div>
+										<div class="order_date_hour">
+											<div class="part_day">			
+												<span class="hour_disabled">10:00</span>
+												<span class="hour_disabled">10:15</span>
+												<span class="hour_disabled">10:30</span>
+												<span>10:45</span>
+												<span>11:00</span>
+												<span>11:15</span>
+												<span class="hour_selected">11:30</span>
+												<span>11:45</span>
+											</div>
+											<div class="part_day">
+												<span>12:00</span>
+												<span>12:15</span>
+												<span>12:30</span>
+												<span class="hour_disabled">12:45</span>
+												<span class="hour_disabled">13:00</span>
+												<span>13:15</span>
+												<span>13:30</span>
+												<span class="hour_selected">13:45</span>
+												<span class="hour_selected">14:00</span>
+												<span class="hour_selected">14:15</span>
+												<span class="hour_disabled">14:30</span>
+												<span class="hour_disabled">14:45</span>
+												<span>15:00</span>
+												<span>15:15</span>
+												<span class="hour_selected">15:30</span>
+												<span class="hour_selected">15:45</span>
+												<span class="hour_selected">16:00</span>
+												<span class="hour_selected">16:15</span>
+												<span class="hour_disabled">16:30</span>
+												<span class="hour_disabled">16:45</span>
+												<span>17:00</span>
+												<span>17:15</span>
+												<span>17:30</span>
+												<span class="hour_selected">17:45</span>
+											</div>
+											<div class="part_day">
+												<span>18:00</span>
+												<span class="hour_selected">18:15</span>
+												<span class="hour_selected">18:30</span>
+												<span class="hour_disabled">18:45</span>
+												<span class="hour_disabled">19:00</span>
+												<span class="hour_disabled">19:15</span>
+												<span>19:30</span>
+												<span>19:45</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="order_info order_body_box" data-attr="order_info">
+						<h4>Ваши контакты</h4>
+						<div class="form_row">
+							<div class="form_group">
+								<label>Ваш Email <span>*</span> <span class="form_help tooltip" title="Вы можете создавать различные альбомы с фотографиями Ваших работ.Кроме того, у Вас есть возможность создать альбомы типа «интерьер», «оборудование», «дипломы и сертификаты» разместив в них соответствующие фотографии">?</span></label> 
+								<input type="email" name="email" placeholder="anna@gmail.com" required>
+							</div>
+							<div class="form_group">
+								<label>Ваш мобильный номер <span>*</span></label>
+								<input class="order_phone" type="text" name="order_phone" placeholder="">
+							</div>
+							<div class="form_group order_confirm">
+								<a href="#" class="a_button a_sm disable">Подтвердить</a>
+							</div>
+						</div>
+						<div class="form_row">
+							<div class="form_group">
+								<label>Имя<span>*</span></label>
+								<input type="text" name="firstname" placeholder="Анастасия" required>
+							</div>
+							<div class="form_group">
+								<label>Фамилия<span>*</span></label>
+								<input type="text" name="lastname" placeholder="Кузнецова" required>
+							</div>
+						</div>
+						<h4>Адрес для выезда специалиста</h4>
+					</div>
+				</div>
+				<div class="order_footer">
+					<div class="order_footer_left">
+						<div class="order_services_selected"></div>
+						<div class="order_info_selected">
+							<div class="order_info_date">Дата: <span>07.10.2014</span></div>
+							<div class="order_info_time">Время: <span>16:45-17:45</span></div>
+							<div class="order_info_employee">Сотрудник: <span>Кузнецова Анастасия</span></div>
+							<div class="order_info_price">Общая сумма: <span>250 000 руб.</span></div>
+						</div> 
+					</div>
+					<div class="order_footer_right">
+						<a href="#" class="a_button a_grad order_next">Продолжить</a>
+						<a href="#" class="a_button a_grad order_submit">Записаться</a>
+					</div>
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<!-- END OF modal -->
+	
+	<div id="overlay"></div>
+</body>
+</html>

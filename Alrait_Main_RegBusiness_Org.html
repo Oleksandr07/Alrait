@@ -216,34 +216,138 @@
 	<!--main -->
 	<div id="main">
 		<div class="inner">
-			<div class="content content_login content_right_internal no_nav">
-				<div class="password_box">
-					<form action="#">
-						<h1>Запрос пароля</h1>
-						<div class="password_text">
-							<p>Если вы забыли пароль, введите email. <br/> Контрольная строка для смены пароля, а также ваши <br/> регистрационные данные, будут высланы вам по email.</p>
+			<div class="content content_small no_nav">
+				<h4>Ведите свой бизнес с помощью портала alrait.by!</h4>
+				<div class="subtitle">С помощью нашего портала вы сможете быстро принимать заявки онлайн, контролировать базу клиентов, добавлять сотрудников и многое-многое другое!</div>
+				<hr/>
+				<br/>
+				<div class="business_tabs">
+					<div class="form_radio">
+						<input id="radio1" type="radio" name="radio_business" data-attr="business_spec">
+						<label for="radio1">Частный специалист</label>
+					</div>
+					<div class="form_radio">
+						<input id="radio2" type="radio" name="radio_business" data-attr="business_org" checked="checked">
+						<label for="radio2">Организация</label>
+					</div>
+				</div>
+				<div class="business_box" data-attr="business_spec">
+					<h4>Информация о частном специалисте</h4>
+					<form class="reg_business" action="">
+						<div class="form_row">
+							<div class="form_group">
+								<label>Имя<span class="required">*</span></label>
+								<input type="text" name="firstname" placeholder="Анастасия" required>
+							</div>
+							<div class="form_group">
+								<label>Фамилия<span class="required">*</span></label>
+								<input type="text" name="lastname" placeholder="Кузнецова" required>
+							</div>
 						</div>
 						<div class="form_row">
 							<div class="form_group">
-								<label>E-mail</label>
-								<input type="email" placeholder="anna@gmail.com">
+								<label>УНН специалиста</label>
+								<input id="number_company" type="text" name="number_company" placeholder="">
+							</div>
+							<div class="form_or">или введите паспортные данные <span class="form_help tooltip" title="Вы можете создавать различные альбомы с фотографиями Ваших работ.Кроме того, у Вас есть возможность создать альбомы типа «интерьер», «оборудование», «дипломы и сертификаты» разместив в них соответствующие фотографии">?</span></div>
+						</div>
+						<div class="form_row">
+							<div class="form_group">
+								<label>Серия и номер паспорта</label>
+								<input id="passport_number" type="text" name="passport_number" placeholder="">
+							</div>
+							<div class="form_group">
+								<label>Дата выдачи</label>
+								<input id="passport_date" type="text" name="passport_date" placeholder="">
+							</div>
+							<div class="form_group">
+								<label>Кем выдан</label>
+								<input id="passport_issued_by" type="text" name="passport_issued_by" placeholder="">
 							</div>
 						</div>
-						<div class="form_button">
-							<a href="#modal_pass_confirm" class="a_button a_sm fancybox">Отправить данные на почту</a>
+						<div class="form_row">
+							<div class="form_group main_profession">
+								<label>Основная профессия<span class="required">*</span></label>
+								<select>
+									<option>Парикмахер</option>
+									<option>Парикмахер 1</option>
+									<option>Парикмахер 2</option>
+									<option>Парикмахер 3</option>
+								</select>
+							</div>
+							<div class="form_group select_business">
+								<label>В профессии</label>
+								<select>
+									<option>с 2009 года</option>
+									<option>с 2010 года</option>
+									<option>с 2011 года</option>
+									<option>с 2012 года</option>
+									<option>с 2013 года</option>
+								</select>
+							</div>
 						</div>
+						<div class="form_row">
+							<div class="form_group">
+								<label>Ваш URL на портале<span class="required">*</span></label>
+								<input id="url_company" type="text" name="company" placeholder="" required>
+							</div>
+							<div class="domain_company">.alrait.by</div>
+							<div class="domain_required">
+								<div class="free_domain"><i class="fa fa-check"></i>Адрес свободен</div>
+								<div class="busy_domain"><i class="fa fa-times"></i>Адрес занят</div>
+							</div>
+						</div>
+						<div class="reg_rules">
+							<p>Регистрируясь, Вы подтверждаете свое согласие с <a href="#">Правилами пользования</a> и <a href="#">Договором оферты</a></p>
+						</div>
+						<button class="a_button a_grad">Открыть бизнес</button>
 					</form>
 				</div>
-				<hr/>
-				<div class="password_box">
-					<h1>Произошла ошибка?</h1>
-					<div class="password_text">Вы знаете свои данные? Тогда Вы можете просто <a href="#">авторизоваться</a></div>
+				<div class="business_box active" data-attr="business_org">
+					<h4>Информация о компании</h4>
+					<form class="reg_business" action="">
+						<div class="form_row">
+							<div class="form_group select_business">
+								<label>Категория<span class="required">*</span></label>
+								<select>
+									<option>Салон красоты</option>
+									<option>Салон красоты 1</option>
+									<option>Салон красоты 2</option>
+									<option>Салон красоты 3</option>
+								</select>
+							</div>
+							<div class="form_group">
+								<label>Название<span class="required">*</span></label>
+								<input id="company" type="text" name="company" placeholder="" required>
+							</div>
+							<div class="form_group">
+								<label>УНН организации<span class="required">*</span></label>
+								<input id="number_company" type="text" name="number_company" placeholder="" required>
+							</div>
+						</div>
+						<div class="form_row">
+							<div class="form_group">
+								<label>Ваш URL на портале<span class="required">*</span></label>
+								<input id="url_company" type="text" name="company" placeholder="" required>
+							</div>
+							<div class="domain_company">.alrait.by</div>
+							<div class="domain_required">
+								<div class="free_domain"><i class="fa fa-check"></i>Адрес свободен</div>
+								<div class="busy_domain"><i class="fa fa-times"></i>Адрес занят</div>
+							</div>
+						</div>
+						<div class="reg_rules">
+							<p>Регистрируясь, Вы подтверждаете свое согласие с <a href="#">Правилами пользования</a> и <a href="#">Договором оферты</a></p>
+						</div>
+						<button class="a_button a_grad">Открыть бизнес</button>
+					</form>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- END OF main -->
 </div>
+	<!--footer -->
 	<div class="top">
 		<a href="#main" class="a_button a_sm">Вверх <i class="fa fa-angle-up"></i></a>
 	</div>
@@ -399,6 +503,7 @@
 				</div>
 			</form>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_pass" class="modal">
@@ -478,6 +583,7 @@
 				</div>
 			</form>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_email" class="modal">
@@ -701,6 +807,10 @@
 		</div>
 	</div>
 	<!-- END OF modal -->
+	
+	<div class="icon_calendar">
+		<img id="calImg" src="img/calendar_icon_32.png" height="16" width="16" class="trigger">
+	</div>
 	<div id="overlay"></div>
 </body>
 </html>
