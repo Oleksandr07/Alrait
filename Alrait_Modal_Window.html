@@ -43,6 +43,7 @@
 		<!-- END OF SCRIPT -->
 	</head>
 <body>
+<div class="wrapper">
 	<!--menu_mobile -->
 	<div class="menu_mobile">
 		<div class="content_menu">
@@ -254,10 +255,11 @@
 	</div>
 	<!-- END OF main -->
 
-	<!--footer -->
 	<div class="top">
 		<a href="#main" class="a_button a_sm">Вверх <i class="fa fa-angle-up"></i></a>
 	</div>
+</div>
+
 	<!--footer -->
 	<footer>
 		<div class="footer_nav">
@@ -841,6 +843,9 @@
 		<div class="block_order">
 			<form action="#">
 				<div class="order_head">
+					<div class="order_back">
+						<i class="fa fa-angle-left"></i>
+					</div>
 					<div class="order_tabs">
 						<ul>
 							<li class="active" data-attr="order_services">Выберите услугу для записи</li>
@@ -1004,7 +1009,7 @@
 							</div>
 							<div class="order_services_box" data-attr="order_services_2">
 								<div class="scrollbar">
-									<div class="order_services_title">Маникюр</div>
+									<div class="order_services_title">Педикюр</div>
 									<div class="order_services_list">
 										<div class="order_services_option">
 											<input id="serv_opt_2_1" type="checkbox">
@@ -1048,7 +1053,7 @@
 							</div>
 							<div class="order_services_box" data-attr="order_services_3">
 								<div class="scrollbar">
-									<div class="order_services_title">Маникюр</div>
+									<div class="order_services_title">Наращивание ногтей</div>
 									<div class="order_services_list">
 										<div class="order_services_option">
 											<input id="serv_opt_3_1" type="checkbox">
@@ -1347,6 +1352,32 @@
 							</div>
 						</div>
 					</div>
+					<div class="order_data">
+						<div class="order_data_head">
+							<h4>Данные о записи</h4>
+							<div class="order_services_selected"></div>
+						</div>
+						<div class="order_data_table">
+							<table>
+								<tr>
+									<td>Дата:</td>
+									<td>07.10.2014</td>
+								</tr>
+								<tr>
+									<td>Время:</td>
+									<td>16:45-17:45</td>
+								</tr>
+								<tr>
+									<td>Сотрудник:</td>
+									<td>Кузнецова Анастасия</td>
+								</tr>
+								<tr>
+									<td>Общая сумма:</td>
+									<td>250 000 руб.</td>
+								</tr>
+							</table>
+						</div>
+					</div>
 					<div class="order_info order_body_box" data-attr="order_info">
 						<h4>Ваши контакты</h4>
 						<div class="form_row">
@@ -1356,7 +1387,7 @@
 							</div>
 							<div class="form_group">
 								<label>Ваш мобильный номер <span>*</span></label>
-								<input class="order_phone" type="text" name="order_phone" placeholder="">
+								<input class="order_phone" type="text" name="order_phone" placeholder="" required>
 							</div>
 							<div class="form_group order_confirm">
 								<a href="#" class="a_button a_sm disable">Подтвердить</a>
@@ -1372,13 +1403,53 @@
 								<input type="text" name="lastname" placeholder="Кузнецова" required>
 							</div>
 						</div>
+						<div class="form_row">
+							<div class="form_check">
+								<input id="check100" type="checkbox">
+								<label for="check100"> Заказать услугу с выездом на дом</label>
+							</div>
+						</div>
 						<h4>Адрес для выезда специалиста</h4>
+						<div class="form_row">
+							<div class="form_group address_output">
+								<label>Город</label>
+								<select>
+									<option>Минск</option>
+									<option>Минск 1</option>
+									<option>Минск 2</option>
+									<option>Минск 3</option>
+									<option>Минск 4</option>
+								</select>
+							</div>
+							<div class="form_group">
+								<label>Улица</label>
+								<input type="text" name="street" placeholder="Аэродромная">
+							</div>
+							<div class="form_group">
+								<label>Дом</label>
+								<input id="address_house" type="text" name="house">
+							</div>
+							<div class="form_group">
+								<label>Корпус</label>
+								<input id="address_building" type="text" name="building">
+							</div>
+							<div class="form_group">
+								<label>Квартира</label>
+								<input id="address_apartment" type="text" name="apartment">
+							</div>
+						</div>
+						<div class="form_row">
+							<div class="modal_text">
+								<p>Подтверждая запись, я принимаю <a href="#">правила сайта</a></p>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="order_footer">
 					<div class="order_footer_left">
 						<div class="order_services_selected"></div>
 						<div class="order_info_selected">
+							<div class="order_services_count">Выбрано <span>0 услуг</span></div>
 							<div class="order_info_date">Дата: <span>07.10.2014</span></div>
 							<div class="order_info_time">Время: <span>16:45-17:45</span></div>
 							<div class="order_info_employee">Сотрудник: <span>Кузнецова Анастасия</span></div>
@@ -1387,7 +1458,7 @@
 					</div>
 					<div class="order_footer_right">
 						<a href="#" class="a_button a_grad order_next">Продолжить</a>
-						<a href="#" class="a_button a_grad order_submit">Записаться</a>
+						<button type="submit" class="a_button a_grad order_submit">Записаться</button>
 					</div>
 				</div>
 			</form>

@@ -275,8 +275,11 @@
 	.catalog_sharing{
 		display: none;
 	}
-	.org_head{
+	.cover_mini{
 		margin-top: 0;
+	}
+	.cover_mini .org_cover{
+		height: 320px;
 	}
 	.no_cover{
 		height: 400px;
@@ -457,6 +460,73 @@
 	.employee_body{
 		width: 200px;
 	}
+	#modal_map{
+		width: 760px;
+	}
+
+	.online_order{
+		width: 760px;
+	}
+	.order_tabs ul li{
+		margin-right: 20px;
+	}
+	.order_section{
+		width: 240px;
+	}
+	.order_section_services{
+		width: 230px;
+	}
+	.order_services .scroll-wrapper > .scroll-content{
+		padding-right: 20px !important;
+	}
+	.order_services .scrollbar > .scroll-element.scroll-y{
+		right: 5px;
+	}
+	.order_section .scrollbar > ul > li > a{
+		padding-left: 30px;
+	}
+	.order_section .scrollbar > ul > li:before{
+		left: 10px;
+	}
+	.order_section ul li ul li{
+		padding-left: 30px;
+	}
+	.order_services_title{
+		padding-left: 15px;
+	}
+	.order_services_option label{
+		background-position: 15px 14px;
+		padding-left: 40px;
+	}
+	.order_services_option label:hover{
+		background-position: 15px 14px;
+	}
+	.order_services_option input[type="checkbox"]:checked + label{
+		background-position: 15px 14px;
+	}
+	.services_option_left{
+		float: none;
+		width: auto;
+	}
+	.services_option_right{
+		float: none;
+		width: auto;
+		text-align: left;
+	}
+	.services_option_time{
+		margin-bottom: 5px;
+	}
+	.order_date_hour{
+		padding: 25px 25px 25px 50px;
+	}
+
+	.order_footer_left{
+		width: 550px;
+	}
+	.order_info_date span, .order_info_time span, .order_info_employee span, .order_info_price span{
+		display: block;
+		padding-top: 5px;
+	}
 }
 
 @media only screen and (min-width:760px) and (max-width:1023px){
@@ -490,7 +560,7 @@
 }
 @media only screen and (max-width:759px) {
 	body{
-		padding-top: 100px;
+		padding-top: 120px;
 	}
 	hr{
 		margin: 15px -20px;
@@ -606,7 +676,7 @@
 		margin: 0 5px;
 	}
 	.modal{
-		width: 300px;
+		width: 320px;
 	}
 	.modal_head{
 		padding: 30px 20px;
@@ -1135,6 +1205,9 @@
 	.org_cover{
 		height: 170px;
 	}
+	.cover_mini .org_cover {
+	    height: 170px;
+	}
 	.no_cover{
 		height: 170px;
 	}
@@ -1465,15 +1538,9 @@
 	.activity_content .scrollbar > .scroll-element.scroll-y{
 		top: 10px;
 	}
-	#map{
+	/*#map{
 		margin-top: 40px;
 		z-index: 100;
-	}
-	/*.map_box{
-		position: fixed;
-		left: 0 !important;
-		top: 0 !important;
-		width: 100%;
 	}*/
 	.map_box_inner{
 		padding: 25px 20px; 
@@ -1656,6 +1723,253 @@
 	.employee_body{
 		width: 170px;
 	}
+	.top{
+		margin-top: 0;
+	}
+	.schedule_legend_box{
+		display: block;
+		float: none;
+		margin-bottom: 5px;
+	}
+	.schedule{
+		display: block;
+		width: auto;
+	}
+	.schedule_calendar{
+		display: block;
+		width: auto;
+	}
+	.schedule_body{
+		display: block;
+		width: auto;
+	}
+	.gallery_photo a, .gallery_video a{
+		float: none;
+		display: block;
+	}
+	.gallery_photo img{
+		width: 100%;
+		height: auto;
+	}
+	.gallery_video img{
+		width: 100%;
+		height: auto;
+	}
+	.spec_info:before{
+		font-size: 18px;
+		left: -21px;
+	}
+	#passport_issued_by{
+		width: 100%;
+	}
+	#modal_map{
+		width: 320px;
+	}
+	#modal_send_message .message_subject{
+		width: auto;
+	}
+	#modal_alert .message_subject{
+		width: auto;
+	}
+	#modal_alert_not_login .message_subject{
+		width: auto;
+	}
+	.all_modal_window h4{
+		font-size: 20px;
+	}
+	.reviews_add_control{
+		opacity: 1;
+	}
+	.employees_price_box{
+		margin: 0 0 30px;
+		overflow: hidden;
+	}
+	.employees_price_table{
+		overflow: hidden;
+		overflow-x: scroll;
+	}
+	.employees_price_table table{
+		width: auto;
+	}
+	.employees_price_table table thead tr td, .employees_price_table table thead tr th{
+		white-space: nowrap;
+		padding: 10px 20px;
+	}
+	.order_tabs{
+		display: none;
+	}
+
+
+
+
+
+
+
+
+
+
+	#modal_online_order_emp .modal_close{
+		top: 22px;
+		right: 22px;
+	}
+	.order_head{
+		padding-top: 0;
+	}
+	.order_clear{
+		float: right;
+		margin-right: 20px;
+		padding: 17px 0;
+	}
+	.order_clear button{
+		font-size: 15px;
+	}
+	.order_timer{
+		display: none;
+		width: 62px;
+		font-size: 17px;
+		line-height: 30px;
+		margin-top: 12px;
+		margin-right: 20px;
+	}
+
+	.order_section{
+		display: none;
+		width: auto;
+		float: none;
+		height: 345px;
+		padding: 0;
+	}
+	.order_section.show{
+		display: block;
+	}
+	.order_section_services{
+		display: none;
+		float: none;
+	}
+	.order_date_user{
+		display: none;
+		float: none;
+	}
+
+	.order_section .scrollbar > ul > li > a{
+		padding-left: 40px;
+	}
+	.order_section ul li ul li{
+		padding-left: 40px;
+	}
+	.order_section .scrollbar > ul > li:before{
+		left: 20px;
+	}
+	.order_services_title{
+		padding-left: 15px;
+	}
+	.order_section_services{
+		width: auto;
+	}
+	.order_services_box{
+		width: auto;
+		height: 345px;
+		padding: 0;
+	}
+	.order_services_title{
+		padding-left: 40px;
+	}
+	.order_services_option label{
+		background-position: 10px 15px;
+	}
+	.order_services_option label:hover{
+		background-position: 10px 15px;
+	}
+	.order_services_option input[type="checkbox"]:checked + label{
+		background-position: 10px 15px;
+	}
+	.order_date_user{
+		width: auto;
+		height: 345px;
+	}
+	.order_date_slider{
+		padding: 20px 30px 30px 30px;
+	}
+	.date_slider{
+		width: 250px;
+	}
+	.date_slider .slick-track{
+		width: 1120px !important;
+	}
+	.date_box{
+		width: 32px !important;
+	}
+	.date_day{
+		width: 32px;
+		height: 32px;
+		font-size: 17px;
+		line-height: 32px;
+	}
+	.services_employees_box{
+		height: 205px;
+	}
+	.order_date_hour{
+		padding: 25px 15px 25px 40px;
+	}
+	.order_date_hour span{
+		width: 56px;
+		height: 34px;
+		font-size: 15px;
+		line-height: 34px;
+	}
+	.order_info{
+		padding: 25px 20px;
+	}
+	.order_info h4, .order_data h4{
+		font-size: 18px;
+		font-weight: 400;
+	}
+	.order_confirm{
+		padding-top: 0;
+	}
+	.order_services_selected{
+		padding: 0;
+	}
+	.services_selected{
+		font-size: 15px;
+		padding: 8px 8px;
+		margin-bottom: 10px;
+	}
+	.services_selected .fa{
+		font-style: 17px;
+	} 
+	
+	.order_footer{
+		min-height: 75px;
+	}
+	.order_footer_left{
+		width: 170px;
+	}
+	.order_services_selected{
+		display: none;
+	}
+	.order_info_selected{
+		padding-left: 20px;
+	}
+	.order_info_date, .order_info_time, .order_info_employee, .order_info_price{
+		display: none;
+		float: none;
+		width: auto;
+		margin-right: 0;
+		margin-top: 5px;
+	}
+	.order_info_date span, .order_info_time span, .order_info_employee span, .order_info_price span{
+		display: inline;
+	}
+	.order_footer_right{
+		width: 120px;
+		margin-left: 10px;
+		padding-top: 15px;
+	}
+
+	/*.order_section.show, .order_section_services.show, .order_date_user.show, .order_info.show{
+		display: block;
+	}*/
 }
 
 

@@ -50,7 +50,8 @@ $(function(){
 
 	jQuery('.scrollbar').scrollbar({
 		"scrollx": "advanced",
-        "scrolly": "advanced"
+        "scrolly": "advanced",
+        'disableBodyScroll': true
 	});
 	jQuery('.scrollbar').not('.scroll-wrapper').on("update", function(){
 	    console.log('content is update');
@@ -198,11 +199,14 @@ $(function(){
 				$('.content_menu').removeClass('menu_lg');
 			}
 			$('.all_category').click(function(){
+				var $height = $('.menu_pc ul').height();
 				if (!$('.content_menu').hasClass('active')) {
 					$('.content_menu').addClass('active');
+					$('.menu_pc').animate({height: $height},300);
 				}
 				else{
 					$('.content_menu').removeClass('active');
+					$('.menu_pc').animate({height: '60px'},300);
 				}
 			});
 		};
@@ -603,6 +607,16 @@ $(function(){
      open_modal.click( function(event){ // лoвим клик пo ссылке с клaссoм open_modal
          event.preventDefault(); // вырубaем стaндaртнoе пoведение
          var div = $(this).attr('href'); // вoзьмем стрoку с селектoрoм у кликнутoй ссылки
+         var parent = $(this).parents('.modal');
+
+         if (overlay.css('display') == 'block') {
+         	parent.animate({opacity: 0, top: '45%'}, 200, // плaвнo прячем
+	            function(){ // пoсле этoгo
+	                $(this).css('display', 'none');
+	            }
+	        );
+         };
+
          overlay.fadeIn(400, //пoкaзывaем oверлэй
              function(){ // пoсле oкoнчaния пoкaзывaния oверлэя
              	$(div).css({
@@ -722,7 +736,8 @@ $(function(){
 	function catalog_filter(){
 		if ($(window).width() >= 1024) {
 			$('.catalog_filter').css({
-				'height': $(window).height() - $('header').height() - $('.content_menu .menu_pc').height() - $('.content_menu .block_mobile').height()
+				'max-height': $(window).height() - $('header').height() - $('.content_menu .menu_pc').height() - $('.content_menu .block_mobile').height() - 60,
+				'height': 'auto'
 			});
 
 			$('.catalog_filter_body').css({
@@ -749,7 +764,7 @@ $(function(){
 				$('body').addClass('fixed_filter');
 				$('#filter_overlay').show();
 		    	$('header').css('width', $('#filter_overlay').width());
-		    	$('.catalog_filter').css('height',$(window).height());
+		    	$('.catalog_filter').css('max-height',$(window).height());
 			});
 			$('#filter_overlay').click(function(){
 				$('body').removeClass('fixed_filter');
@@ -774,22 +789,16 @@ $(function(){
 		//trigger: 'click'
 	});
 
-	// $('.order_tabs ul li').click(function(){
-	// 	if (!$(this).hasClass('active')) {
-	// 		$('.order_tabs ul li').removeClass('active');
-	// 		$(this).addClass('active');
-	// 		$('.order_body_box').removeClass('active');
-	// 		$('.order_body_box[data-attr="'+$(this).attr('data-attr')+'"]').addClass('active')
-	// 	};
-	// });
 
 	$('.order_next').click(function(){
-		$('.order_tabs li').removeClass('active');
-		$('.order_tabs li[data-attr="order_info"]').addClass('active');
-		$('.order_body_box').removeClass('active');
-		$('.order_body_box[data-attr="order_info"]').addClass('active')
-		$('.a_button.order_next').css('display', 'none');
-		$('.a_button.order_submit').css('display', 'block');
+		if ($(window).width() > 767 && !$(this).hasClass('disable')) {
+			$('.order_tabs li').removeClass('active');
+			$('.order_tabs li[data-attr="order_info"]').addClass('active');
+			$('.order_body_box').removeClass('active');
+			$('.order_body_box[data-attr="order_info"]').addClass('active')
+			$('.a_button.order_next').css('display', 'none');
+			$('.a_button.order_submit').css('display', 'block');
+		};
 		return false;
 	});
 
@@ -816,9 +825,91 @@ $(function(){
 			$parent.addClass('active');
 			$('.order_services_box').removeClass('active');
 			$('.order_services_box[data-attr="' + $(this).attr('data-attr') + '"]').addClass('active');
+			$('.order_next').removeClass('disable');
 		}
 		return false;
 	});
+
+	function orderModalSetings(){
+		if ($(window).width() < 768) {
+			$('.order_section').addClass('show');
+			$('.order_next').removeClass('a_grad').addClass('a_sm disable');
+			$('.order_submit').addClass('a_sm');
+			$('.order_next').attr('data-window', 'window2');
+			$('.order_back').attr('data-window', 'window1');
+
+			function orderWindow1(){
+				$('.order_back').hide();
+				$('.order_next').attr('data-window', 'window2');
+				$('.order_section').show();
+				$('.order_section_services').hide();
+				$('.order_services_count').hide();
+			};
+			function orderWindow2(){
+				$('.order_back').show().attr('data-window', 'window1');
+				$('.order_next').attr('data-window', 'window3');
+				$('.order_section').hide();
+				$('.order_date_user').hide();
+				$('.order_section_services').show();
+				$('.order_services_count').show();
+				$('.order_timer').hide();
+				$('.order_info_date').hide();
+				$('.order_info_time').hide();
+			};
+			function orderWindow3(){
+				$('.order_back').show().attr('data-window', 'window2');
+				$('.order_next').attr('data-window', 'window4');
+				$('.order_section_services').hide();
+				$('.order_date_user').show();
+				$('.order_services_count').hide();
+				$('.order_data').hide();
+				$('.order_timer').show();
+				$('.order_info_date').show();
+				$('.order_info_time').show();
+			};
+			function orderWindow4(){
+				$('.order_back').show().attr('data-window', 'window3');
+				$('.order_next').attr('data-window', 'window5');
+				$('.order_date_user').hide();
+				$('.order_info').hide();
+				$('.order_data').show();
+				$('.order_info_date').hide();
+				$('.order_info_time').hide();
+				$('.order_next').show();
+				$('.order_submit').hide();
+			};
+			function orderWindow5(){
+				$('.order_back').show().attr('data-window', 'window4');
+				$('.order_next');
+				$('.order_info').show();
+				$('.order_data').hide();
+				$('.order_next').hide();
+				$('.order_submit').show();
+			}
+
+			$('.order_next').click(function(){
+				if (!$(this).hasClass('disable')) {
+					switch($(this).attr('data-window')) {
+						case 'window1':	orderWindow1();	break;
+						case 'window2':	orderWindow2();	break;
+						case 'window3':	orderWindow3();	break;
+						case 'window4':	orderWindow4();	break;
+						case 'window5':	orderWindow5();	break;
+					};
+				};
+			});
+			$('.order_back').click(function(){
+				switch($(this).attr('data-window')) {
+					case 'window1':	orderWindow1();	break;
+					case 'window2':	orderWindow2();	break;
+					case 'window3':	orderWindow3();	break;
+					case 'window4':	orderWindow4();	break;
+					case 'window5':	orderWindow5();	break;
+				};
+			});
+		};
+	};
+	orderModalSetings();
 
 	$('.services_employees_head').click(function(){
 		var $parent = $(this).parents('.services_employees');
@@ -860,50 +951,33 @@ $(function(){
 		swipeToSlide: true
 	});
 
+	var order_count = 0;
 	$('.order_services_option input').click(function(){
 		if ($(this).is( ":checked" )) {
 			$('.order_services_selected').append("<div class='services_selected' data-attr='" + $(this).attr('id') + "'><span>" + $(this).next().find('.services_option_title').text() + "</span><i class='fa fa-times'></i></div>");
+			order_count++;
+			$('.order_services_count').html('Выбрана <span>' + order_count + ' услуга</span>');
 		}
 		else{
 			$('.services_selected[data-attr="' + $(this).attr('id') + '"]').remove();
+			order_count--;
+			$('.order_services_count').html('Выбрана <span>' + order_count + ' услуга</span>');
 		}
 	});
 
 	$('.order_services_selected').delegate( ".services_selected .fa", "click", function() {
 		$(this).parent().remove();
 		$('.order_services_option input[id="' + $(this).parents('.services_selected').attr('data-attr') + '"]').removeAttr('checked');
+		order_count--;
+		$('.order_services_count').html('Выбрана <span>' + order_count + ' услуга</span>');
 	});
 
-	
+	$('.order_clear button').click(function(){
+		$('.order_services_selected').html('');
+		order_count = 0;
+		$('.order_services_count').html('Выбрано <span>' + order_count + ' услуг</span>');
+	});
 
-	
-	function onlineOrder(){
-		$('.online_order').height($(window).height());
-
-		$('.order_body').height($('.online_order').innerHeight() - $('.order_head').innerHeight() - $('.order_footer').innerHeight())
-		$('.services_employees_box').css({
-			'height': $('.order_date_user').innerHeight() - $('.order_date_slider').innerHeight()
-		})
-	}
-	/*onlineOrder();
-	$(window).resize(function(){
-		onlineOrder();
-	});*/
-
-
-	//console.log($('.online_order').innerHeight() + ' <br/> ' + $('.order_head').outerHeight() + ' <br/> ' + $('.order_body').outerHeight() + ' <br/> ' + $('.order_footer').outerHeight());
-	/*function onlineOrder(){
-		$('.online_order').each(function(){
-			var onlineOrderHeight = $(this).height() - $(this).find('.order_head').innerHeight() - $(this).find('.order_footer').innerHeight()
-			$(this).find('.order_section').css({
-				'height' : onlineOrderHeight
-			});
-		});
-	}*/
-	// onlineOrder();
-	// $(window).resize(function(){
-	// 	onlineOrder();
-	// });
 
 	$('.main_menu ul').slick({
 		infinite: false,
@@ -1139,7 +1213,19 @@ $(function(){
 			$this.addClass('active');
 		};
 	});
-	
+
+	function orderClear(){
+		if ($(window).width() > 1023) {
+			$('.order_clear button').text('Очистить форму заказа');
+		}
+		else{
+			$('.order_clear button').text('Очистить');
+		}
+	}
+	orderClear();
+	$(window).resize(function(){
+		orderClear();
+	});
 
 
 	function box_param(){
