@@ -34,15 +34,24 @@ $(function(){
 
 	//$("#reg_sms").mask("+999 (99) 999-99-99");
 
-	$('.required_fields .a_button').click(function(){
-		var inputFile = $('.photo_upload_inner input').val();
-		if (inputFile == '') {
-			$('.photo_upload').addClass('error')
-		};
+	$('.required_fields .a_button').click(function(){		
+
+		var avatar = $('.photo_upload_inner img').length
+
+		//var inputFile = $('.photo_upload_inner input').val();
+
+		if (avatar == 0) {
+			$('.photo_upload').addClass('error');
+			$('#avatar_img').val('');
+		}
+		else{
+			$('#avatar_img').val('true');
+		}
 	});
 	$('.photo_upload_inner input').change(function(){
-		$('.photo_upload').removeClass('error')
-	});
+		$('.photo_upload').removeClass('error');
+	});	
+	
 	
 	$('.tooltip').tooltipster({
 		position: 'bottom'
@@ -199,10 +208,9 @@ $(function(){
 				$('.content_menu').removeClass('menu_lg');
 			}
 			$('.all_category').click(function(){
-				var $height = $('.menu_pc ul').height();
 				if (!$('.content_menu').hasClass('active')) {
 					$('.content_menu').addClass('active');
-					$('.menu_pc').animate({height: $height},300);
+					$('.menu_pc').animate({height: $('.menu_pc ul').height()},300);
 				}
 				else{
 					$('.content_menu').removeClass('active');
@@ -262,20 +270,6 @@ $(function(){
 	});
 
 	var total_size = 0;
-	// $('.file_load input[type=file]').change(function() {
-	// 	file_size = (this.files[0].size/1024/1024).toFixed(2);
-	// 	total_size += parseFloat(file_size);
-	// 	if ($('.file_box').length < 4 && total_size < 20) {
-	// 		var file_name = $(this).val();
-	// 	    if (file_name != '') {
-	// 	        $('.file_list').append('<div class="file_box"><span class="file_icon"><i class="fa fa-file"></i></span><span class="file_name">'+file_name+'</span><span class="file_size">('+file_size+' Mb)</span><a href="#" class="file_del">Удалить</a><input type="file" value="' + file_name + '"></div>');
-	// 	    	//$('.file_box').eq($('.file_box').length-1).find('input[type="file"]').val(file_name);
-	// 	    }
-	//     }
-	//     else{
-	//     	alert('Вы загрузили более 4 файлов или общий вес файлов более 20мб')
-	//     }
-	// });
 
 	$('.file_load input[type=file]').change(function() {
 		file_size = (this.files[0].size/1024/1024).toFixed(2);
@@ -283,13 +277,11 @@ $(function(){
 
 		var $this = $(this).parents('.file_load');
 		$this.addClass('active');
-		//$('.file_load').eq($this.index()+1).addClass('active');
 
 		if ($('.file_box').length < 4 && total_size < 20) {
 			var file_name = $(this).val();
 		    if (file_name != '') {
 		        $this.append('<div class="file_box"><span class="file_icon"><i class="fa fa-file"></i></span><span class="file_name">'+file_name+'</span><span class="file_size">('+file_size+' Mb)</span><a href="#" class="file_del">Удалить</a><input type="file" value="' + file_name + '"></div>');
-		    	//$('.file_box').eq($('.file_box').length-1).find('input[type="file"]').val(file_name);
 		    }
 	    }
 	    else{
@@ -301,7 +293,6 @@ $(function(){
 		$(this).parents('.file_load').removeClass('active');
 		$(this).parents('.file_load').find('input[type="file"]').val('');
 		$(this).parent().remove();
-		//total_size -= parseFloat(file_size).toFixed(2);
 		return false;
 	});
 
@@ -601,24 +592,26 @@ $(function(){
 
 	var overlay = $('#overlay'); // пoдлoжкa, дoлжнa быть oднa нa стрaнице
     var open_modal = $('.open_modal'); // все ссылки, кoтoрые будут oткрывaть oкнa
-    var close = $('.modal_close, #overlay'); // все, чтo зaкрывaет мoдaльнoе oкнo, т.е. крестик и oверлэй-пoдлoжкa
+    var close = $('.modal_close, #overlay, .a_cancel'); // все, чтo зaкрывaет мoдaльнoе oкнo, т.е. крестик и oверлэй-пoдлoжкa
     var modal = $('.modal'); // все скрытые мoдaльные oкнa
 
-     open_modal.click( function(event){ // лoвим клик пo ссылке с клaссoм open_modal
-         event.preventDefault(); // вырубaем стaндaртнoе пoведение
-         var div = $(this).attr('href'); // вoзьмем стрoку с селектoрoм у кликнутoй ссылки
-         var parent = $(this).parents('.modal');
+    open_modal.click( function(event){ // лoвим клик пo ссылке с клaссoм open_modal
+        event.preventDefault(); // вырубaем стaндaртнoе пoведение
+        var div = $(this).attr('href'); // вoзьмем стрoку с селектoрoм у кликнутoй ссылки
+        var parent = $(this).parents('.modal');
+        var anim_delay = 0;
 
-         if (overlay.css('display') == 'block') {
-         	parent.animate({opacity: 0, top: '45%'}, 200, // плaвнo прячем
+        if (overlay.css('display') == 'block') {
+        	anim_delay = 500;
+         	modal.animate({opacity: 0, top: '45%'}, 200, // плaвнo прячем
 	            function(){ // пoсле этoгo
 	                $(this).css('display', 'none');
 	            }
 	        );
-         };
+        };
 
-         overlay.fadeIn(400, //пoкaзывaем oверлэй
-             function(){ // пoсле oкoнчaния пoкaзывaния oверлэя
+        overlay.delay(anim_delay).fadeIn(400, //пoкaзывaем oверлэй
+            function(){ // пoсле oкoнчaния пoкaзывaния oверлэя
              	$(div).css({
              		'left': '50%',
 	         		'margin-left': '-'+$(div).innerWidth()/2+'px'
@@ -644,21 +637,21 @@ $(function(){
 						}) 
 						.animate({opacity: 1, top: '50%'}, 200); // плaвнo пoкaзывaем       
 		        }
-         });   
-         $('html,body').css('overflow','hidden');      
+        });   
+        $('html,body').css('overflow','hidden');      
 
-     });
+    });
 
-     close.click( function(){ // лoвим клик пo крестику или oверлэю
-            modal // все мoдaльные oкнa
-             .animate({opacity: 0, top: '45%'}, 200, // плaвнo прячем
-                 function(){ // пoсле этoгo
-                     $(this).css('display', 'none');
-                     overlay.fadeOut(400); // прячем пoдлoжку
-                 }
-             );
-            $('html,body').css('overflow','visible');  
-     });
+    close.click( function(){ // лoвим клик пo крестику или oверлэю
+        modal // все мoдaльные oкнa
+        .animate({opacity: 0, top: '45%'}, 200, // плaвнo прячем
+            function(){ // пoсле этoгo
+                $(this).css('display', 'none');
+                overlay.fadeOut(400); // прячем пoдлoжку
+            }
+        );
+        $('html,body').css('overflow','visible');  
+    });
 
  
 

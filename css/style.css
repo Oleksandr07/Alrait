@@ -653,8 +653,22 @@ header{
 			height: 40px;
 			border-radius: 50%;
 			line-height: 0;
-			box-shadow: 0 -2px 0px rgba(0,0,0,0.5);
 		}
+			.user_box .user_img:before{
+				content: '';
+				position: absolute;
+				left: -2px;
+				top: -2px;
+				width: 44px;
+				height: 44px;
+				border-radius: 50%;
+				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#352a54+0,4a3a74+100 */
+				background: #352a54; /* Old browsers */
+				background: -moz-linear-gradient(top,  #352a54 0%, #4a3a74 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(top,  #352a54 0%,#4a3a74 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to bottom,  #352a54 0%,#4a3a74 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				z-index: -1;
+			}
 		.user_box .user_title{
 			position: relative;
 			display: table-cell;
@@ -723,6 +737,9 @@ header{
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		transition: all 0.3s ease;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
 	}
 		.content_menu.menu_lg .menu_pc{
 			float: left;
@@ -764,6 +781,7 @@ header{
 						line-height: 19px;
 						border-radius: 9px;
 						padding: 0 6px;
+						margin-left: 5px;
 					}
 				.content_menu ul li.active{
 					box-shadow: inset 0 -3px 0 #eb4e9b;
@@ -2046,6 +2064,13 @@ header{
 							background: url('../img/delete_icon_hover_64.png');
 							background-size: cover;
 						}
+			#avatar_img{
+				position: absolute;
+				width: 0;
+				height: 0;
+				padding: 0;
+				margin: 0;
+			}
 		.required_fields{
 			line-height: 50px;
 			padding: 20px 0 5px 0;
@@ -5696,7 +5721,7 @@ body .ui-datepicker .ui-datepicker-prev span, body .ui-datepicker .ui-datepicker
 .catalog_sharing{
 	position: absolute;
 	left: 0;
-	top: 30px;
+	top: 100px;
 	z-index: 50;
 }
 	.catalog_sharing a{
@@ -9317,4 +9342,88 @@ footer{
 }
 .footer_orgpage{
 	margin-top: -70px;
+}
+
+
+.similar_tags{
+padding-bottom: 40px;
+}
+	.similar_tags a{
+	display: inline-block;
+	color: #333;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	text-decoration: none;
+	background: #eeeeee;
+	padding: 8px;
+	font-family: "Roboto";
+	font-size: 13px;
+	margin-right: 8px;
+	}
+		.similar_tags a:hover{
+		color: #fff;
+		background: #ec5fa3;
+		}
+.social_share{
+position: relative;
+}
+	.social_share nav{
+	padding-bottom: 45px;
+	vertical-align: top;
+	}
+		.social_share nav a{
+		width: 90px;
+		height: 40px;
+		margin: 0 8px 0 0;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		display: inline-block;
+		color: #fff;
+		font-family: "Roboto";
+		font-size: 15px;
+		font-weight: bold;
+		text-decoration: none;
+		background: #000;
+		vertical-align: top;
+		position: relative;
+		}
+		.social_share nav a.vk_icon{
+		background: #4c75a3;
+		}
+		.social_share nav a.fb_icon{
+		background: #3d5998;
+		}
+		.social_share nav a.ok_icon{
+		background: #e47e25;
+		}
+		.social_share nav a.g_icon{
+		background: #dd4c39;
+		}
+		.social_share nav a.tweet_icon{
+		background: #09b0ed;
+		}
+		.social_share nav a:hover{
+		opacity: 0.8;
+		}
+			.social_share nav a b{
+			width: 90px;
+			display: table-cell;
+			height: 40px;
+			vertical-align: middle;
+			}
+			.social_share nav a img{
+			padding-left: 17px;
+			}
+			.social_share nav a  span{
+			    padding-left: 12px;
+				position: absolute;
+				top: 12px;
+				right: 5px;
+				width: 37px;
+				line-height: 1;
+			}
+#thanks{
+	display: none;
 }

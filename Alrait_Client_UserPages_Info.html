@@ -42,7 +42,7 @@
 
 			<link href="js/croppic/assets/css/croppic.css" rel="stylesheet">
 		    <script src="js/croppic/assets/js/jquery.mousewheel.min.js"></script>
-		    <script src="js/croppic/croppic.min.js"></script>
+		    <script src="js/croppic/croppic.js"></script>
 			
 			<script src="js/jquery.mobile-events.min.js"></script>
 			<script src="js/common.js"></script>
@@ -269,86 +269,12 @@
 				</div>
 			</div>
 
-	<!-- Validation -->
-	<script src="js/validation/dist/jquery.validate.js"></script>
-	<script>
-		// $.validator.setDefaults({
-		// 	submitHandler: function() {
-		// 		alert("submitted!");
-		// 	}
-		// });
-		
-		$().ready(function() {
-			// validate signup form on keyup and submit
-			$(".user_pages form").validate({
-				rules: {
-					firstname: "required",
-					lastname: "required",
-					email: {
-						required: true,
-						email: true
-					},
-					pass: { 
-						required: true,
-						minlength: 6
-					},
-					confirmpass: {
-						required: true,
-						minlength: 6,
-						equalTo: "#reg_pass"
-					},
-					phone: "required",
-					PERSONAL_PHOTO: "required"
-				},
-				messages: {
-					firstname: "Введите ваше имя",
-					lastname: "Введите вашу фамилию",
-					email: {
-						required: "Введите ваш email",
-						email: "Правильно введите ваш email"
-					},
-					pass: {
-						required: "Введите пароль",
-						minlength: "Минимум 6 символов"
-					},
-					confirmpass: {
-						required: "Повторите пароль",
-						minlength: "Минимум 6 символов",
-						equalTo: "Пароли не совпадают"
-					},
-					phone: "Введите ваш телефон",
-					PERSONAL_PHOTO: ""
-				},
-				submitHandler: function(form) {
-					$.fancybox({ 
-						href: "#modal_thanks",
-						padding: 0,
-						margin: 10,
-						minHeight: false,
-						autoHeight: true,
-						openEffect: 'fade',
-						closeEffect: 'fade',
-						openSpeed: 400,
-						closeSpeed: 400,
-						helpers: {
-							overlay: {
-								locked: true
-							}
-						}
-					});
-				}
-			});
-		});
-	</script>
-	<!-- End Validation -->
-
 			<div class="content content_right content_right_internal">
 				<h1>Общая информация</h1>
 				<div class="user_pages">
-					<form action="Alrait_Client_UserPages_Info.html" method="post">
+					<form id="info_form" action="#">
 						<div class="photo_upload" id='js_croppic'>
 							<div class="photo_upload_inner"  id='js_photo_upload'>
-								<!-- <input type="file" name="image_file" id="image_file" onchange="fileSelectHandler()"> -->
 							</div>
 							<div class="photo_upload_title">Загрузите фото <span>*</span></div>
 							<div class="photo_upload_text">Минимальное разрешение 360х360 пикселей</div>
@@ -356,6 +282,7 @@
 								<a href="#" class="photo_edit"></a>
 								<a href="#" class="photo_del"></a>
 							</nav>
+							<input type="text" name="avatar" id="avatar_img" required>
 						</div>
 					      <script>
 					       var croppicHeaderOptions = {
@@ -384,19 +311,19 @@
 						<div class="form_row">
 							<div class="form_group">
 								<label>Имя<span class="required">*</span></label>
-								<input id="reg_name" type="text" name="firstname" placeholder="Анастасия">
+								<input id="reg_name" type="text" name="firstname" placeholder="Анастасия" required>
 							</div>
 							<div class="form_group">
 								<label>Фамилия<span class="required">*</span></label>
-								<input id="reg_lastname" type="text" name="lastname" placeholder="Кузнецова">
+								<input id="reg_lastname" type="text" name="lastname" placeholder="Кузнецова" required>
 							</div>
 						</div>
 						<div class="form_row">
 							<div class="form_group">
 								<label>Email<span class="required">*</span></label>
 								<div class="form_row_row">
-									<input id="reg_email" type="text" name="email" placeholder="anna@gmail.com" disabled>
-									<a href="#modal_change_email" class="a_button fancybox">изменить</a>
+									<input id="reg_email" type="text" name="email" placeholder="anna@gmail.com" disabled required>
+									<a href="#modal_change_email" class="a_button open_modal">изменить</a>
 								</div>
 							</div>
 						</div>
@@ -404,7 +331,7 @@
 							<div class="form_group">
 								<label>Номер для SMS-уведомлений<span class="required">*</span><span class="form_help tooltip" title="Вы можете создавать различные альбомы с фотографиями Ваших работ.Кроме того, у Вас есть возможность создать альбомы типа «интерьер», «оборудование», «дипломы и сертификаты» разместив в них соответствующие фотографии">?</span></label>
 								<div class="form_group">
-									<input id="reg_sms" type="text" name="phone" placeholder="+375 (33) 300-00-00">
+									<input id="reg_sms" type="text" name="phone" placeholder="+375 (33) 300-00-00" required>
 								</div>
 								<div class="form_group">
 									<a href="#" id="sms_button" class="a_button disable">Подтвердить</a>
@@ -516,11 +443,11 @@
 						<div class="form_row">
 							<div class="form_group">
 								<label>Пароль (минимум 6 символов) <span class="required">*</span></label>
-								<input id="reg_pass" type="password" name="pass" placeholder="">
+								<input id="reg_pass" type="password" name="pass" placeholder="" required>
 							</div>
 							<div class="form_group">
 								<label>Повторите пароль<span class="required">*</span></label>
-								<input id="reg_repeat_pass" type="password" name="confirmpass" placeholder="">
+								<input id="reg_repeat_pass" type="password" name="confirmpass" placeholder="" required>
 							</div>
 						</div>
 						<hr/>
@@ -528,7 +455,7 @@
 							<div class="form_group required_text">
 								<label><span class="required">*</span> — обязательно для заполнения</label>
 							</div>
-							<div class="form_group"><button class="a_button a_grad" type="submite">Сохранить</button></div>
+							<div class="form_group"><button class="a_button a_grad" type="submit">Сохранить</button></div>
 						</div>
 						<hr/>
 						<br><br>
@@ -579,7 +506,7 @@
 								</div>
 							</div>
 							<div class="form_info">
-								<p>Отправить <a href="#modal_exit_org" class="fancybox">запрос на выход из организации</a></p>
+								<p>Отправить <a href="#modal_exit_org" class="open_modal">запрос на выход из организации</a></p>
 								<p>Организация долгое время не подтверждает запрос?  <a href="#">Напишите нам об этом</a></p>
 							</div>
 						</div>
@@ -587,7 +514,7 @@
 						<div class="form_row">
 							<div class="form_info">
 								<h4>Удаление аккаунта</h4>
-								<p>Отправить <a href="#modal_delete_ac" class="fancybox">запрос на удаление аккаунта</a></p>
+								<p>Отправить <a href="#modal_delete_ac" class="open_modal">запрос на удаление аккаунта</a></p>
 							</div>
 						</div>
 					</form>
@@ -629,6 +556,153 @@
 	</footer>
 	<!-- END OF footer -->
 
+	<!-- Validation -->
+	<script src="js/validation/dist/jquery.validate.js"></script>
+	<script>		
+		$().ready(function() {
+
+			$("#modal_reg form").validate({
+				rules: {
+					firstname: "required",
+					lastname: "required",
+					email: {
+						required: true,
+						email: true
+					}
+				},
+				messages: {
+					firstname: "Введите ваше имя",
+					lastname: "Введите вашу фамилию",
+					email: {
+						required: "Введите ваш email",
+						email: "Правильно введите ваш email"
+					}
+				},
+				submitHandler: function(form) {
+					$.fancybox({ 
+						href: "#modal_thanks",
+						padding: 0,
+						margin: 10,
+						minHeight: false,
+						autoHeight: true,
+						openEffect: 'fade',
+						closeEffect: 'fade',
+						openSpeed: 400,
+						closeSpeed: 400,
+						helpers: {
+							overlay: {
+								locked: true
+							}
+						}
+					});
+				}
+			});
+
+			$("#modal_login form").validate({
+				rules: {
+					email: {
+						required: true,
+						email: true
+					},
+					pass: { 
+						required: true,
+						minlength: 6
+					}
+					
+				},
+				messages: {
+					email: {
+						required: "Введите ваш email",
+						email: "Правильно введите ваш email"
+					},
+					pass: {
+						required: "Введите пароль",
+						minlength: "Минимум 6 символов"
+					}
+				},
+				submitHandler: function(form) {
+					$.fancybox({ 
+						href: "#modal_thanks",
+						padding: 0,
+						margin: 10,
+						minHeight: false,
+						autoHeight: true,
+						openEffect: 'fade',
+						closeEffect: 'fade',
+						openSpeed: 400,
+						closeSpeed: 400,
+						helpers: {
+							overlay: {
+								locked: true
+							}
+						}
+					});
+				}
+			});
+
+			// validate signup form on keyup and submit
+			$("#info_form").validate({
+				rules: {
+					firstname: "required",
+					lastname: "required",
+					email: {
+						required: true,
+						email: true
+					},
+					pass: { 
+						required: true,
+						minlength: 6
+					},
+					confirmpass: {
+						required: true,
+						minlength: 6,
+						equalTo: "#reg_pass"
+					},
+					phone: "required",
+					avatar: "required"
+				},
+				messages: {
+					firstname: "Введите ваше имя",
+					lastname: "Введите вашу фамилию",
+					email: {
+						required: "Введите ваш email",
+						email: "Правильно введите ваш email"
+					},
+					pass: {
+						required: "Введите пароль",
+						minlength: "Минимум 6 символов"
+					},
+					confirmpass: {
+						required: "Повторите пароль",
+						minlength: "Минимум 6 символов",
+						equalTo: "Пароли не совпадают"
+					},
+					phone: "Введите ваш телефон",
+					avatar: ""
+				},
+				submitHandler: function(form) {
+					$.fancybox({ 
+						href: "#modal_thanks",
+						padding: 0,
+						margin: 10,
+						minHeight: false,
+						autoHeight: true,
+						openEffect: 'fade',
+						closeEffect: 'fade',
+						openSpeed: 400,
+						closeSpeed: 400,
+						helpers: {
+							overlay: {
+								locked: true
+							}
+						}
+					});
+				}
+			});
+		});
+	</script>
+	<!-- End Validation -->
+
 	<!--modal -->
 	<div id="modal_login" class="modal">
 		<div class="modal_head">
@@ -647,16 +721,16 @@
 				<div class="form_row">
 					<div class="form_group">
 						<label>Email</label>
-						<input type="email" placeholder="anna@gmail.com">
+						<input type="email" name="email" placeholder="anna@gmail.com" required>
 					</div>
 					<div class="form_group">
 						<label>Пароль</label>
-						<input class="login_pass" type="password" placeholder="">
+						<input class="login_pass" type="password" name="pass" placeholder="">
 					</div>
 				</div>
 				<div class="form_button">
-					<a href="#modal_noemail" class="a_button a_grad fancybox">Войти в кабинет</a>
-					<a href="#modal_pass" class="forgot_pass fancybox">Забыли пароль?</a>
+					<button class="a_button a_grad" type="submit">Войти в кабинет</button>
+					<a href="#modal_pass" class="forgot_pass open_modal">Забыли пароль?</a>
 				</div>
 			</form>
 		</div>
@@ -677,7 +751,7 @@
 					</div>
 				</div>
 				<div class="form_button">
-					<a href="#modal_pass_confirm" class="a_button a_grad fancybox">Отправить</a>
+					<a href="#modal_pass_confirm" class="a_button a_grad open_modal">Отправить</a>
 				</div>
 			</form>
 		</div>
@@ -693,11 +767,11 @@
 		<div class="modal_head">
 			<div class="modal_title">Регистрация через социальные сети</div>
 			<div class="uLogin">
-				<a href="#modal_email" class="a_socials vk fancybox"><i class="fa fa-vk"></i></a>
-				<a href="#modal_email" class="a_socials fb fancybox"><i class="fa fa-facebook"></i></a>
-				<a href="#modal_email" class="a_socials ok fancybox"><i class="fa fa-odnoklassniki"></i></a>
-				<a href="#modal_email" class="a_socials go fancybox"><i class="fa fa-google-plus"></i></a>
-				<a href="#modal_email" class="a_socials tw fancybox"><i class="fa fa-twitter"></i></a>
+				<a href="#modal_email" class="a_socials vk open_modal"><i class="fa fa-vk"></i></a>
+				<a href="#modal_email" class="a_socials fb open_modal"><i class="fa fa-facebook"></i></a>
+				<a href="#modal_email" class="a_socials ok open_modal"><i class="fa fa-odnoklassniki"></i></a>
+				<a href="#modal_email" class="a_socials go open_modal"><i class="fa fa-google-plus"></i></a>
+				<a href="#modal_email" class="a_socials tw open_modal"><i class="fa fa-twitter"></i></a>
 			</div>
 		</div>
 		<div class="modal_body">
@@ -706,17 +780,17 @@
 				<div class="form_row">
 					<div class="form_group">
 						<label>Имя</label>
-						<input type="text" placeholder="Анастасия">
+						<input type="text" name="firstname" placeholder="Анастасия" required>
 					</div>
 					<div class="form_group">
 						<label>Фамилия</label>
-						<input type="text" placeholder="Кузнецова">
+						<input type="text" name="lastname" placeholder="Кузнецова" required>
 					</div>
 				</div>
 				<div class="form_row">
 					<div class="form_group">
 						<label>Email</label>
-						<input type="email" placeholder="anna@gmail.com">
+						<input type="email" name="email" placeholder="anna@gmail.com" required>
 					</div>
 				</div>
 				<div class="form_row">
@@ -735,7 +809,8 @@
 					</div>
 				</div>
 				<div class="form_button">
-					<a href="#modal_thanks" class="a_button a_grad fancybox">зарегистрироваться</a>
+					<button class="a_button a_grad" type="submit">зарегистрироваться</button>
+					<!-- <a href="#modal_thanks" class="a_button a_grad fancybox">зарегистрироваться</a> -->
 				</div>
 			</form>
 		</div>
@@ -756,7 +831,7 @@
 					</div>
 				</div>
 				<div class="form_button">
-					<a href="#modal_thanks" class="a_button a_grad fancybox">Сохранить</a>
+					<a href="#modal_thanks" class="a_button a_grad open_modal">Сохранить</a>
 				</div>
 			</form>
 		</div>
@@ -781,8 +856,8 @@
 				<p>Извините, но email <a href="mailto:annanew@gmail.com">annanew@gmail.com</a> не зарегистрирован на портале. Пожалуйста, пройдите процесс регистрации или попробуйте ещё раз.</p>
 			</div>
 			<div class="form_button">
-				<a href="#modal_reg" class="a_button a_grad fancybox">зарегистрироваться</a>
-				<a href="#modal_login" class="forgot_pass fancybox">Попробовать ещё раз</a>
+				<a href="#modal_reg" class="a_button a_grad open_modal">зарегистрироваться</a>
+				<a href="#modal_login" class="forgot_pass open_modal">Попробовать ещё раз</a>
 			</div>
 		</div>
 	</div>
@@ -827,7 +902,7 @@
 					</div>
 				</div>
 				<div class="form_button">
-					<a href="#modal_change_email_confirm" class="a_button a_grad fancybox">Сохранить</a>
+					<a href="#modal_change_email_confirm" class="a_button a_grad open_modal">Сохранить</a>
 					<a href="#" class="a_button a_white a_cancel">Отменить</a>
 				</div>
 			</form>
@@ -890,7 +965,7 @@
 		</form>
 		<div class="modal_footer">
 			<div class="form_button">
-				<a href="#modal_article_confirm" class="a_button a_grad fancybox">Отправить</a>
+				<a href="#modal_article_confirm" class="a_button a_grad open_modal">Отправить</a>
 				<a href="#" class="a_button a_white a_cancel">Отменить</a>
 			</div>
 		</div>
@@ -928,7 +1003,7 @@
 						<p>Стоимость услуги размещения в ленте популярных специалистов и организаций составляет <a href="#">35 баллов.</a> </p>
 					</div>
 					<div class="form_button">
-						<a href="#modal_add_services" class="a_button a_grad fancybox">Добавить услугу</a>
+						<a href="#modal_add_services" class="a_button a_grad open_modal">Добавить услугу</a>
 					</div>
 				</div>
 			</div>
@@ -942,8 +1017,8 @@
 				<p>Вы действительно хотите добавить данную услугу?</p>
 			</div>
 			<div class="form_button">
-				<a href="#modal_spec_org_confirm" class="a_button a_grad fancybox">Да</a>
-				<a href="#modal_popular_spec_org" class="a_button a_white fancybox">Нет</a>
+				<a href="#modal_spec_org_confirm" class="a_button a_grad open_modal">Да</a>
+				<a href="#modal_popular_spec_org" class="a_button a_white open_modal">Нет</a>
 			</div>
 		</div>
 	</div>
@@ -961,7 +1036,7 @@
 				<p>Чтобы иметь возможность разместиться в ленте популярных специалистов и организаций, Вам необходимо зарегистрировать Ваш бизнес на портале alrait.by.</p>
 			</div>
 			<div class="form_button">
-				<a href="#modal_reg" class="a_button a_grad fancybox">Зарегистрировать бизнес</a>
+				<a href="#modal_reg" class="a_button a_grad open_modal">Зарегистрировать бизнес</a>
 			</div>
 		</div>
 	</div>
@@ -973,7 +1048,7 @@
 				<p>У Вас пока нет акций для размещения в ленте популярных акций. Пройдите в личный кабинет и создайте акцию для размещения.</p>
 			</div>
 			<div class="form_button">
-				<a href="#modal_reg" class="a_button a_grad fancybox">Создать акцию</a>
+				<a href="#modal_reg" class="a_button a_grad open_modal">Создать акцию</a>
 			</div>
 		</div>
 	</div>

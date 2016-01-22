@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<title>alrait</title>
+		<!-- CSS -->
+			<link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.5" media="screen">
+			<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,400italic,500italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+			<link href="fonts/awesome/css/font-awesome.min.css" rel="stylesheet" media="screen">
+			<link href="css/style.css" rel="stylesheet" media="screen">
+			<link href="css/media.css" rel="stylesheet" media="screen">
+		<!-- END OF CSS -->
+		<!--SCRIPT -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+			<script src="js/jquery.placeholder.js"></script>
+			<script src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
+			<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+			<script type="text/javascript" src="js/slick/slick.min.js"></script>
+			<link rel="stylesheet" href="js/fotorama/fotorama.css">
+			<script src="js/fotorama/fotorama.js"></script>
+			<link rel="stylesheet" type="text/css" href="js/tooltipster-master/css/tooltipster.css" />
+			<script type="text/javascript" src="js/tooltipster-master/js/jquery.tooltipster.min.js"></script>
+			<link rel="stylesheet" href="js/scrollbar/jquery.scrollbar.css">
+			<script src="js/scrollbar/jquery.scrollbar.js"></script>
+			
+			<link href="js/select2/select2.css" rel="stylesheet" />
+			<script src="js/select2/select2.js"></script>
+			<script src="js/select2/select2_locale_ru.js"></script>
+		
+	        <link href="js/jcrop/jquery.Jcrop.min.css" rel="stylesheet" type="text/css">
+	        <!-- add scripts -->
+	        <script src="js/jcrop/jquery.Jcrop.min.js"></script>
+	        <script src="js/jcrop/script.js"></script>
+
+			<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4.datepicker/jquery-ui.css"> 
+			<script src="js/jquery-ui-1.11.4.datepicker/jquery-ui.js"></script>
+			<script src="js/jquery-ui-1.11.4.datepicker/datepicker-ru.js"></script>
+
+			<link href="js/croppic/assets/css/croppic.css" rel="stylesheet">
+		    <script src="js/croppic/assets/js/jquery.mousewheel.min.js"></script>
+		    <script src="js/croppic/croppic.min.js"></script>
+			
+			<script src="js/jquery.mobile-events.min.js"></script>
+			<script src="js/common.js"></script>
+			<!--[if IE]>  
+				<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>  
+			<![endif]--> 
+		<!-- END OF SCRIPT -->
+	</head>
+<body>
+<div class="wrapper">
+	<!--menu_mobile -->
+	<div class="menu_mobile">
+		<div class="content_menu">
+			<div class="scrollbar">
+				<ul>
+					<li class="active"><a href="#">Все статьи</a></li>
+					<li><a href="#">Красота</a></li>
+					<li><a href="#">Стиль</a></li>
+					<li><a href="#">Здоровье</a></li>
+					<li><a href="#">Специалисты</a></li>
+					<li><a href="#">Творчество</a></li>
+					<li><a href="#">Праздник</a></li>
+					<li><a href="#">Искусство</a></li>
+					<li><a href="#">Здоровье</a></li>
+					<li><a href="#">Специалисты</a></li>
+					<li><a href="#">Творчество</a></li>
+					<li><a href="#">Праздник</a></li>
+					<li><a href="#">Искусство</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu_close"><i class="fa fa-times"></i></div>
+	</div>
+	<div id="menu_overlay"></div>
+	<!-- END OF menu_mobile -->
+
+	<!--header -->
+	<header>
+		<div class="inner">
+			<div class="logo">
+				<a href="/" title="">
+					<img src="img/logo_x2.png" alt="">
+				</a>
+			</div>
+			<div class="nav">
+				<div class="nav_head">
+					<div class="nav_icon">
+						<span class="icon_bar"></span>
+						<span class="icon_bar"></span>
+						<span class="icon_bar"></span>
+					</div>
+					<div class="nav_title">Меню</div>
+				</div>
+				<div class="nav_body">
+					<div class="inner">
+					
+					</div>
+				</div>
+				<div id="nav_overlay"></div>
+			</div>
+			<div class="search">
+				<div class="search_head">
+					<form action="#">
+						<input type="text" placeholder="Найти специалиста, организацию или что-нибудь ещё">
+						<button class="search_submit" type="button"><i class="fa fa-search"></i></button>
+						<button class="search_close" type="reset"><i class="fa fa-times"></i></button>
+					</form>
+					<div class="search_result">
+						<div class="scrollbar">
+							<div class="search_section">
+								<div class="search_section_title">Специалисты</div>
+								<div class="search_row">
+									<div class="search_col">
+										<a href="#" class="search_img">
+											<img src="img/organization/organization_img1.png" alt="">
+										</a>
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Кузнецова Анастасия</a>
+											<span class="pro">pro</span>
+										</div>
+										<div class="search_organization">Парикмахер</div>
+									</div>
+								</div>
+								<div class="search_row">
+									<div class="search_col">
+										<a href="#" class="search_img">
+											<img src="img/organization/organization_img1.png" alt="">
+										</a>
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Кузнецова Анастасия</a>
+											<span class="pro">pro</span>
+										</div>
+										<div class="search_organization">Парикмахер</div>
+									</div>
+								</div>
+								<div class="search_more">
+									<a href="#">Показать ещё 69 специалистов</a>
+								</div>
+							</div>
+							<div class="search_section">
+								<div class="search_section_title">Организации</div>
+								<div class="search_row">
+									<div class="search_col">
+										<a href="#" class="search_img">
+											<img src="img/organization/organization_img2.png" alt="">
+										</a>
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Incanto (Инканто)</a>
+											<span class="pro">pro</span>
+										</div>
+										<div class="search_organization">Салон красоты</div>
+									</div>
+								</div>
+								<div class="search_row">
+									<div class="search_col">
+										<a href="#" class="search_img">
+											<img src="img/organization/organization_img2.png" alt="">
+										</a>
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Incanto (Инканто)</a>
+											<span class="pro">pro</span>
+										</div>
+										<div class="search_organization">Салон красоты</div>
+									</div>
+								</div>
+								<div class="search_more">
+									<a href="#">Показать ещё 53 организаций</a>
+								</div>
+							</div>
+							<div class="search_section">
+								<div class="search_section_title">И так каждая категория</div>
+								<div class="search_row">
+									<div class="search_col">
+										<a href="#" class="search_img">
+											<img src="img/organization/organization_img1.png" alt="">
+										</a>
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Кузнецова Анастасия</a>
+										</div>
+										<div class="search_organization">Парикмахер</div>
+									</div>
+								</div>
+								<div class="search_row">
+									<div class="search_col">
+
+									</div>
+									<div class="search_col">
+										<div class="search_title">
+											<a href="#">Incanto (Инканто)</a>
+										</div>
+										<div class="search_organization">Салон красоты</div>
+									</div>
+								</div>
+								<div class="search_more">
+									<a href="#">Показать ещё 100 результатов</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="entrance">
+				<div class="entrance_lock"><i class="fa fa-lock"></i></div>
+				<div class="entrance_box">
+					<div class="login">
+						<a href="#modal_login" class="open_modal"><i class="fa fa-lock"></i>Войти</a>
+					</div>
+					<div class="reg">
+						<a href="#modal_reg" class="a_button a_grad open_modal">Зарегистрироваться</a>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</header>
+	<!-- END OF header -->
+	<!--main -->
+	<div class="content_menu">
+		<div class="inner">
+			<div class="menu_pc">
+				<ul>
+					<li class="active"><a href="#">Все статьи</a></li>
+					<li><a href="#">Красота</a></li>
+					<li><a href="#">Стиль</a></li>
+					<li><a href="#">Здоровье</a></li>
+					<li><a href="#">Специалисты</a></li>
+					<li><a href="#">Творчество</a></li>
+					<li><a href="#">Праздник</a></li>
+					<li><a href="#">Искусство</a></li>
+					<li><a href="#">Здоровье</a></li>
+					<li><a href="#">Специалисты</a></li>
+					<li><a href="#">Творчество</a></li>
+					<li><a href="#">Праздник</a></li>
+					<li><a href="#">Искусство</a></li>
+				</ul>
+			</div>
+			<div class="all_category">Все категории<i class="fa fa-bars"></i></div>
+			<div class="block_mobile">
+				<div class="menu_change"><i class="fa fa-list-ul"></i></div>
+				<div class="page_title">Все статьи</div>
+			</div>
+		</div>
+	</div>
+	<div id="main">
+		<div class="article">
+			<div class="article_head">
+				<div class="inner">
+					<div class="article_box article_w">
+						<div class="catalog_img">
+							<img src="img/article/article_w.jpg" alt="">
+						</div>
+						<div class="catalog_body">
+							<div class="catalog_info">
+								<div class="catalog_category">
+									<a href="#">Красота</a>
+								</div>
+								<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+								<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+							</div>
+							<div class="catalog_title">
+								<a href="#">Секреты правильного ухода за различными типами кожи</a>
+							</div>
+							<div class="catalog_short_desc">
+								<p>Красивая, безукоризненная кожа — мечта любой женщины. К сожалению, не всех представительниц прекрасного пола природа наградила таким богатством. </p>
+							</div>
+							<div class="catalog_date">21 ноября 2014</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="article_body">
+				<div class="inner">
+					<div class="content content_left">
+						<div class="article_user">
+							<div class="article_user_img">
+								<div class="user_img">
+									<img src="img/organization/organization_img3.png" alt="">
+								</div>
+							</div>
+							<div class="article_user_body">
+								<div class="article_author">Автор статьи</div>
+								<div class="article_user_title">
+									<a href="#">Савенко Виктория</a>
+								</div>
+								<div class="article_organization">Мастер по маникюру и педикюру в <a href="#">Incanto (Инканто)</a><span class="pro">pro</span></div>
+							</div>
+						</div>
+						<div class="main_text">У нас новая модная стрижка. Вы понимаете, что ошиблись с новой модной стрижкой и что больше всего на свете мечтаете о длинных волосах. Ну, что же – будем отращивать.</div>
+						<p>Решение отрастить длинные волосы – прекрасный повод всерьёз заняться здоровьем. Причём не только волос, иначе просто ничего не получится. Если организму не хватает витаминов и минеральных веществ, если диета не сбалансирована, а стресс – знакомый, с которым вы встречаетесь ежедневно, – всё это в первую очередь отразится на состоянии волос. Расти, в таком случае, они будут медленно и неохотно. </p>
+						<p>Лучшие друзья девушек здесь – биологически активные добавки. Главная из них – биотин или витамин B7. Для того, чтобы волосы были блестящими, сильными и росли быстрее, дерматологи рекомендуют принимать 5000 микрограммов биотина ежедневно в течение хотя бы трёх месяцев. За это время можно хорошо подумать, ещё раз подумать, набраться терпения – и перейти, наконец, к делу.</p>
+						<h1>Title Н1</h1>
+						<p>Решение отрастить длинные волосы – прекрасный повод всерьёз заняться здоровьем. Причём не только волос, иначе просто ничего не получится.</p>
+						<h2>Title Н2</h2>
+						<p>Решение отрастить длинные волосы – прекрасный повод всерьёз заняться здоровьем. Причём не только волос, иначе просто ничего не получится.</p>
+						<h3>Title Н3</h3>
+						<p>Решение отрастить длинные волосы – прекрасный повод всерьёз заняться здоровьем. Причём не только волос, иначе просто ничего не получится.</p>
+						<h4>Title Н4</h4>
+						<p>Решение отрастить длинные волосы – прекрасный повод всерьёз заняться здоровьем. Причём не только волос, иначе просто ничего не получится.</p>
+						<h5>Title Н5</h5>
+						<p>Решение отрастить длинные волосы – прекрасный повод всерьёз заняться здоровьем. Причём не только волос, иначе просто ничего не получится.</p>
+						<h6>Title Н6</h6>
+						<p>Решение отрастить длинные волосы – прекрасный повод всерьёз заняться здоровьем. Причём не только волос, иначе просто ничего не получится.</p>
+						<h3>Фотографии И Видео</h3>
+						<p>Волосы, короткие сзади и по бокам и длинные спереди, – самая грамотная форма для начала процесса. Если отращивать их равномерно по всей длине, пряди на затылке очень быстро превратят голову в весёлый одуванчик в середине лета. И наоборот – чем длиннее волосы в теменной зоне, тем удачнее выглядит стрижка и тем больше вариантов укладок для неё можно придумать. Не волнуйтесь – волосы своё ещё наверстают.</p>
+						<div class="img">
+							<img src="img/article/article_img1.jpg" alt="">
+							<div class="img_title">Подпись фотографии: inofashionstyle.com</div>
+						</div>
+						<p>Вот он – следующий стратегический шаг на пути к идеалу вечной женственности: начинаем превращать пикси в боб. В один прекрасный день вы поймёте, что волосы на темени отрасли достаточно для короткого боба. </p>
+						<div class="img">
+							<img src="img/article/article_img2.jpg" alt="">
+						</div>
+						<p>Отлично – прощай, пикси, можно отращивать пряди на затылке и боках, стрижка теперь надолго останется элегантной и ухоженной. На этом этапе очень важно учитывать структуру волос: толстые и густые придётся периодически прореживать и стричь скользящими срезами, чтобы убрать лишний объём, а кончики тонких надо будет подстригать примерно раз в два месяца – им немного объёма не помешает.</p>
+						<div class="article_slider">
+							<div class="fotorama">
+								<a id="article_slider_img1" href="img/article/article_slider_img1.jpg"></a>
+	  							<a id="article_slider_img2" href="img/article/article_slider_img2.jpg"></a>
+	  							<a id="article_slider_img3" href="img/article/article_slider_img3.jpg"></a>
+	  							<a id="article_slider_img4" href="img/article/article_slider_img4.jpg"></a>
+	  							<a id="article_img1" href="img/article/article_img1.jpg"></a>
+  							</div>
+  							<div class="article_slider_nav">
+								<button class="article_slider_arr article_prev"><i class="fa fa-angle-left"></i></button>
+								<button class="article_slider_arr article_next"><i class="fa fa-angle-right"></i></button>
+  							</div>
+						</div>
+						<p>Самое важное на этом этапе – избежать грибообразной формы. У отрастающего боба есть не очень приятная особенность: он всеми силами стремится стать не только длиннее, но шире и объёмнее.</p>
+						<div class="video">
+							<iframe width="620" height="349" src="https://www.youtube.com/embed/bZ75BjYMvOM?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<p>Гриб на голове – это совсем не то, что нам сейчас нужно. Поэтому с лишним объёмом будем бороться: ходить в салон примерно раз в месяц и прореживать кончики бритвой.</p>
+						<div class="vote">
+							<h3>Голосование</h3>
+							<div class="vote_question">
+								<form action="">
+									<h6>Вопрос для голосования</h6>
+									<div class="vote_list">
+										<div class="form_radio">
+											<input id="radio1" type="radio" name="vote" checked>
+											<label for="radio1">Вариант ответа на вопрос номер один</label>
+										</div>
+										<div class="form_radio">
+											<input id="radio2" type="radio" name="vote">
+											<label for="radio2">Вариант ответа на вопрос номер два</label>
+										</div>
+										<div class="form_radio">
+											<input id="radio3" type="radio" name="vote">
+											<label for="radio3">Вариант ответа на вопрос номер три</label>
+										</div>
+									</div>
+									<div class="vote_button">
+										<a href="#" class="a_button a_xs">Проголосовать</a>
+									</div>
+								</form>
+							</div>
+							<div class="vote_result">
+								<h6>Вопрос для голосования (результат)</h6>
+								<div class="vote_result_list">
+									<div class="result_box">
+										<label>Вариант ответа на вопрос номер один</label>
+										<div class="result_schedule" data-percent="0.3">
+											<div class="result_line">
+												<div class="result_count">764</div>
+												<div class="result_fill"></div>
+											</div>
+											<div class="result_percent"></div>
+										</div>
+									</div>
+									<div class="result_box">
+										<label>Вариант ответа на вопрос номер два</label>
+										<div class="result_schedule" data-percent="0.5">
+											<div class="result_line">
+												<div class="result_count">1 274</div>
+												<div class="result_fill"></div>
+											</div>
+											<div class="result_percent"></div>
+										</div>
+									</div>
+									<div class="result_box">
+										<label>Вариант ответа на вопрос номер три</label>
+										<div class="result_schedule" data-percent="0.2">
+											<div class="result_line">
+												<div class="result_count">510</div>
+												<div class="result_fill"></div>
+											</div>
+											<div class="result_percent"></div>
+										</div>
+									</div>
+								</div>
+								<div class="voted">Проголосовало <span class="result_total_count">2 548</span> человек</div>
+							</div>
+						</div>
+						<h3>Цитата и списки</h3>
+						<p>Итак, мы красиво миновали стадии пикси и боба – и уже на территории длинных волос, а значит, можно выдохнуть. «Лоб» – удлинённый вариант боба идёт абсолютно всем, впрочем, как и любая стрижка длиной по плечи.</p>
+						<blockquote>
+							Всё ниже и ниже: когда чёлка или, вернее, пряди по бокам лица, которые совсем недавно были чёлкой, дорастут до линии подбородка, переходите к роскошным слоистым стрижкам – работа сделана, поздравляем.
+						</blockquote>
+						<p>Отрастить чёлку – отдельная история, которая потребует самообладания буддийского монаха. </p>
+						<ul>
+							<li>Модные укладки из знаменитых коллекций 2013–2014 года</li>
+							<li>Используется профессиональная косметика Lebel, Matrix, Estel Deluxe</li>
+							<li>Здоровые и «живые» волосы</li>
+							<li>Продолжительность — 90–120 минут</li>
+						</ul>
+						<p>Но и здесь есть свои нюансы. «Лоб» любит естественную небрежность и растрёпанные кудри, слишком прямой его вариант может выглядеть жёстко и несколько старомодно.</p>
+						<ol>
+							<li>Модные укладки из знаменитых коллекций 2013–2014 года</li>
+							<li>Используется профессиональная косметика Lebel, Matrix, Estel Deluxe</li>
+							<li>Здоровые и «живые» волосы</li>
+							<li>Продолжительность — 90–120 минут</li>
+						</ol>
+						<nav class="article_tags">
+							<a href="#">Макияж</a>
+							<a href="#">Уход за лицом</a>
+							<a href="#">Стрижка</a>
+						</nav>
+						<div class="social_share">
+							<h3>ПОНРАВИЛОСЬ? РАССКАЖИТЕ ДРУЗЬЯМ!</h3>
+							<div class="block_share">
+								<a href="#" class="vk_icon">
+									<i class="fa fa-vk"></i>
+									<span>222</span>
+								</a>
+								<a href="#" class="fb_icon">
+									<i class="fa fa-facebook"></i>
+									<span>222</span>
+								</a>
+								<a href="#" class="ok_icon">
+									<i class="fa fa-odnoklassniki"></i>
+									<span>222</span>
+								</a>
+								<a href="#" class="go_icon">
+									<i class="fa fa-google-plus"></i>
+									<span>222</span>
+								</a>
+								<a href="#" class="tw_icon">
+									<i class="fa fa-twitter"></i>
+									<span>222</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="aside aside_right">
+						<div class="catalog_request">
+							<div class="request_body">
+								<div class="request_title">Хотите стать <b>АВТОРОМ?</b></div>
+								<div class="request_text">Отправьте нам Вашу статью и её опубликуют!</div>
+								<div class="request_button">
+									<a href="#modal_send_article" class="a_button fancybox"><i class="fa fa-envelope-o"></i>Отправить статью</a>
+								</div>
+							</div>
+						</div>
+						<div class="popular_today">
+							<h6>Популярное сегодня</h6>
+							<div class="catalog_box box_h">
+								<div class="catalog_img">
+									<img src="img/catalog/catalog_img1.jpg" alt="">
+								</div>
+								<div class="catalog_body">
+									<div class="catalog_info">
+										<div class="catalog_category">
+											<a href="#">Красота</a>
+										</div>
+										<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+										<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+									</div>
+									<div class="catalog_title">
+										<a href="#">Бьюти-дайджест: электронный макияж, красота в Сети и не только</a>
+									</div>
+									<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
+								</div>
+							</div>
+							<div class="catalog_box box_w">
+								<div class="catalog_img">
+									<img src="img/catalog/catalog_img2.jpg" alt="">
+								</div>
+								<div class="catalog_body">
+									<div class="catalog_info">
+										<div class="catalog_category">
+											<a href="#">Красота</a>
+										</div>
+										<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+										<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+									</div>
+									<div class="catalog_title">
+										<a href="#">Практикуем Фен-Шуй в переговорах: как достичь успеха?</a>
+									</div>
+									<div class="catalog_user"><i class="fa fa-user"></i>Екатерина Мельникова</div>
+								</div>
+							</div>
+							<div class="catalog_box box_h">
+								<div class="catalog_img">
+									<img src="img/catalog/catalog_img3.jpg" alt="">
+								</div>
+								<div class="catalog_body">
+									<div class="catalog_info">
+										<div class="catalog_category">
+											<a href="#">Красота</a>
+										</div>
+										<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+										<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+									</div>
+									<div class="catalog_title">
+										<a href="#">В Москве откроется обувной магазин Louis Vuitton</a>
+									</div>
+									<div class="catalog_user"><i class="fa fa-user"></i>Воронена Екатерина</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="subscribe_wrap">
+				<div class="inner">
+					<form>
+						<div class="subscribe_box">
+							<label>Узнавайте о новых статьях первыми</label>
+							<div class="subscribe_input">
+								<input type="text" placeholder="Ваш email">
+							</div>
+							<div class="subscribe_button">
+								<a class="a_button a_sm"><i class="fa fa-envelope-o"></i><span>Подписаться</span></a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="comments">
+				<div class="inner">
+					<div class="best_comment">
+						<h3>Лучший комментарий</h3>
+						<div class="comment_box">
+							<div class="comment_head">
+								<div class="comment_img">
+									<a href="#"><img src="img/organization/organization_img3.png" alt=""></a>
+								</div>
+								<div class="comment_mobile">
+									<div class="comment_title">
+										<a href="#">Дарья К.</a>
+									</div>
+									<div class="comment_organization"></div>
+								</div>
+							</div>
+							<div class="comment_body">
+								<div class="comment_body_inner">
+									<div class="comment_title">
+										<a href="#">Дарья К.</a>
+									</div>
+									<div class="comment_organization"></div>
+									<div class="comment_text">
+										<p><a href="#">@Савенко Виктория</a>, А я всегда отращиваю с легкостью)) Не хочу короткую прическу, да и не пойдёт она мне!</p>
+									</div>
+									<div class="comment_control">
+										<a href="#" class="comment_complain"><i class="fa fa-bell"></i>Пожаловаться</a>
+										<a href="#" class="comment_reply"><i class="fa fa-reply"></i>Ответить</a>
+									</div>
+									<div class="comment_like">
+										<a href="#">
+											<i class="fa fa-heart-o"></i>
+											<i class="fa fa-heart"></i>
+											<span>12</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="add_comment">
+						<h3>Оставьте Ваш комментарий</h3>
+						<div class="comment_box">
+							<div class="comment_head">
+								<div class="comment_img">
+									<a href="#"><img src="img/organization/organization_img3.png" alt=""></a>
+								</div>
+							</div>
+							<div class="comment_body">
+								<form action="#">
+									<textarea placeholder="Ваш комментарий"></textarea>
+									<a href="#" class="a_button a_white a_sm">Прокомментировать</a>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="comments_discussion">
+						<h3>Обсуждение <span>7</span></h3>
+						<div class="comment_box">
+							<div class="comment_head">
+								<div class="comment_img">
+									<a href="#"><img src="img/organization/organization_img3.png" alt=""></a>
+								</div>
+								<div class="comment_mobile">
+									<div class="comment_title">
+										<a href="#">Дарья К.</a>
+									</div>
+									<div class="comment_organization">Мастер по маникюру и педикюру в <a href="#">Incanto (Инканто)</a><span class="pro">pro</span></div>
+								</div>
+							</div>
+							<div class="comment_body">
+								<div class="comment_body_inner">
+									<div class="comment_title">
+										<a href="#">Дарья К.</a>
+									</div>
+									<div class="comment_organization">Мастер по маникюру и педикюру в <a href="#">Incanto (Инканто)</a><span class="pro">pro</span></div>
+									<div class="comment_text">
+										<p>Наконец-то и для меня статья вышла. А всегда хочется сделать так: "Всё! Отращиваю! Наташа, не трожь волосы полгода!!" Потом видишь, какой это ужас и бежишь к мастеру: всё состричь, я передумала!</p>
+									</div>
+									<div class="comment_control">
+										<a href="#" class="comment_complain"><i class="fa fa-bell"></i>Пожаловаться</a>
+										<a href="#" class="comment_reply"><i class="fa fa-reply"></i>Ответить</a>
+									</div>
+									<div class="comment_like">
+										<a href="#">
+											<i class="fa fa-heart-o"></i>
+											<i class="fa fa-heart"></i>
+											<span>12</span>
+										</a>
+									</div>
+								</div>
+								<div class="comment_box">
+									<div class="comment_head">
+										<div class="comment_img">
+											<a href="#"><img src="img/organization/organization_img3.png" alt=""></a>
+										</div>
+										<div class="comment_mobile">
+											<div class="comment_title">
+												<a href="#">Дарья К.</a>
+											</div>
+											<div class="comment_organization"></div>
+										</div>
+									</div>
+									<div class="comment_body">
+										<div class="comment_body_inner">
+											<div class="comment_title">
+												<a href="#">Дарья К.</a>
+											</div>
+											<div class="comment_organization"></div>
+											<div class="comment_text">
+												<p><a href="#">@Савенко Виктория</a>, А я всегда отращиваю с легкостью)) Не хочу короткую прическу, да и не пойдёт она мне!</p>
+											</div>
+											<div class="comment_control">
+												<a href="#" class="comment_complain"><i class="fa fa-bell"></i>Пожаловаться</a>
+												<a href="#" class="comment_reply"><i class="fa fa-reply"></i>Ответить</a>
+											</div>
+											<div class="comment_like">
+												<a href="#">
+													<i class="fa fa-heart-o"></i>
+													<i class="fa fa-heart"></i>
+													<span>12</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="comment_box">
+									<div class="comment_head">
+										<div class="comment_img">
+											<a href="#"><img src="img/organization/organization_img3.png" alt=""></a>
+										</div>
+										<div class="comment_mobile">
+											<div class="comment_title">
+												<a href="#">Савенко Виктория</a>
+											</div>
+											<div class="comment_organization">Мастер по маникюру и педикюру в <a href="#">Incanto (Инканто)</a><span class="pro">pro</span></div>
+										</div>
+									</div>
+									<div class="comment_body">
+										<div class="comment_body_inner">
+											<div class="comment_title">
+												<a href="#">Савенко Виктория</a>
+											</div>
+											<div class="comment_organization">Мастер по маникюру и педикюру в <a href="#">Incanto (Инканто)</a><span class="pro">pro</span></div>
+											<div class="comment_text">
+												<p><a href="#">@Дарья К.</a>, Вам очень повезло!)))</p>
+											</div>
+											<div class="comment_control">
+												<a href="#" class="comment_complain"><i class="fa fa-bell"></i>Пожаловаться</a>
+												<a href="#" class="comment_reply"><i class="fa fa-reply"></i>Ответить</a>
+											</div>
+											<div class="comment_like">
+												<a href="#">
+													<i class="fa fa-heart-o"></i>
+													<i class="fa fa-heart"></i>
+													<span>12</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="comment_box">
+							<div class="comment_head">
+								<div class="comment_img">
+									<a href="#"><img src="img/organization/organization_img3.png" alt=""></a>
+								</div>
+								<div class="comment_mobile">
+									<div class="comment_title">
+										<a href="#">Иванова Евгения</a>
+										<span class="pro">pro</span>
+									</div>
+									<div class="comment_organization">Парикмахер</div>
+								</div>
+							</div>
+							<div class="comment_body">
+								<div class="comment_body_inner">
+									<div class="comment_title">
+										<a href="#">Иванова Евгения</a>
+										<span class="pro">pro</span>
+									</div>
+									<div class="comment_organization">Парикмахер</div>
+									<div class="comment_text">
+										<p>О эти вечные проблемы - как пережить, когда короткие волосы сзади дорастут наконец до длины, чтобы не топорщиться и не выглядеть неухожено. Здесь правда самообладание и сила характера должны быть, и отсуцтвие комплексов...</p>
+									</div>
+									<div class="comment_control">
+										<a href="#" class="comment_edit"><i class="fa fa-pencil"></i>Редактировать</a>
+										<a href="#" class="comment_del"><i class="fa fa-times"></i>Удалить</a>
+									</div>
+									<div class="comment_like active">
+										<a href="#">
+											<i class="fa fa-heart-o"></i>
+											<i class="fa fa-heart"></i>
+											<span>12</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="comments_more"><a href="#">Показать все комментарии к статье</a></div>
+				</div>
+			</div>
+			<div class="popular">
+				<div class="inner">
+					<div class="popular_head">
+						<div class="title"><span>Популярные специалисты и организации</span></div>
+						<div class="popular_arr">
+							<button class="popular_prev a_button"><i class="fa fa-angle-left"></i></button>
+							<button class="popular_next a_button"><i class="fa fa-angle-right"></i></button>
+						</div>
+						<div class="popular_question">
+							<a href="#modal_popular_spec_org" class="fancybox">Как сюда попасть?</a>
+						</div>
+					</div>
+					<div class="popular_slider">
+						<div>
+							<div class="popular_box">
+								<div class="popular_image">
+									<div class="popular_img">
+										<img src="img/organization/organization_img1.png" alt="">
+									</div>
+									<span class="pro">pro</span>
+								</div>
+								<div class="popular_organization">Парикмахер</div>
+								<div class="popular_user"><a href="#">Кузнецова Анастасия</a></div>
+								<div class="popular_button">
+									<a href="#" class="a_button a_green">Записаться онлайн</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="popular_box">
+								<div class="popular_image">
+									<div class="popular_img">
+										<img src="img/organization/organization_img2.png" alt="">
+									</div>
+									<span class="pro">pro</span>
+								</div>
+								<div class="popular_organization">Салон красоты</div>
+								<div class="popular_user"><a href="#">Incanto (Инканто)</a></div>
+								<div class="popular_button">
+									<a href="#" class="a_button a_green">Записаться онлайн</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="popular_box">
+								<div class="popular_image">
+									<div class="popular_img">
+										<img src="img/organization/organization_img3.png" alt="">
+									</div>
+									<span class="pro">pro</span>
+								</div>
+								<div class="popular_organization">Мастер по наращиванию ресниц</div>
+								<div class="popular_user"><a href="#">Хатянович Наталья</a></div>
+								<div class="popular_button">
+									<a href="#" class="a_button a_green">Записаться онлайн</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="popular_box">
+								<div class="popular_image">
+									<div class="popular_img">
+										<img src="img/organization/organization_img4.png" alt="">
+									</div>
+									<span class="pro">pro</span>
+								</div>
+								<div class="popular_organization">Салон красоты</div>
+								<div class="popular_user"><a href="#">Diva (Дива)</a></div>
+								<div class="popular_button">
+									<a href="#" class="a_button a_green">Записаться онлайн</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="popular_box">
+								<div class="popular_image">
+									<div class="popular_img">
+										<img src="img/organization/organization_img1.png" alt="">
+									</div>
+									<span class="pro">pro</span>
+								</div>
+								<div class="popular_organization">Парикмахер</div>
+								<div class="popular_user"><a href="#">Кузнецова Анастасия</a></div>
+								<div class="popular_button">
+									<a href="#" class="a_button a_green">Записаться онлайн</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="popular_box">
+								<div class="popular_image">
+									<div class="popular_img">
+										<img src="img/organization/organization_img2.png" alt="">
+									</div>
+									<span class="pro">pro</span>
+								</div>
+								<div class="popular_organization">Салон красоты</div>
+								<div class="popular_user"><a href="#">Incanto (Инканто)</a></div>
+								<div class="popular_button">
+									<a href="#" class="a_button a_green">Записаться онлайн</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="popular_box">
+								<div class="popular_image">
+									<div class="popular_img">
+										<img src="img/organization/organization_img3.png" alt="">
+									</div>
+									<span class="pro">pro</span>
+								</div>
+								<div class="popular_organization">Мастер по наращиванию ресниц</div>
+								<div class="popular_user"><a href="#">Хатянович Наталья</a></div>
+								<div class="popular_button">
+									<a href="#" class="a_button a_green">Записаться онлайн</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="popular_box">
+								<div class="popular_image">
+									<div class="popular_img">
+										<img src="img/organization/organization_img4.png" alt="">
+									</div>
+									<span class="pro">pro</span>
+								</div>
+								<div class="popular_organization">Салон красоты</div>
+								<div class="popular_user"><a href="#">Diva (Дива)</a></div>
+								<div class="popular_button">
+									<a href="#" class="a_button a_green">Записаться онлайн</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="popular_bottom">
+						<div class="popular_arr">
+							<button class="popular_prev a_button"><i class="fa fa-angle-left"></i></button>
+							<button class="popular_next a_button"><i class="fa fa-angle-right"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="catalog_block article_catalog">
+				<div class="inner">
+					<div class="catalog_row">
+						<div class="catalog_box box_h">
+							<div class="catalog_img">
+								<img src="img/catalog/catalog_img1.jpg" alt="">
+							</div>
+							<div class="catalog_body">
+								<div class="catalog_info">
+									<div class="catalog_category">
+										<a href="#">Красота</a>
+									</div>
+									<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+									<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+								</div>
+								<div class="catalog_title">
+									<a href="#">Бьюти-дайджест: электронный макияж, красота в Сети и не только</a>
+								</div>
+								<div class="catalog_user"><i class="fa fa-user"></i>Савенко Виктория</div>
+							</div>
+						</div>
+						<div class="catalog_box box_w">
+							<div class="catalog_img">
+								<img src="img/catalog/catalog_img2.jpg" alt="">
+							</div>
+							<div class="catalog_body">
+								<div class="catalog_info">
+									<div class="catalog_category">
+										<a href="#">Красота</a>
+									</div>
+									<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+									<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+								</div>
+								<div class="catalog_title">
+									<a href="#">Практикуем Фен-Шуй в переговорах: как достичь успеха?</a>
+								</div>
+								<div class="catalog_user"><i class="fa fa-user"></i>Екатерина Мельникова</div>
+							</div>
+						</div>
+						<div class="catalog_box box_h">
+							<div class="catalog_img">
+								<img src="img/catalog/catalog_img3.jpg" alt="">
+							</div>
+							<div class="catalog_body">
+								<div class="catalog_info">
+									<div class="catalog_category">
+										<a href="#">Красота</a>
+									</div>
+									<div class="catalog_looks"><i class="fa fa-eye"></i>405</div>
+									<div class="catalog_comments"><i class="fa fa-comment"></i>33</div>
+								</div>
+								<div class="catalog_title">
+									<a href="#">В Москве откроется обувной магазин Louis Vuitton</a>
+								</div>
+								<div class="catalog_user"><i class="fa fa-user"></i>Воронена Екатерина</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END OF main -->
+</div>
+	<!--footer -->
+	<footer>
+		<div class="footer_nav">
+			<div class="inner">
+				<ul>
+					<li class="active"><a href="#">О проекте</a></li>
+					<li><a href="#">Правила</a></li>
+					<li><a href="#">Частые вопросы</a></li>
+					<li><a href="#">Обратная связь</a></li>
+					<li><a href="#">Реклама на сайте</a></li>
+					<li><a href="#">Оплата услуг</a></li>
+					<li><a href="#">Договор оферты</a></li>
+				</ul>
+				<span class="nav_active"></span>
+			</div>
+		</div>
+		<div class="footer_bottom">
+			<div class="inner">
+				<div class="copyright">2015 © alrait.by. Все права защищены, копирование материалов только с разрешения редакции.</div>
+			</div>
+		</div>
+	</footer>
+	<!-- END OF footer -->
+
+	<!--modal -->
+	<div id="modal_login" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Войти через социальные сети</div>
+			<div class="uLogin">
+				<a href="#" class="a_socials vk"><i class="fa fa-vk"></i></a>
+				<a href="#" class="a_socials fb"><i class="fa fa-facebook"></i></a>
+				<a href="#" class="a_socials ok"><i class="fa fa-odnoklassniki"></i></a>
+				<a href="#" class="a_socials go"><i class="fa fa-google-plus"></i></a>
+				<a href="#" class="a_socials tw"><i class="fa fa-twitter"></i></a>
+			</div>
+		</div>
+		<div class="modal_body">
+			<div class="modal_title">Войти через email и пароль</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Email</label>
+						<input type="email" name="email" placeholder="anna@gmail.com" required>
+					</div>
+					<div class="form_group">
+						<label>Пароль</label>
+						<input class="login_pass" type="password" name="pass" placeholder="">
+					</div>
+				</div>
+				<div class="form_button">
+					<button class="a_button a_grad" type="submite">Войти в кабинет</button>
+					<a href="#modal_pass" class="forgot_pass open_modal">Забыли пароль?</a>
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_pass" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Укажите Ваш email</div>
+			<div class="modal_text">
+				<p>Введите Ваш регистрационный email, и мы вышлем на него инструкцию по восстановлению пароля.</p>
+			</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Введите Ваш регистрационный email</label>
+						<input type="email" placeholder="anna@gmail.com">
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#modal_pass_confirm" class="a_button a_grad open_modal">Отправить</a>
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_pass_confirm" class="modal modal_confirm">
+		<div class="modal_head">
+			<div class="modal_title">Инструкция отправлена</div>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_reg" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Регистрация через социальные сети</div>
+			<div class="uLogin">
+				<a href="#modal_email" class="a_socials vk open_modal"><i class="fa fa-vk"></i></a>
+				<a href="#modal_email" class="a_socials fb open_modal"><i class="fa fa-facebook"></i></a>
+				<a href="#modal_email" class="a_socials ok open_modal"><i class="fa fa-odnoklassniki"></i></a>
+				<a href="#modal_email" class="a_socials go open_modal"><i class="fa fa-google-plus"></i></a>
+				<a href="#modal_email" class="a_socials tw open_modal"><i class="fa fa-twitter"></i></a>
+			</div>
+		</div>
+		<div class="modal_body">
+			<div class="modal_title">Обычная регистрация</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Имя</label>
+						<input type="text" name="firstname" placeholder="Анастасия" required>
+					</div>
+					<div class="form_group">
+						<label>Фамилия</label>
+						<input type="text" name="lastname" placeholder="Кузнецова" required>
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="form_group">
+						<label>Email</label>
+						<input type="email" name="email" placeholder="anna@gmail.com" required>
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="modal_text">
+						<p>Регистрируясь, я принимаю <a href="#">правила сайта</a></p>
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="form_check">
+						<input id="check1" type="checkbox" checked>
+						<label for="check1">Я хочу получать email письма о мероприятиях и/или иных услугах портала</label>
+					</div>
+					<div class="form_check">
+						<input id="check2" type="checkbox" checked>
+						<label for="check2">Я согласен получать СМС уведомления от администрации портала</label>
+					</div>
+				</div>
+				<div class="form_button">
+					<button class="a_button a_grad" type="submite">зарегистрироваться</button>
+					<!-- <a href="#modal_thanks" class="a_button a_grad open_modal">зарегистрироваться</a> -->
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_email" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Укажите Ваш email</div>
+			<div class="modal_text">
+				<p>Для завершения регистрации Вам необходимо указать email адрес</p>
+			</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Введите Ваш email</label>
+						<input type="email" placeholder="anna@gmail.com">
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#modal_thanks" class="a_button a_grad open_modal">Сохранить</a>
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_thanks" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Благодарим за регистрацию на портале alrait.by! </div>
+			<div class="modal_text">
+				<p>На указанный Вами адрес электронной почты выслано письмо. Для получения доступа к личному кабинету, Вам необходимо  подтвердить адрес электронной почты - пройти по ссылке указанной в письме.</p>
+			</div>
+			<div class="modal_wishes">
+				<p>Пользуйтесь с удовольствием!</p>
+			</div>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_noemail" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Данный email не зарегистрирован</div>
+			<div class="modal_text">
+				<p>Извините, но email <a href="mailto:annanew@gmail.com">annanew@gmail.com</a> не зарегистрирован на портале. Пожалуйста, пройдите процесс регистрации или попробуйте ещё раз.</p>
+			</div>
+			<div class="form_button">
+				<a href="#modal_reg" class="a_button a_grad open_modal">зарегистрироваться</a>
+				<a href="#modal_login" class="forgot_pass open_modal">Попробовать ещё раз</a>
+			</div>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_region" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Выберите Ваш регион</div>
+			<div class="modal_text">
+				<p>Основываясь на Вашем регионе, мы сможем показать наиболее подходящий для Вас контент.</p>
+			</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<select>
+							<option>Брестская область</option>
+							<option>Витебская область</option>
+							<option>Гомельская область</option>
+							<option>Гродненская область</option>
+							<option>Минская область</option>
+							<option>Могилёвская область</option>
+						</select>
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#" class="a_button a_grad">Сохранить</a>
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_change_email" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Изменить email адрес</div>
+			<div class="modal_text">
+				<p>На старый email адрес будет отправлено письмо с просьбой подтвердить изменение email адреса. </p>
+			</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Введите новый email</label>
+						<input type="email" placeholder="anna@gmail.com">
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#modal_change_email_confirm" class="a_button a_grad open_modal">Сохранить</a>
+					<a href="#" class="a_button a_white a_cancel">Отменить</a>
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_change_email_confirm" class="modal modal_confirm">
+		<div class="modal_head">
+			<div class="modal_title">Ваш email изменен</div>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_send_article" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Отправить статью в редакцию</div>
+		</div>
+		<div class="modal_body">
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Раздел для статьи<span>*</span></label>
+						<select>
+							<option>Красота </option>
+							<option>Красота 1</option>
+							<option>Красота 2</option>
+							<option>Красота 3</option>
+							<option>Красота 4</option>
+							<option>Красота 5</option>
+						</select>
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="form_group group_lg">
+						<label>Название статьи<span>*</span></label>
+						<input type="text" placeholder="">
+					</div>
+				</div>
+				<div class="form_file">
+					<div class="file_list"></div>
+					<div class="file_load">
+						<div class="file_button">
+							<span class="a_button a_white a_xs"><i class="fa fa-plus"></i>Прикрепить файл<input type="file"></span>
+						</div>
+						<div class="file_format">Доступные форматы файлов: .doc .jpg .png .txt</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal_footer">
+			<div class="form_button">
+				<a href="#modal_article_confirm" class="a_button a_grad open_modal">Отправить</a>
+				<a href="#" class="a_button a_white a_cancel">Отменить</a>
+			</div>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_article_confirm" class="modal modal_confirm">
+		<div class="modal_head">
+			<div class="modal_title">Статья отправлена</div>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_popular_spec_org" class="modal">
+		<div class="modal_head">
+			<div class="popular_spec_org">
+				<div class="popular_box">
+					<div class="popular_image">
+						<div class="popular_img">
+							<img src="img/organization/organization_img1.png" alt="">
+						</div>
+						<span class="pro">pro</span>
+					</div>
+					<div class="popular_organization">Парикмахер</div>
+					<div class="popular_user"><a href="#">Кузнецова Анастасия</a></div>
+					<div class="popular_button">
+						<a href="#" class="a_button a_green">Записаться онлайн</a>
+					</div>
+				</div>
+				<div class="spec_org">
+					<div class="modal_title">Популярные специалисты и организации</div>
+					<div class="spec_org_text">
+						<p>Данная услуга поможет рассказать о Ваших услугах более чем <a href="#">40 000 читателей</a> нашего портала!</p>
+						<p>Стоимость услуги размещения в ленте популярных специалистов и организаций составляет <a href="#">35 баллов.</a> </p>
+					</div>
+					<div class="form_button">
+						<a href="#modal_add_services" class="a_button a_grad open_modal">Добавить услугу</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_add_services" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Внимание!</div>
+			<div class="modal_text">
+				<p>Вы действительно хотите добавить данную услугу?</p>
+			</div>
+			<div class="form_button">
+				<a href="#modal_spec_org_confirm" class="a_button a_grad open_modal">Да</a>
+				<a href="#modal_popular_spec_org" class="a_button a_white open_modal">Нет</a>
+			</div>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_spec_org_confirm" class="modal modal_confirm">
+		<div class="modal_head">
+			<div class="modal_title">Услуга добавлена</div>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_reg_business" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Уважаемый пользователь</div>
+			<div class="modal_text">
+				<p>Чтобы иметь возможность разместиться в ленте популярных специалистов и организаций, Вам необходимо зарегистрировать Ваш бизнес на портале alrait.by.</p>
+			</div>
+			<div class="form_button">
+				<a href="#modal_reg" class="a_button a_grad open_modal">Зарегистрировать бизнес</a>
+			</div>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_create_share" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Уважаемый пользователь</div>
+			<div class="modal_text">
+				<p>У Вас пока нет акций для размещения в ленте популярных акций. Пройдите в личный кабинет и создайте акцию для размещения.</p>
+			</div>
+			<div class="form_button">
+				<a href="#modal_reg" class="a_button a_grad open_modal">Создать акцию</a>
+			</div>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+	<!-- END OF modal -->
+	
+	<div id="overlay"></div>
+</body>
+</html>

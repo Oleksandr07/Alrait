@@ -239,15 +239,24 @@
 			<div class="content">
 				<div class="all_modal_window">
 					<h2>Модальные окна</h2>
+					<h4>Общие</h4>
+					<p>
+						<a href="#modal_region" class="a_button open_modal">Region</a>
+						<a href="#modal_login" class="a_button open_modal">Login</a>
+						<a href="#modal_pass" class="a_button open_modal">Pass</a>
+						<a href="#modal_reg" class="a_button open_modal">Registration</a>
+						<a href="#modal_email" class="a_button open_modal">Email</a>
+						<a href="#modal_thanks" class="a_button open_modal">Thanks</a>
+					</p>
 					<h4>Alrait_Catalog_OrgPage_Main</h4>
 					<p>
-						<a href="#modal_map" class="open_modal a_button">Map</a>
-						<a href="#modal_send_message" class="open_modal a_button">SendMessage</a>
-						<a href="#modal_alert" class="open_modal a_button">Alert</a>
-						<a href="#modal_alert_not_login" class="open_modal a_button">AlertNotLogin</a>
-						<a href="#modal_confirm" class="open_modal a_button">Confirm</a>
-						<a href="#modal_confirm_order" class="open_modal a_button">ConfirmOrder</a>
-						<a href="#modal_online_order_emp" class="open_modal a_button">OnlineOrderEmp</a>
+						<a href="#modal_map" class="a_button open_modal">Map</a>
+						<a href="#modal_send_message" class="a_button open_modal">SendMessage</a>
+						<a href="#modal_alert" class="a_button open_modal">Alert</a>
+						<a href="#modal_alert_not_login" class="a_button a_button">AlertNotLogin</a>
+						<a href="#modal_confirm" class="a_button open_modal">Confirm</a>
+						<a href="#modal_confirm_order" class="a_button open_modal">ConfirmOrder</a>
+						<a href="#modal_online_order_emp" class="a_button open_modal">OnlineOrderEmp</a>
 					</p>
 				</div>
 			</div>
@@ -316,23 +325,9 @@
 						email: "Правильно введите ваш email"
 					}
 				},
-				submitHandler: function(form) {
-					$.fancybox({ 
-						href: "#modal_thanks",
-						padding: 0,
-						margin: 10,
-						minHeight: false,
-						autoHeight: true,
-						openEffect: 'fade',
-						closeEffect: 'fade',
-						openSpeed: 400,
-						closeSpeed: 400,
-						helpers: {
-							overlay: {
-								locked: true
-							}
-						}
-					});
+				submitHandler: function(element) {
+					//$('#thanks').click();
+					console.log(element.attr("class"));
 				}
 			});
 
@@ -382,6 +377,36 @@
 	<!-- End Validation -->
 
 	<!--modal -->
+
+	<a id="thanks" href="#modal_thanks" class="a_button open_modal">Thanks</a>
+
+	<div id="modal_region" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Выберите Ваш регион</div>
+			<div class="modal_text">
+				<p>Основываясь на Вашем регионе, мы сможем показать наиболее подходящий для Вас контент.</p>
+			</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<select>
+							<option>Брестская область</option>
+							<option>Витебская область</option>
+							<option>Гомельская область</option>
+							<option>Гродненская область</option>
+							<option>Минская область</option>
+							<option>Могилёвская область</option>
+						</select>
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#" class="a_button a_grad">Сохранить</a>
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
 	<div id="modal_login" class="modal">
 		<div class="modal_head">
 			<div class="modal_title">Войти через социальные сети</div>
@@ -407,8 +432,8 @@
 					</div>
 				</div>
 				<div class="form_button">
-					<button class="a_button a_grad" type="submite">Войти в кабинет</button>
-					<a href="#modal_pass" class="forgot_pass fancybox">Забыли пароль?</a>
+					<button class="a_button a_grad" type="submit">Войти в кабинет</button>
+					<a href="#modal_pass" class="forgot_pass open_modal">Забыли пароль?</a>
 				</div>
 			</form>
 		</div>
@@ -429,27 +454,29 @@
 					</div>
 				</div>
 				<div class="form_button">
-					<a href="#modal_pass_confirm" class="a_button a_grad fancybox">Отправить</a>
+					<a href="#modal_pass_confirm" class="a_button a_grad open_modal">Отправить</a>
 				</div>
 			</form>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_pass_confirm" class="modal modal_confirm">
 		<div class="modal_head">
 			<div class="modal_title">Инструкция отправлена</div>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_reg" class="modal">
 		<div class="modal_head">
 			<div class="modal_title">Регистрация через социальные сети</div>
 			<div class="uLogin">
-				<a href="#modal_email" class="a_socials vk fancybox"><i class="fa fa-vk"></i></a>
-				<a href="#modal_email" class="a_socials fb fancybox"><i class="fa fa-facebook"></i></a>
-				<a href="#modal_email" class="a_socials ok fancybox"><i class="fa fa-odnoklassniki"></i></a>
-				<a href="#modal_email" class="a_socials go fancybox"><i class="fa fa-google-plus"></i></a>
-				<a href="#modal_email" class="a_socials tw fancybox"><i class="fa fa-twitter"></i></a>
+				<a href="#modal_email" class="a_socials vk open_modal"><i class="fa fa-vk"></i></a>
+				<a href="#modal_email" class="a_socials fb open_modal"><i class="fa fa-facebook"></i></a>
+				<a href="#modal_email" class="a_socials ok open_modal"><i class="fa fa-odnoklassniki"></i></a>
+				<a href="#modal_email" class="a_socials go open_modal"><i class="fa fa-google-plus"></i></a>
+				<a href="#modal_email" class="a_socials tw open_modal"><i class="fa fa-twitter"></i></a>
 			</div>
 		</div>
 		<div class="modal_body">
@@ -487,7 +514,7 @@
 					</div>
 				</div>
 				<div class="form_button">
-					<button class="a_button a_grad" type="submite">зарегистрироваться</button>
+					<button class="a_button a_grad" type="submit">зарегистрироваться</button>
 					<!-- <a href="#modal_thanks" class="a_button a_grad fancybox">зарегистрироваться</a> -->
 				</div>
 			</form>
@@ -509,10 +536,11 @@
 					</div>
 				</div>
 				<div class="form_button">
-					<a href="#modal_thanks" class="a_button a_grad fancybox">Сохранить</a>
+					<a href="#modal_thanks" class="a_button a_grad open_modal">Сохранить</a>
 				</div>
 			</form>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_thanks" class="modal">
@@ -525,6 +553,7 @@
 				<p>Пользуйтесь с удовольствием!</p>
 			</div>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_noemail" class="modal">
@@ -534,36 +563,11 @@
 				<p>Извините, но email <a href="mailto:annanew@gmail.com">annanew@gmail.com</a> не зарегистрирован на портале. Пожалуйста, пройдите процесс регистрации или попробуйте ещё раз.</p>
 			</div>
 			<div class="form_button">
-				<a href="#modal_reg" class="a_button a_grad fancybox">зарегистрироваться</a>
-				<a href="#modal_login" class="forgot_pass fancybox">Попробовать ещё раз</a>
+				<a href="#modal_reg" class="a_button a_grad open_modal">зарегистрироваться</a>
+				<a href="#modal_login" class="forgot_pass open_modal">Попробовать ещё раз</a>
 			</div>
 		</div>
-	</div>
-
-	<div id="modal_region" class="modal">
-		<div class="modal_head">
-			<div class="modal_title">Выберите Ваш регион</div>
-			<div class="modal_text">
-				<p>Основываясь на Вашем регионе, мы сможем показать наиболее подходящий для Вас контент.</p>
-			</div>
-			<form action="#">
-				<div class="form_row">
-					<div class="form_group">
-						<select>
-							<option>Брестская область</option>
-							<option>Витебская область</option>
-							<option>Гомельская область</option>
-							<option>Гродненская область</option>
-							<option>Минская область</option>
-							<option>Могилёвская область</option>
-						</select>
-					</div>
-				</div>
-				<div class="form_button">
-					<a href="#" class="a_button a_grad">Сохранить</a>
-				</div>
-			</form>
-		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_change_email" class="modal">
@@ -580,11 +584,12 @@
 					</div>
 				</div>
 				<div class="form_button">
-					<a href="#modal_change_email_confirm" class="a_button a_grad fancybox">Сохранить</a>
+					<a href="#modal_change_email_confirm" class="a_button a_grad open_modal">Сохранить</a>
 					<a href="#" class="a_button a_white a_cancel">Отменить</a>
 				</div>
 			</form>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_change_email_confirm" class="modal modal_confirm">
@@ -631,16 +636,18 @@
 		</div>
 		<div class="modal_footer">
 			<div class="form_button">
-				<a href="#modal_article_confirm" class="a_button a_grad fancybox">Отправить</a>
+				<a href="#modal_article_confirm" class="a_button a_grad open_modal">Отправить</a>
 				<a href="#" class="a_button a_white a_cancel">Отменить</a>
 			</div>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_article_confirm" class="modal modal_confirm">
 		<div class="modal_head">
 			<div class="modal_title">Статья отправлена</div>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_popular_spec_org" class="modal">
@@ -666,11 +673,12 @@
 						<p>Стоимость услуги размещения в ленте популярных специалистов и организаций составляет <a href="#">35 баллов.</a> </p>
 					</div>
 					<div class="form_button">
-						<a href="#modal_add_services" class="a_button a_grad fancybox">Добавить услугу</a>
+						<a href="#modal_add_services" class="a_button a_grad open_modal">Добавить услугу</a>
 					</div>
 				</div>
 			</div>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_add_services" class="modal">
@@ -680,16 +688,18 @@
 				<p>Вы действительно хотите добавить данную услугу?</p>
 			</div>
 			<div class="form_button">
-				<a href="#modal_spec_org_confirm" class="a_button a_grad fancybox">Да</a>
-				<a href="#modal_popular_spec_org" class="a_button a_white fancybox">Нет</a>
+				<a href="#modal_spec_org_confirm" class="a_button a_grad open_modal">Да</a>
+				<a href="#modal_popular_spec_org" class="a_button a_white open_modal">Нет</a>
 			</div>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_spec_org_confirm" class="modal modal_confirm">
 		<div class="modal_head">
 			<div class="modal_title">Услуга добавлена</div>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_reg_business" class="modal">
@@ -699,9 +709,10 @@
 				<p>Чтобы иметь возможность разместиться в ленте популярных специалистов и организаций, Вам необходимо зарегистрировать Ваш бизнес на портале alrait.by.</p>
 			</div>
 			<div class="form_button">
-				<a href="#modal_reg" class="a_button a_grad fancybox">Зарегистрировать бизнес</a>
+				<a href="#modal_reg" class="a_button a_grad open_modal">Зарегистрировать бизнес</a>
 			</div>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 	<div id="modal_create_share" class="modal">
@@ -711,9 +722,10 @@
 				<p>У Вас пока нет акций для размещения в ленте популярных акций. Пройдите в личный кабинет и создайте акцию для размещения.</p>
 			</div>
 			<div class="form_button">
-				<a href="#modal_reg" class="a_button a_grad fancybox">Создать акцию</a>
+				<a href="#modal_reg" class="a_button a_grad open_modal">Создать акцию</a>
 			</div>
 		</div>
+		<span class="modal_close"></span>
 	</div>
 
 

@@ -13,6 +13,39 @@
 		.org_menu .menu_pc{
 			float: left;
 		}
+	.content_menu ul li{
+		padding: 10px 0;
+		margin-bottom: -20px;
+	}
+		.content_menu ul li:last-child{
+			margin-bottom: 0;
+		}
+		.content_menu ul li a{
+			padding: 10px 0;
+		}
+	.content_menu ul li.active{
+		box-shadow: none;
+	}
+		.content_menu ul li.active:before{
+			content: '';
+			position: absolute;
+			background: #eb4e9b;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 3px;
+			-webkit-transition: all 0.3s ease;
+			-moz-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+			-webkit-transition-delay: 0.3s;
+			-moz-transition-delay: 0.3s;
+			-o-transition-delay: 0.3s;
+			transition-delay: 0.3s;
+		}
+	.content_menu.menu_lg.active ul li.active:before{
+		bottom: 10px;
+	}
 }
 @media only screen and (max-width:1023px) {
 	.inner{
