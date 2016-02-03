@@ -487,6 +487,7 @@
 					<h4>Alrait_Client_UserPages_Info</h4>
 					<p>
 						<a href="#modal_change_email" class="a_button open_modal">ChangeEmail</a>
+						<a href="#modal_change_email_confirm" class="a_button open_modal">ChangeEmail</a>
 						<a href="#modal_change_phone" class="a_button open_modal">ChangePhone</a>
 						<a href="#modal_change_phone_conf" class="a_button open_modal">ChangePhoneConf</a>
 					</p>
@@ -717,33 +718,26 @@
 			<form action="#" method="post">
 				<div class="form_row">
 					<div class="form_group">
-						<label>Имя</label>
+						<label>Имя<span>*</span></label>
 						<input type="text" name="firstname" placeholder="Анастасия" required>
 					</div>
 					<div class="form_group">
-						<label>Фамилия</label>
+						<label>Фамилия<span>*</span></label>
 						<input type="text" name="lastname" placeholder="Кузнецова" required>
 					</div>
 				</div>
 				<div class="form_row">
 					<div class="form_group">
-						<label>Email</label>
+						<label>Email<span>*</span></label>
 						<input type="email" name="email" placeholder="anna@gmail.com" required>
 					</div>
 				</div>
 				<div class="form_row">
 					<div class="modal_text">
-						<p>Регистрируясь, я принимаю <a href="#">правила сайта</a></p>
-					</div>
-				</div>
-				<div class="form_row">
-					<div class="form_check">
-						<input id="check1" type="checkbox" checked>
-						<label for="check1">Я хочу получать email письма о мероприятиях и/или иных услугах портала</label>
-					</div>
-					<div class="form_check">
-						<input id="check2" type="checkbox" checked>
-						<label for="check2">Я согласен получать СМС уведомления от администрации портала</label>
+						<p>
+							Регистрируясь, я принимаю <a href="#" target="_blank">правила сайта</a>
+							и соглашаюсь получать email письма о мероприятиях и/или иных услугах портала, и СМС уведомления от администрации портала.
+						</p>
 					</div>
 				</div>
 				<div class="form_button">

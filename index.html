@@ -2016,8 +2016,8 @@
 		<div class="modal_head">
 			<div class="modal_title">Отправить статью в редакцию</div>
 		</div>
-		<div class="modal_body">
-			<form action="#">
+		<form action="#">
+			<div class="modal_body">
 				<div class="form_row">
 					<div class="form_group">
 						<label>Раздел для статьи<span>*</span></label>
@@ -2038,16 +2038,53 @@
 					</div>
 				</div>
 				<div class="form_file">
-					<div class="file_list"></div>
-					<div class="file_load">
-						<div class="file_button">
-							<span class="a_button a_white a_xs"><i class="fa fa-plus"></i>Прикрепить файл<input type="file"></span>
+					<div class="file_load attach_file">
+						<div class="file_load_box">
+							<div class="file_button">
+								<span class="a_button a_white a_xs"><i class="fa fa-plus"></i>Прикрепить файл<input type="file"></span>
+							</div>
+							<div class="file_format">Доступные форматы файлов: .doc .jpg .png .txt</div>
 						</div>
-						<div class="file_format">Доступные форматы файлов: .doc .jpg .png .txt</div>
+					</div>
+					<div class="file_load attach_file">
+						<div class="file_load_box">
+							<div class="file_button">
+								<span class="a_button a_white a_xs"><i class="fa fa-plus"></i>Прикрепить файл<input type="file"></span>
+							</div>
+							<div class="file_format">Доступные форматы файлов: .doc .jpg .png .txt</div>
+						</div>
+					</div>
+					<div class="file_load attach_file">
+						<div class="file_load_box">
+							<div class="file_button">
+								<span class="a_button a_white a_xs"><i class="fa fa-plus"></i>Прикрепить файл<input type="file"></span>
+							</div>
+							<div class="file_format">Доступные форматы файлов: .doc .jpg .png .txt</div>
+						</div>
+					</div>
+					<div class="file_load attach_file">
+						<div class="file_load_box">
+							<div class="file_button">
+								<span class="a_button a_white a_xs"><i class="fa fa-plus"></i>Прикрепить файл<input type="file"></span>
+							</div>
+							<div class="file_format">Доступные форматы файлов: .doc .jpg .png .txt</div>
+						</div>
 					</div>
 				</div>
-			</form>
-		</div>
+			</div>
+			<div class="modal_body">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Контактный email<span>*</span></label>
+						<input type="email" placeholder="anna@gmail.com">
+					</div>
+					<div class="form_group">
+						<label>Ваше имя<span>*</span></label>
+						<input class="name" type="text" placeholder="">
+					</div>
+				</div>
+			</div>
+		</form>
 		<div class="modal_footer">
 			<div class="form_button">
 				<a href="#modal_article_confirm" class="a_button a_grad open_modal">Отправить</a>
