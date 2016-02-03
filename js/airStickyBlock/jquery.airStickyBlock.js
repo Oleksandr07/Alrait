@@ -47,7 +47,7 @@
                 /* Разное */
 
                 //Высота блоков до каких должен приливнуть сайдбар                     // Добавлено вручную
-                stickyBeforeParentHeight = $('header').height() + $('.content_menu .menu_pc').height() + $('.content_menu .block_mobile').height() + 20
+                stickyBeforeParentHeight = /*$('header').height() + $('.content_menu .menu_pc').height() + $('.content_menu .block_mobile').height() + 20*/ 40
 
                 // Высота рабочей области
                 windowHeight = $(window).height();

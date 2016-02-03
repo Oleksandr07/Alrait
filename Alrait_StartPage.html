@@ -17,6 +17,7 @@
 		<!--SCRIPT -->
 			<script src="js/jquery-1.11.1.min.js"></script>
 			<script src="js/jquery.placeholder.js"></script>
+			<script src="js/jquery.maskedinput.js"></script>
 			<script src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
 			<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
 			<script type="text/javascript" src="js/slick/slick.min.js"></script>
@@ -815,7 +816,7 @@
 											</div>
 											<div class="models_body">
 												<div class="models_text">Модель, 24 года, Минск</div>
-												<div class="models_name">Наталья М.</div>
+												<div class="models_name"><a href="">Наталья М.</a></div>
 											</div>
 										</div>
 									</div>
@@ -826,7 +827,7 @@
 											</div>
 											<div class="models_body">
 												<div class="models_text">Модель, 24 года, Минск</div>
-												<div class="models_name">Наталья М.</div>
+												<div class="models_name"><a href="">Наталья М.</a></div>
 											</div>
 										</div>
 									</div>
@@ -837,7 +838,7 @@
 											</div>
 											<div class="models_body">
 												<div class="models_text">Модель, 24 года, Минск</div>
-												<div class="models_name">Наталья М.</div>
+												<div class="models_name"><a href="">Наталья М.</a></div>
 											</div>
 										</div>
 									</div>
@@ -1214,7 +1215,7 @@
 								<button class="land_action_next"></button>
 							</div>
 							<div class="popular_question">
-								<a href="#modal_popular_share" class="fancybox">Как сюда попасть?</a>
+								<a href="#modal_popular_share" class="open_modal">Как сюда попасть?</a>
 							</div>
 						</div>
 						<div class="land_action_carousel">
@@ -1812,6 +1813,153 @@
 	</footer>
 	<!-- END OF footer -->
 
+	<!-- Validation -->
+	<script src="js/validation/dist/jquery.validate.js"></script>
+	<script>		
+		$().ready(function() {
+
+			$("#modal_reg form").validate({
+				rules: {
+					firstname: "required",
+					lastname: "required",
+					email: {
+						required: true,
+						email: true
+					}
+				},
+				messages: {
+					firstname: "Введите ваше имя",
+					lastname: "Введите вашу фамилию",
+					email: {
+						required: "Введите ваш email",
+						email: "Правильно введите ваш email"
+					}
+				},
+				submitHandler: function(form) {
+					// $.fancybox({ 
+					// 	href: "#modal_thanks",
+					// 	padding: 0,
+					// 	margin: 10,
+					// 	minHeight: false,
+					// 	autoHeight: true,
+					// 	openEffect: 'fade',
+					// 	closeEffect: 'fade',
+					// 	openSpeed: 400,
+					// 	closeSpeed: 400,
+					// 	helpers: {
+					// 		overlay: {
+					// 			locked: true
+					// 		}
+					// 	}
+					// });
+				}
+			});
+
+			$("#modal_login form").validate({
+				rules: {
+					email: {
+						required: true,
+						email: true
+					},
+					pass: { 
+						required: true,
+						minlength: 6
+					}
+					
+				},
+				messages: {
+					email: {
+						required: "Введите ваш email",
+						email: "Правильно введите ваш email"
+					},
+					pass: {
+						required: "Введите пароль",
+						minlength: "Минимум 6 символов"
+					}
+				},
+				submitHandler: function(form) {
+					// $.fancybox({ 
+					// 	href: "#modal_thanks",
+					// 	padding: 0,
+					// 	margin: 10,
+					// 	minHeight: false,
+					// 	autoHeight: true,
+					// 	openEffect: 'fade',
+					// 	closeEffect: 'fade',
+					// 	openSpeed: 400,
+					// 	closeSpeed: 400,
+					// 	helpers: {
+					// 		overlay: {
+					// 			locked: true
+					// 		}
+					// 	}
+					// });
+				}
+			});
+
+			// validate signup form on keyup and submit
+			$("#info_form").validate({
+				rules: {
+					firstname: "required",
+					lastname: "required",
+					email: {
+						required: true,
+						email: true
+					},
+					pass: { 
+						required: true,
+						minlength: 6
+					},
+					confirmpass: {
+						required: true,
+						minlength: 6,
+						equalTo: "#reg_pass"
+					},
+					phone: "required",
+					avatar: "required"
+				},
+				messages: {
+					firstname: "Введите ваше имя",
+					lastname: "Введите вашу фамилию",
+					email: {
+						required: "Введите ваш email",
+						email: "Правильно введите ваш email"
+					},
+					pass: {
+						required: "Введите пароль",
+						minlength: "Минимум 6 символов"
+					},
+					confirmpass: {
+						required: "Повторите пароль",
+						minlength: "Минимум 6 символов",
+						equalTo: "Пароли не совпадают"
+					},
+					phone: "Введите ваш телефон",
+					avatar: ""
+				},
+				submitHandler: function(form) {
+					// $.fancybox({ 
+					// 	href: "#modal_thanks",
+					// 	padding: 0,
+					// 	margin: 10,
+					// 	minHeight: false,
+					// 	autoHeight: true,
+					// 	openEffect: 'fade',
+					// 	closeEffect: 'fade',
+					// 	openSpeed: 400,
+					// 	closeSpeed: 400,
+					// 	helpers: {
+					// 		overlay: {
+					// 			locked: true
+					// 		}
+					// 	}
+					// });
+				}
+			});
+		});
+	</script>
+	<!-- End Validation -->
+
 	<!--modal -->
 	<div id="modal_login" class="modal">
 		<div class="modal_head">
@@ -2161,7 +2309,189 @@
 		</div>
 		<span class="modal_close"></span>
 	</div>
+
+	<div id="modal_popular_share" class="modal">
+		<div class="modal_head">
+			<div class="popular_spec_org">
+				<div class="modal_title">Популярные акции</div>
+				<div class="subtitle">Выберите акцию для размещения в ленте популярных акций:</div>
+				<div class="modal_carousel">
+					<div class="popular_arr">
+						<button class="action_modal_prev a_button"><i class="fa fa-angle-left"></i></button>
+						<button class="action_modal_next a_button"><i class="fa fa-angle-right"></i></button>
+					</div>
+					<div class="action_modal_carousel">
+						<div>
+							<div class="action_box">
+								<div class="action_image">
+									<div class="action_img">
+										<img src="img/action/action_img1.jpg" alt="">
+									</div>
+								</div>
+								<div class="action_date">с 01.10.2014 по 01.01.2015</div>
+								<div class="action_title">
+									<a href="#">Выпрямление волос со скидкой 70%!</a>
+								</div>
+								<div class="action_days">
+									<span class="disable">Пн.</span>
+									<span>Вт.</span>
+									<span>Ср.</span>
+									<span>Чт.</span>
+									<span>Пт.</span>
+									<span class="disable">Сб.</span>
+									<span class="disable">Вс.</span>
+								</div>
+								<div class="action_time">c 11:30 до 16:00</div>
+								<div class="action_button">
+									<a href="#" class="a_button">Записаться онлайн</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="action_box">
+								<div class="action_image">
+									<div class="action_img">
+										<img src="img/action/action_img2.jpg" alt="">
+									</div>
+								</div>
+								<div class="action_date">с 01.10.2014 по 01.01.2015</div>
+								<div class="action_title">
+									<a href="#">Наращивание и коррекция ногтей – 2 по цене 1!</a>
+								</div>
+								<div class="action_days">
+									<span class="disable">Пн.</span>
+									<span class="disable">Вт.</span>
+									<span>Ср.</span>
+									<span>Чт.</span>
+									<span>Пт.</span>
+									<span>Сб.</span>
+									<span>Вс.</span>
+								</div>
+								<div class="action_time">c 12:00 до 18:00</div>
+								<div class="action_button">
+									<a href="#" class="a_button">Записаться онлайн</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="action_box">
+								<div class="action_image">
+									<div class="action_img">
+										<img src="img/action/action_img3.jpg" alt="">
+									</div>
+								</div>
+								<div class="action_date">с 01.10.2014 по 01.01.2015</div>
+								<div class="action_title">
+									<a href="#">Поресничное наращивание ресниц со скидкой 30%!</a>
+								</div>
+								<div class="action_days">
+									<span class="disable">Пн.</span>
+									<span>Вт.</span>
+									<span>Ср.</span>
+									<span>Чт.</span>
+									<span>Пт.</span>
+									<span class="disable">Сб.</span>
+									<span class="disable">Вс.</span>
+								</div>
+								<div class="action_time">c 11:30 до 16:00</div>
+								<div class="action_button">
+									<a href="#" class="a_button">Записаться онлайн</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="action_box">
+								<div class="action_image">
+									<div class="action_img">
+										<img src="img/action/action_img1.jpg" alt="">
+									</div>
+								</div>
+								<div class="action_date">с 01.10.2014 по 01.01.2015</div>
+								<div class="action_title">
+									<a href="#">Выпрямление волос со скидкой 70%!</a>
+								</div>
+								<div class="action_days">
+									<span class="disable">Пн.</span>
+									<span>Вт.</span>
+									<span>Ср.</span>
+									<span>Чт.</span>
+									<span>Пт.</span>
+									<span class="disable">Сб.</span>
+									<span class="disable">Вс.</span>
+								</div>
+								<div class="action_time">c 11:30 до 16:00</div>
+								<div class="action_button">
+									<a href="#" class="a_button">Записаться онлайн</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="action_box">
+								<div class="action_image">
+									<div class="action_img">
+										<img src="img/action/action_img2.jpg" alt="">
+									</div>
+								</div>
+								<div class="action_date">с 01.10.2014 по 01.01.2015</div>
+								<div class="action_title">
+									<a href="#">Наращивание и коррекция ногтей – 2 по цене 1!</a>
+								</div>
+								<div class="action_days">
+									<span class="disable">Пн.</span>
+									<span class="disable">Вт.</span>
+									<span>Ср.</span>
+									<span>Чт.</span>
+									<span>Пт.</span>
+									<span>Сб.</span>
+									<span>Вс.</span>
+								</div>
+								<div class="action_time">c 12:00 до 18:00</div>
+								<div class="action_button">
+									<a href="#" class="a_button">Записаться онлайн</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="action_box">
+								<div class="action_image">
+									<div class="action_img">
+										<img src="img/action/action_img3.jpg" alt="">
+									</div>
+								</div>
+								<div class="action_date">с 01.10.2014 по 01.01.2015</div>
+								<div class="action_title">
+									<a href="#">Поресничное наращивание ресниц со скидкой 30%!</a>
+								</div>
+								<div class="action_days">
+									<span class="disable">Пн.</span>
+									<span>Вт.</span>
+									<span>Ср.</span>
+									<span>Чт.</span>
+									<span>Пт.</span>
+									<span class="disable">Сб.</span>
+									<span class="disable">Вс.</span>
+								</div>
+								<div class="action_time">c 11:30 до 16:00</div>
+								<div class="action_button">
+									<a href="#" class="a_button">Записаться онлайн</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="spec_org_text">
+					<p>Данная услуга поможет рассказать о Ваших услугах более чем <a href="#">40 000 читателей</a> нашего портала!</p>
+					<p>Стоимость услуги размещения в ленте популярных специалистов и организаций составляет <a href="#">35 баллов.</a> </p>
+				</div>
+				<div class="form_button">
+					<a href="#modal_add_services" class="a_button a_grad open_modal">Добавить услугу</a>
+				</div>
+			</div>
+		</div>
+		<span class="modal_close"></span>
+	</div>
 	<!-- END OF modal -->
+	
 	<div id="overlay"></div>
 </body>
 </html>

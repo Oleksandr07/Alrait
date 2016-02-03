@@ -17,7 +17,9 @@
 		<!--SCRIPT -->
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 			<script src="js/jquery.placeholder.js"></script>
+			<script src="js/jquery.maskedinput.js"></script>
 			<script src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
+			<script src="js/jquery.inputmask.bundle.js"></script>
 			<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
 			<script type="text/javascript" src="js/slick/slick.min.js"></script>
 			<link rel="stylesheet" href="js/fotorama/fotorama.css">
@@ -30,11 +32,6 @@
 			<link href="js/select2/select2.css" rel="stylesheet" />
 			<script src="js/select2/select2.js"></script>
 			<script src="js/select2/select2_locale_ru.js"></script>
-		
-	        <link href="js/jcrop/jquery.Jcrop.min.css" rel="stylesheet" type="text/css">
-	        <!-- add scripts -->
-	        <script src="js/jcrop/jquery.Jcrop.min.js"></script>
-	        <script src="js/jcrop/script.js"></script>
 
 			<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4.datepicker/jquery-ui.css"> 
 			<script src="js/jquery-ui-1.11.4.datepicker/jquery-ui.js"></script>
@@ -492,14 +489,24 @@
 				<div class="user_pages">
 					<form id="info_form" action="#">
 						<div class="photo_upload" id='js_croppic'>
-							<div class="photo_upload_inner"  id='js_photo_upload'>
+							<div class="photo_upload_inner"  id='js_photo_upload'></div>
+							<div id="photo_upload_add"></div>
+							<div class="photo_controls">
+								<a href="#" class="photo_zoom_in"></a>
+								<a href="#" class="photo_zoom_out"></a>
+								<a href="#" class="photo_crop"></a>
+								<a href="#" class="photo_clear"></a>
 							</div>
-							<div class="photo_upload_title">Загрузите фото <span>*</span></div>
-							<div class="photo_upload_text">Минимальное разрешение 360х360 пикселей</div>
-							<nav class="photo_button">
-								<a href="#" class="photo_edit"></a>
-								<a href="#" class="photo_del"></a>
-							</nav>
+							<div class="photo_upload_info">
+								<div class="photo_upload_title">Загрузите фото <span>*</span></div>
+								<div class="photo_upload_text">Минимальное разрешение 360х360 пикселей</div>
+							</div>
+							<div class="photo_upload_edits">
+								<nav class="photo_button">
+									<a href="#" class="photo_edit"></a>
+									<a href="#" class="photo_del"></a>
+								</nav>
+							</div>
 							<input type="text" name="avatar" id="avatar_img" required>
 						</div>
 					      <script>
@@ -513,18 +520,71 @@
 					         cropUrl:'js/croppic/img_crop_to_file.php',
 					         //customUploadButtonId:'js_photo_upload',
 					         processInline:true,
+					         customUploadButtonId:'photo_upload_add',
+					         modal:false,
+					         imgEyecandy:false,
+					         doubleZoomControls:false,
+					         rotateControls: false,
+					         rotateFactor:90,
 					         loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-					         onBeforeImgUpload: function(){ console.log('onBeforeImgUpload') },
-					         onAfterImgUpload: function(){ console.log('onAfterImgUpload') },
-					         onImgDrag: function(){ console.log('onImgDrag') },
-					         onImgZoom: function(){ console.log('onImgZoom') },
-					         onBeforeImgCrop: function(){ console.log('onBeforeImgCrop') },
-					         onAfterImgCrop:function(){ console.log('onAfterImgCrop') },
-					         onReset:function(){ console.log('onReset') },
-					         onError:function(errormessage){ console.log('onError:'+errormessage) }
+					         // onBeforeImgUpload: function(){ console.log('onBeforeImgUpload') },
+					         // onAfterImgUpload: function(){ console.log('onAfterImgUpload') },
+					         // onImgDrag: function(){ console.log('onImgDrag') },
+					         // onImgZoom: function(){ console.log('onImgZoom') },
+					         // onBeforeImgCrop: function(){ console.log('onBeforeImgCrop') },
+					         // onAfterImgCrop:function(){ console.log('onAfterImgCrop') },
+					         // onReset:function(){ console.log('onReset') },
+					         // onError:function(errormessage){ console.log('onError:'+errormessage) }
 					       } 
 					       var croppic = new Croppic('js_photo_upload', croppicHeaderOptions);
-					       
+
+
+
+					        
+					        $('#photo_upload_add').mouseover(function(){
+					        	$('.photo_upload_inner').addClass('hover');
+					        });
+					        $('#photo_upload_add').mouseout(function(){
+					        	$('.photo_upload_inner').removeClass('hover');
+					        });
+
+							$('.photo_upload_inner input[type="file"]').live('change', function(){
+								$('.photo_controls').show();
+								$('.photo_upload_info').hide();
+								$('.photo_upload_edits').hide();
+							});
+
+					        $('.photo_zoom_in').click(function(){
+								$('.cropControlZoomIn').click();
+								return false;
+							})
+							$('.photo_zoom_out').click(function(){
+								$('.cropControlZoomOut').click();
+								return false;
+							})
+							$('.photo_crop').click(function(){
+								$('.cropControlCrop').click();
+								$('.photo_controls').hide();
+								$('.photo_upload_edits').show();
+								return false;
+							})
+							$('.photo_clear').click(function(){
+								$('.cropControlReset').click();
+								$('.photo_controls').hide();
+								$('.photo_upload_info').show();
+								return false;
+							})
+
+					        $('.photo_edit').click(function(){
+								$('#photo_upload_add').click();
+								return false;
+							})
+							$('.photo_del').click(function(){
+								$('.cropControlRemoveCroppedImage').click();
+								$('.photo_upload_info').show();
+								$('.photo_upload_edits').hide();
+								return false;
+							})
 					      </script>
 						<div class="form_row">
 							<div class="form_group">
@@ -549,16 +609,19 @@
 							<div class="form_group">
 								<label>Номер для SMS-уведомлений<span class="required">*</span><span class="form_help tooltip" title="Вы можете создавать различные альбомы с фотографиями Ваших работ.Кроме того, у Вас есть возможность создать альбомы типа «интерьер», «оборудование», «дипломы и сертификаты» разместив в них соответствующие фотографии">?</span></label>
 								<div class="form_group">
-									<input id="reg_sms" type="text" name="phone" placeholder="+375 (33) 300-00-00" required>
+									<input type="text" name="phone" placeholder="+375 (33) 300-00-00" required class="phone reg_sms" data-attr="sms1">
 								</div>
 								<div class="form_group">
-									<a href="#" id="sms_button" class="a_button disable">Подтвердить</a>
+									<a href="#" class="a_button disable sms_button" data-attr="sms1">Подтвердить</a>
 								</div>
 								<div class="form_group">
 									<div class="form_row_row">
-									<input id="sms_confirm" type="text" placeholder="12345" >
-									<a href="#" id="sms_code" class="a_button">Код верный</a>
+										<input class="sms_confirm" type="text" placeholder="12345"  data-attr="sms1">
+										<a href="#" class="a_button sms_code" data-attr="sms1">Код верный</a>
 									</div>	
+								</div>
+								<div class="form_group">
+									<a href="#modal_change_phone" class="a_button open_modal phone_change" data-attr="sms1">Изменить</a>
 								</div>
 							</div>
 						</div>
@@ -797,22 +860,22 @@
 					}
 				},
 				submitHandler: function(form) {
-					$.fancybox({ 
-						href: "#modal_thanks",
-						padding: 0,
-						margin: 10,
-						minHeight: false,
-						autoHeight: true,
-						openEffect: 'fade',
-						closeEffect: 'fade',
-						openSpeed: 400,
-						closeSpeed: 400,
-						helpers: {
-							overlay: {
-								locked: true
-							}
-						}
-					});
+					// $.fancybox({ 
+					// 	href: "#modal_thanks",
+					// 	padding: 0,
+					// 	margin: 10,
+					// 	minHeight: false,
+					// 	autoHeight: true,
+					// 	openEffect: 'fade',
+					// 	closeEffect: 'fade',
+					// 	openSpeed: 400,
+					// 	closeSpeed: 400,
+					// 	helpers: {
+					// 		overlay: {
+					// 			locked: true
+					// 		}
+					// 	}
+					// });
 				}
 			});
 
@@ -839,22 +902,22 @@
 					}
 				},
 				submitHandler: function(form) {
-					$.fancybox({ 
-						href: "#modal_thanks",
-						padding: 0,
-						margin: 10,
-						minHeight: false,
-						autoHeight: true,
-						openEffect: 'fade',
-						closeEffect: 'fade',
-						openSpeed: 400,
-						closeSpeed: 400,
-						helpers: {
-							overlay: {
-								locked: true
-							}
-						}
-					});
+					// $.fancybox({ 
+					// 	href: "#modal_thanks",
+					// 	padding: 0,
+					// 	margin: 10,
+					// 	minHeight: false,
+					// 	autoHeight: true,
+					// 	openEffect: 'fade',
+					// 	closeEffect: 'fade',
+					// 	openSpeed: 400,
+					// 	closeSpeed: 400,
+					// 	helpers: {
+					// 		overlay: {
+					// 			locked: true
+					// 		}
+					// 	}
+					// });
 				}
 			});
 
@@ -899,22 +962,22 @@
 					avatar: ""
 				},
 				submitHandler: function(form) {
-					$.fancybox({ 
-						href: "#modal_thanks",
-						padding: 0,
-						margin: 10,
-						minHeight: false,
-						autoHeight: true,
-						openEffect: 'fade',
-						closeEffect: 'fade',
-						openSpeed: 400,
-						closeSpeed: 400,
-						helpers: {
-							overlay: {
-								locked: true
-							}
-						}
-					});
+					// $.fancybox({ 
+					// 	href: "#modal_thanks",
+					// 	padding: 0,
+					// 	margin: 10,
+					// 	minHeight: false,
+					// 	autoHeight: true,
+					// 	openEffect: 'fade',
+					// 	closeEffect: 'fade',
+					// 	openSpeed: 400,
+					// 	closeSpeed: 400,
+					// 	helpers: {
+					// 		overlay: {
+					// 			locked: true
+					// 		}
+					// 	}
+					// });
 				}
 			});
 		});
@@ -1294,6 +1357,45 @@
 					<a href="#" class="forgot_pass">Вернуться назад</a>
 				</div>
 			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_change_phone" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Изменить номер для SMS-уведомлений</div>
+			<div class="modal_text">
+				<p>Чтобы изменить номер для SMS-уведомлений, введите новый номер, а затем подтвердите его проверочным кодом.</p>
+			</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Введите новый номер</label>
+						<div class="form_group">
+							<input type="text" name="phone" placeholder="+375 (33) 300-00-00" required class="phone reg_sms" data-attr="sms2">
+						</div>
+						<div class="form_group">
+							<a href="#" class="a_button disable sms_button" data-attr="sms2">Подтвердить</a>
+						</div>
+						<div class="form_group">
+							<div class="form_row_row">
+								<input class="sms_confirm" type="text" placeholder="12345" data-attr="sms2">
+								<a href="#" class="a_button sms_code" data-attr="sms2">Код верный</a>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#modal_change_phone_conf" class="a_button a_grad open_modal">Отправить</a>
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_change_phone_conf" class="modal modal_confirm">
+		<div class="modal_head">
+			<div class="modal_title">Номер для SMS-уведомлений изменен</div>
 		</div>
 		<span class="modal_close"></span>
 	</div>

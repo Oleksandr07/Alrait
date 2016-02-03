@@ -32,7 +32,13 @@ $(function(){
 	});	
 	
 
-	//$("#reg_sms").mask("+999 (99) 999-99-99");
+	// $('.phone').inputmask('Regex', { 
+	// 	regex: "^[+][3][7][5] [(]?([1][5]|([2][9])|([3][3])|([4][4]))[)] [0-9]{3}[-][0-9]{2}[-][0-9]{2}$"
+	// });
+	
+	//$.mask.definitions['h'] = "[1,2,3,4,5,7,9]";
+	$(".phone").mask("+375 (99) 999-99-99");
+
 
 	$('.required_fields .a_button').click(function(){		
 
@@ -249,20 +255,27 @@ $(function(){
 	});
 
 
-	$('#reg_sms').keyup(function(){
+	$('.reg_sms').keyup(function(){
 		if ($(this).val()!='') {
-			$('#sms_button').removeClass('disable');
+			$('.sms_button[data-attr="' + $(this).attr('data-attr') + '"]').removeClass('disable');
 		}
 		else{
-			$('#sms_button').addClass('disable');
+			$('.sms_button[data-attr="' + $(this).attr('data-attr') + '"]').addClass('disable');
 		}
 	});
-	$('#sms_button').click(function(){
+	$('.sms_button').click(function(){
 		if (!$(this).hasClass('disable')) {	
 			$(this).hide();
-			$('#sms_confirm').show();
-			$('#sms_code').show();
+			$('.sms_confirm[data-attr="' + $(this).attr('data-attr') + '"]').show();
+			$('.sms_code[data-attr="' + $(this).attr('data-attr') + '"]').show();
 		};
+		return false;
+	});
+	$('.sms_code').click(function(){
+		$(this).hide();
+		$('.sms_confirm[data-attr="' + $(this).attr('data-attr') + '"]').hide();
+		$('.phone_change[data-attr="' + $(this).attr('data-attr') + '"]').css('display','block');
+		$('.reg_sms[data-attr="' + $(this).attr('data-attr') + '"]').attr('disabled', 'disabled');
 		return false;
 	});
 
@@ -586,7 +599,7 @@ $(function(){
     	keyboard: true,
     	maxwidth: '100%',
     	transition: 'crossfade',
-    	ratio: 9/11, 
+    	//ratio: 9/11, 
     	hash: true,
     	nav: 'thumbs',
     	thumbmargin: 5,
@@ -741,7 +754,7 @@ $(function(){
 	function catalog_filter(){
 		if ($(window).width() >= 1024) {
 			$('.catalog_filter').css({
-				'max-height': $(window).height() - $('header').height() - $('.content_menu .menu_pc').height() - $('.content_menu .block_mobile').height() - 60,
+				'max-height': $(window).height() - /*$('header').height() - $('.content_menu .menu_pc').height() - $('.content_menu .block_mobile').height() - 60*/ 200,
 				'height': 'auto'
 			});
 
@@ -1069,6 +1082,8 @@ $(function(){
 		if (!$(this).hasClass('active')) {
 			$('.choise-item').removeClass('active');
 			$(this).addClass('active');
+			$('.landingScreen-easy').removeClass('active');
+			$('.landingScreen-easy[data-attr="' + $(this).attr('data-attr') + '"]').addClass('active')
 		};
 	});
 	
@@ -1252,6 +1267,39 @@ $(function(){
 		$(this).parent().remove();
 		return false;
 	});
+
+	//--------------------       add new phone field
+	function phoneDel(){
+		var phoneCount = $('.number_field').length;
+		if (phoneCount > 1) {
+			$('.phone_del').show();
+		}
+		else{
+			$('.phone_del').hide();
+		}
+	}
+	phoneDel();
+	$('#phone_add').click(function(){
+		var phoneCount = $('.number_field').length;
+		if (phoneCount < 4) {
+			$('.number_phone').append('<div class="number_field"><input type="text" name="phone" placeholder="+375 (33) 300-00-00" required class="phone"><div class="phone_del"></div></div>');
+		}
+		if (phoneCount == 3){
+			$('#phone_add').hide();
+		}
+		phoneDel();
+		return false;
+	});
+	$('.number_phone').delegate( '.phone_del', 'click', function() {
+		$(this).parents('.number_field').remove();
+		var phoneCount = $('.number_field').length;
+		if (phoneCount < 4) {
+			$('#phone_add').show();
+		};
+		phoneDel();
+	});
+
+	//--------------------       avatar load
 
 
 

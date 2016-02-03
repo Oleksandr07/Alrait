@@ -17,6 +17,7 @@
 		<!--SCRIPT -->
 			<script src="js/jquery-1.11.1.min.js"></script>
 			<script src="js/jquery.placeholder.js"></script>
+			<script src="js/jquery.maskedinput.js"></script>
 			<script src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
 			<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
 			<script type="text/javascript" src="js/slick/slick.min.js"></script>
@@ -437,7 +438,7 @@
 			<div class="landingScreen">
 				<div class="landingScreen-head">
 					<div class="inner">
-						<div class="mainheading">Alrait.BY</div>
+						<div class="mainheading">Alrait</div>
 						<div class="subheading">Поиск исполнителей и клиентов стал ещё проще!</div>
 						<div class="thirdheading">Индивидуальный подход к каждому пользователю</div>
 						<div class="indent-list">
@@ -518,12 +519,12 @@
 						<div class="subheading">Вы уже пользовались</div>
 						<div class="thirdheading">сервисами онлайн записи?</div>
 						<div class="choise-box">
-							<div class="choise-item active">Да</div>
-							<div class="choise-item">Нет</div>
+							<div class="choise-item active" data-attr="choise-yes">Да</div>
+							<div class="choise-item" data-attr="choise-no">Нет</div>
 						</div>
 					</div>
 				</div>
-				<div class="landingScreen-easy">
+				<div class="landingScreen-easy active" data-attr="choise-yes">
 					<div class="inner">
 						<div class="mainheading">ещё удобнее, ещё проще!</div>
 						<div class="thirdheading">Наш сервис онлайн записи сможет удивить Вас!</div>
@@ -550,7 +551,38 @@
 							</div>
 						</div>
 						<div class="check_button">
-							<a href="" class="a_button">Зарегистрироваться прямо сейчас!</a>
+							<a href="#modal_reg" class="a_button open_modal">Зарегистрироваться прямо сейчас!</a>
+						</div>
+					</div>
+				</div>
+				<div class="landingScreen-easy" data-attr="choise-no">
+					<div class="inner">
+						<div class="mainheading">ещё удобнее, ещё проще!</div>
+						<div class="thirdheading">Наш сервис онлайн записи сможет удивить Вас!</div>
+						<div class="check-list">
+							<div class="check-item">
+								<div class="icon icon-check"></div>
+								<span>Удобный фильтр-поиск</span>
+							</div>
+							<div class="check-item">
+								<div class="icon icon-check"></div>
+								<span>Поиск по карте</span>
+							</div>
+							<div class="check-item">
+								<div class="icon icon-check"></div>
+								<span>Запись в 3 шага</span>
+							</div>
+							<div class="check-item">
+								<div class="icon icon-check"></div>
+								<span>Достоверные отзывы</span>
+							</div>
+							<div class="check-item">
+								<div class="icon icon-check"></div>
+								<span>Возможность посмотреть работы специалистов</span>
+							</div>
+						</div>
+						<div class="check_button">
+							<a href="#modal_reg" class="a_button open_modal">Зарегистрироваться прямо сейчас!</a>
 						</div>
 					</div>
 				</div>
@@ -588,6 +620,141 @@
 		</div>
 	</footer>
 	<!-- END OF footer -->
+
+	<!-- Validation -->
+	<script src="js/validation/dist/jquery.validate.js"></script>
+	<script>		
+		$().ready(function() {
+
+			$("#modal_reg form").validate({
+				rules: {
+					firstname: "required",
+					lastname: "required",
+					email: {
+						required: true,
+						email: true
+					}
+				},
+				messages: {
+					firstname: "Введите ваше имя",
+					lastname: "Введите вашу фамилию",
+					email: {
+						required: "Введите ваш email",
+						email: "Правильно введите ваш email"
+					}
+				},
+				submitHandler: function(form) {
+					// $.fancybox({ 
+					// 	href: "#modal_thanks",
+					// 	padding: 0,
+					// 	margin: 10,
+					// 	minHeight: false,
+					// 	autoHeight: true,
+					// 	openEffect: 'fade',
+					// 	closeEffect: 'fade',
+					// 	openSpeed: 400,
+					// 	closeSpeed: 400,
+					// 	helpers: {
+					// 		overlay: {
+					// 			locked: true
+					// 		}
+					// 	}
+					// });
+				}
+			});
+
+			$("#modal_login form").validate({
+				rules: {
+					email: {
+						required: true,
+						email: true
+					},
+					pass: { 
+						required: true,
+						minlength: 6
+					}
+					
+				},
+				messages: {
+					email: {
+						required: "Введите ваш email",
+						email: "Правильно введите ваш email"
+					},
+					pass: {
+						required: "Введите пароль",
+						minlength: "Минимум 6 символов"
+					}
+				},
+				submitHandler: function(form) {
+
+				}
+			});
+
+			// validate signup form on keyup and submit
+			$("#info_form").validate({
+				rules: {
+					firstname: "required",
+					lastname: "required",
+					email: {
+						required: true,
+						email: true
+					},
+					pass: { 
+						required: true,
+						minlength: 6
+					},
+					confirmpass: {
+						required: true,
+						minlength: 6,
+						equalTo: "#reg_pass"
+					},
+					phone: "required",
+					avatar: "required"
+				},
+				messages: {
+					firstname: "Введите ваше имя",
+					lastname: "Введите вашу фамилию",
+					email: {
+						required: "Введите ваш email",
+						email: "Правильно введите ваш email"
+					},
+					pass: {
+						required: "Введите пароль",
+						minlength: "Минимум 6 символов"
+					},
+					confirmpass: {
+						required: "Повторите пароль",
+						minlength: "Минимум 6 символов",
+						equalTo: "Пароли не совпадают"
+					},
+					phone: "Введите ваш телефон",
+					avatar: ""
+				},
+				submitHandler: function(form) {
+
+				}
+			});
+
+			$("#modal_pass form").validate({
+				rules: {
+					email: {
+						required: true,
+						email: true
+					}
+				},
+				messages: {
+					email: {
+						required: "Введите ваш email",
+						email: "Правильно введите ваш email"
+					}
+				},
+				submitHandler: function(form) {
+
+				}
+			});
+		});
+	</script>
+	<!-- End Validation -->
 
 	<!--modal -->
 	<div id="modal_login" class="modal">
@@ -633,11 +800,11 @@
 				<div class="form_row">
 					<div class="form_group">
 						<label>Введите Ваш регистрационный email</label>
-						<input type="email" placeholder="anna@gmail.com">
+						<input type="email" name="email" placeholder="anna@gmail.com" required>
 					</div>
 				</div>
 				<div class="form_button">
-					<a href="#modal_pass_confirm" class="a_button a_grad open_modal">Отправить</a>
+					<button class="a_button a_grad" type="submite">Отправить</button>
 				</div>
 			</form>
 		</div>

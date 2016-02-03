@@ -15,7 +15,7 @@
 			<link href="css/media.css" rel="stylesheet" media="screen">
 		<!-- END OF CSS -->
 		<!--SCRIPT -->
-			<script src="js/jquery-1.11.1.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 			<script src="js/jquery.placeholder.js"></script>
 			<script src="js/jquery.maskedinput.js"></script>
 			<script src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
@@ -36,26 +36,9 @@
 			<script src="js/jquery-ui-1.11.4.datepicker/jquery-ui.js"></script>
 			<script src="js/jquery-ui-1.11.4.datepicker/datepicker-ru.js"></script>
 
-			<script src="js/airStickyBlock/jquery.airStickyBlock.js"></script>
-			<script>
-			    jQuery(document).ready(function($){
-			    	function catalogFilterPosition(){
-				        if ($(window).width() >= 1024) {
-				            $('.catalog_filter').airStickyBlock({
-				            	debug: false,
-				                stopBlock: '.airSticky__stop-block'
-				            });
-				        };
-			    	}
-			    	window.onload = function() {
-			    		catalogFilterPosition();
-				    };
-			    	$(window).resize(function(){
-			    		catalogFilterPosition();
-			    	});
-			    });
-			</script>
-
+			<link href="js/croppic/assets/css/croppic.css" rel="stylesheet">
+		    <script src="js/croppic/assets/js/jquery.mousewheel.min.js"></script>
+		    <script src="js/croppic/croppic.js"></script>
 			
 			<script src="js/jquery.mobile-events.min.js"></script>
 			<script src="js/common.js"></script>
@@ -71,25 +54,32 @@
 		<div class="content_menu">
 			<div class="scrollbar">
 				<ul>
-					<li class="active"><a href="#">Все салоны и специалисты</a></li>
-					<li><a href="#">Уход за лицом</a></li>
-					<li><a href="#">Уход за волосами</a></li>
-					<li><a href="#">Уход за руками и ногами</a></li>
-					<li><a href="#">Мероприятия и праздники</a></li>
-					<li><a href="#">Здоровье</a></li>
-					<li><a href="#">Искусство и творчество</a></li>
-					<li><a href="#">Аренда</a></li>
-					<li><a href="#">Акции</a></li>
-					<li><a href="#">Модели</a></li>
+					<li class="active"><a href="#">Страница пользователя</a>
+						<div class="aside">
+							<div class="aside_menu">
+								<ul>
+									<li class="active"><a href="#"><i class="fa fa-angle-right"></i>Общая информация</a></li>
+									<li><a href="#"><i class="fa fa-angle-right"></i>Мои заказы</a></li>
+									<li><a href="#"><i class="fa fa-angle-right"></i>Избранное</a></li>
+									<li><a href="#"><i class="fa fa-angle-right"></i>Социальные сети</a></li>
+									<li><a href="#"><i class="fa fa-angle-right"></i>Настройки</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">Анкета модели</a></li>
+					<li><a href="#">Уведомления<span>3</span></a></li>
+					<li><a href="#">Сообщения<span>2</span></a></li>
+					<li><a href="#">Баланс</a></li>
+					<li><a href="#">Правила</a></li>
 				</ul>
 			</div>
 		</div>
+		<div class="menu_close"><i class="fa fa-times"></i></div>
 	</div>
 	<div id="menu_overlay"></div>
 	<!-- END OF menu_mobile -->
-
-	<div id="filter_overlay"></div>
-
+	
 	<!--header -->
 	<header class="header">
 		<div class="inner">
@@ -447,7 +437,7 @@
 				<div class="entrance_lock"><i class="fa fa-lock"></i></div>
 				<div class="entrance_box">
 					<div class="login">
-						<a href="#modal_login" class="open_modal"><i class="fa fa-lock"></i>Войти</a>
+						<a href="#modal_avatar" class="open_modal"><i class="fa fa-lock"></i>Войти</a>
 					</div>
 					<div class="reg">
 						<a href="#modal_reg" class="a_button a_grad open_modal">Зарегистрироваться</a>
@@ -463,338 +453,438 @@
 		<div class="inner">
 			<div class="menu_pc">
 				<ul>
-					<li class="active"><a href="#">Все салоны и специалисты</a></li>
-					<li><a href="#">Уход за лицом</a></li>
-					<li><a href="#">Уход за волосами</a></li>
-					<li><a href="#">Уход за руками и ногами</a></li>
-					<li><a href="#">Мероприятия и праздники</a></li>
-					<li><a href="#">Здоровье</a></li>
-					<li><a href="#">Искусство и творчество</a></li>
+					<li class="active"><a href="#">Страница пользователя</a></li>
+					<li><a href="#">Сотрудники</a></li>
 					<li><a href="#">Аренда</a></li>
-					<li><a href="#">Акции</a></li>
-					<li><a href="#">Модели</a></li>
+					<li><a href="#">Как видят анкету клиенты</a></li>
+					<li><a href="#">Баланс</a></li>
 				</ul>
 			</div>
-			<div class="all_category">Все категории<i class="fa fa-bars"></i></div>
+			<div class="all_category">Все разделы<i class="fa fa-bars"></i></div>
 			<div class="block_mobile">
 				<div class="menu_change"><i class="fa fa-list-ul"></i></div>
-				<div class="filter_change"><i class="fa fa-sliders"></i></div>
-				<div class="page_title">Все статьи</div>
+				<div class="page_title">Информация о компании</div>
 			</div>
 			<div class="clear"></div>
 		</div>
-		<div class="catalog_sharing">
-			<a href="#" class="share_all"><i class="fa fa-share-alt"></i></a>
-			<a href="#" class="vk"><i class="fa fa-vk"></i></a>
-			<a href="#" class="fb"><i class="fa fa-facebook"></i></a>
-			<a href="#" class="ok"><i class="fa fa-odnoklassniki"></i></a>
-			<a href="#" class="go"><i class="fa fa-google-plus"></i></a>
-			<a href="#" class="tw"><i class="fa fa-twitter"></i></a>
-		</div>
 	</div>
-	<div id="main" class="airSticky__stop-block">
+	<div id="main">
 		<div class="inner">
-			<div class="aside_catalog">
-				<div class="catalog_filter">
-					<form action="#">
-						<div class="catalog_filter_head">
-							<div class="catalog_filter_title"><span>450</span> предложений</div>
-							<div class="catalog_filter_nav">
-								<div class="catalog_filter_tabs">
-									<a href="#" class="a_button a_xs">Все</a>
-									<a href="#" class="a_button a_grey a_xs">новые</a>
-								</div>
-								<a href="#" class="a_button a_white a_xs"><i class="fa fa-map-marker"></i>На карте</a>
+			<div class="aside aside_left">
+				<div class="aside_menu">
+					<ul>
+						<li class="active"><a href="#"><i class="fa fa-angle-right"></i>Общая информация</a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i>Прайс-лист</a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i>Фотогалерея</a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i>Видеоматериалы</a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i>Акции</a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i>Отзывы</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="content content_right content_right_internal">
+				<h1>Информация о компании</h1>
+				<div class="user_pages">
+					<form id="info_form" action="#">
+						<div class="photo_upload">
+							<div class="photo_upload_inner"  id='js_photo_upload'></div>
+							<div id="photo_upload_add"></div>
+							<div class="photo_controls">
+								<a href="#" class="photo_zoom_in"></a>
+								<a href="#" class="photo_zoom_out"></a>
+								<a href="#" class="photo_crop"></a>
+								<a href="#" class="photo_clear"></a>
 							</div>
-							<div class="form_row">
+							<div class="photo_upload_info">
+								<div class="photo_upload_title">Загрузите фото <span>*</span></div>
+								<div class="photo_upload_text">Минимальное разрешение 360х360 пикселей</div>
+							</div>
+							<div class="photo_upload_edits">
+								<nav class="photo_button">
+									<a href="#" class="photo_edit"></a>
+									<a href="#" class="photo_del"></a>
+								</nav>
+							</div>
+						</div>
+					      <script>
+					       var croppicHeaderOptions = {
+					         //uploadUrl:'js/croppic/img_save_to_file.php',
+					         cropData:{
+					          "dummyData":1,
+					          "dummyData2":"asdas"
+					         },
+					         modal:true,
+					         cropUrl:'js/croppic/img_crop_to_file.php',
+					         processInline:true,
+					         customUploadButtonId:'photo_upload_add',
+					         modal:false,
+					         imgEyecandy:false,
+					         doubleZoomControls:false,
+					         rotateControls: false,
+					         rotateFactor:90,
+					         loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
+					         // onBeforeImgUpload: function(){ console.log('onBeforeImgUpload') },
+					         // onAfterImgUpload: function(){ console.log('onAfterImgUpload') },
+					         // onImgDrag: function(){ console.log('onImgDrag') },
+					         // onImgZoom: function(){ console.log('onImgZoom') },
+					         // onBeforeImgCrop: function(){ console.log('onBeforeImgCrop') },
+					         // onAfterImgCrop:function(){ console.log('onAfterImgCrop') },
+					         // onReset:function(){ console.log('onReset') },
+					         // onError:function(errormessage){ console.log('onError:'+errormessage) }
+					       } 
+					       var croppic = new Croppic('js_photo_upload', croppicHeaderOptions);
+
+
+
+					        
+					        $('#photo_upload_add').mouseover(function(){
+					        	$('.photo_upload_inner').addClass('hover');
+					        });
+					        $('#photo_upload_add').mouseout(function(){
+					        	$('.photo_upload_inner').removeClass('hover');
+					        });
+
+							$('.photo_upload_inner input[type="file"]').live('change', function(){
+								$('.photo_controls').show();
+								$('.photo_upload_info').hide();
+								$('.photo_upload_edits').hide();
+							});
+
+					        $('.photo_zoom_in').click(function(){
+								$('.cropControlZoomIn').click();
+								return false;
+							})
+							$('.photo_zoom_out').click(function(){
+								$('.cropControlZoomOut').click();
+								return false;
+							})
+							$('.photo_crop').click(function(){
+								$('.cropControlCrop').click();
+								$('.photo_controls').hide();
+								$('.photo_upload_edits').show();
+								return false;
+							})
+							$('.photo_clear').click(function(){
+								$('.cropControlReset').click();
+								$('.photo_controls').hide();
+								$('.photo_upload_info').show();
+								return false;
+							})
+
+					        $('.photo_edit').click(function(){
+								$('#pcover_upload_add').click();
+								return false;
+							})
+							$('.photo_del').click(function(){
+								$('.cropControlRemoveCroppedImage').click();
+								$('.photo_upload_info').show();
+								$('.photo_upload_edits').hide();
+								return false;
+							})
+					      </script>
+						<div class="form_row">
+							<div class="form_group">
+								<label>Категория<span class="required">*</span></label>
+								<input id="reg_name" type="text" name="category" placeholder="Салон красоты" required disabled>
+							</div>
+							<div class="form_group">
+								<label>Название<span class="required">*</span></label>
+								<input id="reg_lastname" type="text" name="company_name" placeholder="Инканто" required>
+							</div>
+						</div>
+						<div class="form_row">
+							<div class="form_group">
+								<label>УНН организации<span class="required">*</span></label>
+								<input id="unn" type="text" name="unn" placeholder="" required>
+							</div>
+							<div class="form_group">
+								<label>Адрес сайта организации</label>
+								<input id="site_name" type="text" name="site" placeholder="http://domain.com">
+							</div>
+						</div>
+						<div class="form_row">
+							<div class="form_group">
+								<label>Ваш URL на портале<span class="required">*</span></label>
+								<input id="url_company" type="text" name="url_company" placeholder="" required="">
+							</div>
+							<div class="domain_company">.alrait.by</div>
+							<div class="domain_required">
+								<div class="free_domain"><i class="fa fa-check"></i>Адрес свободен</div>
+								<div class="busy_domain"><i class="fa fa-times"></i>Адрес занят</div>
+							</div>
+						</div>
+						<div class="form_row">
+							<div class="form_group">
+								<label>Информация о Вашей организации<span class="form_help tooltip" title="Вы можете создавать различные альбомы с фотографиями Ваших работ.Кроме того, у Вас есть возможность создать альбомы типа «интерьер», «оборудование», «дипломы и сертификаты» разместив в них соответствующие фотографии">?</span></label>
 								<div class="form_group">
-									<label>Укажите город (область или регион)</label>
-									<select multiple>
-										<option>Брестск</option>
-										<option>Витебск</option>
-										<option>Гомельск</option>
-										<option>Гродненск</option>
-										<option>Минск</option>
-										<option>Могилёвск</option>
-									</select>
+									<textarea class="company_info" placeholder="Для продвижения Вашей страницы в интернете, необходимо добавить уникальное описание (минимум 500 символов)"></textarea>
 								</div>
 							</div>
 						</div>
-						<div class="catalog_filter_body">
-							<div class="scrollbar">							
-								<div class="form_row">
-									<div class="form_group">
+						<div class="form_row">
+							<div class="form_group">
+								<label>В каталоге показывать<span class="form_help tooltip" title="Вы можете создавать различные альбомы с фотографиями Ваших работ.Кроме того, у Вас есть возможность создать альбомы типа «интерьер», «оборудование», «дипломы и сертификаты» разместив в них соответствующие фотографии">?</span></label>
+							</div>
+							<div class="switch_photovideo">
+								<div class="form_radio">
+									<input id="radio1" type="radio" name="radio_switch" data-attr="switch_photo" checked="checked">
+									<label for="radio1">Фотогалерею</label>
+								</div>
+								<div class="form_radio">
+									<input id="radio2" type="radio" name="radio_switch" data-attr="switch_video">
+									<label for="radio2">Видеоматериалы</label>
+								</div>
+							</div>
+						</div>
+						<div class="form_row">
+							<div class="form_group">
+								<label>Загрузите фотографию обложки<span class="form_help tooltip" title="Вы можете создавать различные альбомы с фотографиями Ваших работ.Кроме того, у Вас есть возможность создать альбомы типа «интерьер», «оборудование», «дипломы и сертификаты» разместив в них соответствующие фотографии">?</span></label>
+								<div class="cover_upload">
+									<div class="cover_upload_inner" id='js_cover_upload'></div>
+									<div id="cover_upload_add"></div>
+									<div class="cover_controls">
+										<a href="#" class="cover_zoom_in"></a>
+										<a href="#" class="cover_zoom_out"></a>
+										<a href="#" class="cover_crop"></a>
+										<a href="#" class="cover_clear"></a>
+									</div>
+									<div class="cover_upload_info">
+										<div class="cover_upload_text">Минимальное разрешение 360х360 пикселей</div>
+									</div>
+									<div class="cover_upload_edits">
+										<nav class="cover_button">
+											<a href="#" class="cover_edit"></a>
+											<a href="#" class="cover_del"></a>
+										</nav>
+									</div>
+									<input type="text" name="avatar" id="avatar_img" required>
+								</div>
+								<script>
+							       var croppicHeaderOptions = {
+							         cropData:{
+							          "dummyData":1,
+							          "dummyData2":"asdas"
+							         },
+							         modal:true,
+							         cropUrl:'js/croppic/img_crop_to_file.php',
+							         processInline:true,
+							         customUploadButtonId:'cover_upload_add',
+							         modal:false,
+							         imgEyecandy:false,
+							         doubleZoomControls:false,
+							         rotateControls: false,
+							         rotateFactor:90,
+							         loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
+							         // onBeforeImgUpload: function(){ console.log('onBeforeImgUpload') },
+							         // onAfterImgUpload: function(){ console.log('onAfterImgUpload') },
+							         // onImgDrag: function(){ console.log('onImgDrag') },
+							         // onImgZoom: function(){ console.log('onImgZoom') },
+							         // onBeforeImgCrop: function(){ console.log('onBeforeImgCrop') },
+							         // onAfterImgCrop:function(){ console.log('onAfterImgCrop') },
+							         // onReset:function(){ console.log('onReset') },
+							         // onError:function(errormessage){ console.log('onError:'+errormessage) }
+							       } 
+							       var croppic = new Croppic('js_cover_upload', croppicHeaderOptions);
+
+
+
+							        
+							        $('#cover_upload_add').mouseover(function(){
+							        	$('.cover_upload_inner').addClass('hover');
+							        });
+							        $('#cover_upload_add').mouseout(function(){
+							        	$('.cover_upload_inner').removeClass('hover');
+							        });
+
+									$('.cover_upload_inner input[type="file"]').live('change', function(){
+										$('.cover_controls').show();
+										$('.cover_upload_info').hide();
+										$('.cover_upload_edits').hide();
+									});
+
+							        $('.cover_zoom_in').click(function(){
+										$('.cropControlZoomIn').click();
+										return false;
+									})
+									$('.cover_zoom_out').click(function(){
+										$('.cropControlZoomOut').click();
+										return false;
+									})
+									$('.cover_crop').click(function(){
+										$('.cropControlCrop').click();
+										$('.cover_controls').hide();
+										$('.cover_upload_edits').show();
+										return false;
+									})
+									$('.cover_clear').click(function(){
+										$('.cropControlReset').click();
+										$('.cover_controls').hide();
+										$('.cover_upload_info').show();
+										return false;
+									})
+
+							        $('.cover_edit').click(function(){
+										$('#cover_upload_add').click();
+										return false;
+									})
+									$('.cover_del').click(function(){
+										$('.cropControlRemoveCroppedImage').click();
+										$('.cover_upload_info').show();
+										$('.cover_upload_edits').hide();
+										return false;
+									})
+							      </script>
+							</div>
+						</div>
+						<hr/>
+						<h4>Контактная информация</h4>
+						<div class="form_row">
+							<div class="form_group">
+								<label>Номера телефонов<span class="required">*</span><span class="form_help tooltip" title="Вы можете создавать различные альбомы с фотографиями Ваших работ.Кроме того, у Вас есть возможность создать альбомы типа «интерьер», «оборудование», «дипломы и сертификаты» разместив в них соответствующие фотографии">?</span></label>
+								<div class="number_phone">
+									<div class="number_field">
+										<input type="text" name="phone" placeholder="+375 (33) 300-00-00" required class="phone">
+										<div class="phone_del"></div>
+									</div>
+								</div>
+								<a href="" id="phone_add">+ Добавить номер телефона</a>
+							</div>
+						</div>
+						<div class="form_row">
+							<div class="form_group">
+								<label>Номер для SMS-уведомлений<span class="required">*</span><span class="form_help tooltip" title="Вы можете создавать различные альбомы с фотографиями Ваших работ.Кроме того, у Вас есть возможность создать альбомы типа «интерьер», «оборудование», «дипломы и сертификаты» разместив в них соответствующие фотографии">?</span></label>
+								<div class="form_group">
+									<input type="text" name="phone" placeholder="+375 (33) 300-00-00" required class="phone">
+								</div>
+								<div class="form_group">
+									<a href="#" class="a_button disable">Подтвердить</a>
+								</div>
+							</div>
+						</div>
+						<div class="form_row">
+							<div class="form_group">
+								<label>Номер для SMS-уведомлений<span class="required">*</span><span class="form_help tooltip" title="Вы можете создавать различные альбомы с фотографиями Ваших работ.Кроме того, у Вас есть возможность создать альбомы типа «интерьер», «оборудование», «дипломы и сертификаты» разместив в них соответствующие фотографии">?</span></label>
+								<div class="form_group">
+									<input type="text" name="phone" placeholder="+375 (33) 300-00-00" required class="phone">
+								</div>
+								<div class="form_group">
+									<a href="#" class="a_button">Подтвердить</a>
+								</div>
+								<div class="form_group">
+									<div class="form_row_row">
+									<input type="text" class="sms_confirm" placeholder="12345" >
+									<a href="#" class="a_button sms_code">Код верный</a>
+									</div>	
+								</div>
+							</div>
+						</div>
+						<div class="form_row">
+							<div class="form_group">
+								<label>Номер для SMS-уведомлений<span class="required">*</span><span class="form_help tooltip" title="Вы можете создавать различные альбомы с фотографиями Ваших работ.Кроме того, у Вас есть возможность создать альбомы типа «интерьер», «оборудование», «дипломы и сертификаты» разместив в них соответствующие фотографии">?</span></label>
+								<div class="form_group">
+									<input type="text" name="phone" placeholder="+375 (33) 300-00-00" required class="phone">
+								</div>
+								<div class="form_group">
+									<div class="form_row_row">
+									<input type="text" placeholder="12345" style="width: 80px;">
+									<a href="#" class="a_button">Код верный</a>
+									</div>	
+								</div>
+							</div>
+						</div>
+						<div class="form_row">
+							<div class="form_group">
+								<label>Номер для SMS-уведомлений<span class="required">*</span><span class="form_help tooltip" title="Вы можете создавать различные альбомы с фотографиями Ваших работ.Кроме того, у Вас есть возможность создать альбомы типа «интерьер», «оборудование», «дипломы и сертификаты» разместив в них соответствующие фотографии">?</span></label>
+								<div class="form_group">
+									<input type="text" name="phone" placeholder="+375 (33) 300-00-00" required class="phone" disabled>
+								</div>
+								<div class="form_group">
+									<a href="#" class="a_button">Изменить</a>
+								</div>
+							</div>
+						</div>
+						<div class="form_row">
+							<div class="form_group">
+								<label>Получать SMS-уведомления</label>
+								<div class="form_row_row">
+									<div class="form_row_row_text">с</div>
+									<div class="time">
 										<select>
-											<option>Категория</option>
+											<option value="">00:00</option>
+											<option value="">01:00</option>
+											<option value="">02:00</option>
+											<option value="">03:00</option>
+											<option value="">04:00</option>
+											<option value="">05:00</option>
+											<option value="">06:00</option>
+											<option value="">07:00</option>
+											<option value="">08:00</option>
+											<option value="">09:00</option>
+											<option value="">10:00</option>
+											<option value="">11:00</option>
+											<option value="">12:00</option>
+											<option value="">13:00</option>
+											<option value="">14:00</option>
+											<option value="">15:00</option>
+											<option value="">16:00</option>
+											<option value="">17:00</option>
+											<option value="">18:00</option>
+											<option value="">19:00</option>
+											<option value="">20:00</option>
+											<option value="">21:00</option>
+											<option value="">22:00</option>
+											<option value="">23:00</option>
+										</select>
+									</div>
+									<div class="form_row_row_text">до</div>
+									<div class="time">
+										<select>
+											<option value="">00:00</option>
+											<option value="">01:00</option>
+											<option value="">02:00</option>
+											<option value="">03:00</option>
+											<option value="">04:00</option>
+											<option value="">05:00</option>
+											<option value="">06:00</option>
+											<option value="">07:00</option>
+											<option value="">08:00</option>
+											<option value="">09:00</option>
+											<option value="">10:00</option>
+											<option value="">11:00</option>
+											<option value="">12:00</option>
+											<option value="">13:00</option>
+											<option value="">14:00</option>
+											<option value="">15:00</option>
+											<option value="">16:00</option>
+											<option value="">17:00</option>
+											<option value="">18:00</option>
+											<option value="">19:00</option>
+											<option value="">20:00</option>
+											<option value="">21:00</option>
+											<option value="">22:00</option>
+											<option value="">23:00</option>
 										</select>
 									</div>
 								</div>
 							</div>
 						</div>
+						<div class="form_row">
+							<div class="form_group">
+								<a href="#modal_change_phone" class="a_button open_modal">ChangePhone</a>
+							</div>
+							<div class="form_group">
+								<a href="#modal_change_phone_conf" class="a_button open_modal">ChangePhoneConf</a>
+							</div>
+						</div>
 					</form>
-				</div>
-			</div>
-			<div class="catalog_content">
-				<div class="catalog_content_inner rents">
-					<div class="catalog_org_box catalog_org_hot">
-						<div class="catalog_org_content">
-							<div class="catalog_org_avatar">
-								<a href="#"><img src="img/organization/organization_img7.png" alt=""></a>
-							</div>
-							<div class="catalog_org_body">
-								<div class="catalog_org_category">Усадьбы и коттеджи</div>
-								<div class="catalog_org_title"><a href="#">Тарасово</a> <span class="pro">pro</span></div>
-								<div class="catalog_org_info">
-									<p>Адрес: <a href="#">г. Минск пр-т Независимости, 177</a> </p>
-									<p>Удаленность от областного центра, км: <b>Более 50</b></p>
-									<p>Количество спальных мест: <b>30</b></p>
-									<p>Количество мест для гостей: <b>20</b></p>
-									<p>Количество комнат: <b>12</b></p>
-									<p>Площадь, м2: <b>250</b></p>
-								</div>								
-								<div class="catalog_org_link">
-									<a href="#" class="a_button a_green a_sm">Арендовать онлайн</a>
-								</div>
-							</div>
-							<div class="clear"></div>
-						</div>
-						<div class="catalog_org_gallery">
-							<div class="org_gallery_img">
-								<img src="img/org_gallery_img.jpg" alt="">
-							</div>
-							<div class="org_gallery_img">
-								<img src="img/org_gallery_img.jpg" alt="">
-							</div>
-							<div class="org_gallery_img">
-								<img src="img/org_gallery_img.jpg" alt="">
-							</div>
-							<div class="org_gallery_img">
-								<img src="img/org_gallery_img.jpg" alt="">
-							</div>
-						</div>						
-						<div class="catalog_org_footer">
-							<div class="catalog_org_footer-left">
-								<div class="catalog_org_min_avatar"><a href="#"><img src="img/organization/organization_img1.png" alt=""></a></div>
-								<div class="catalog_org_min_info">
-									<div class="catalog_org_min_title"><a href="#">Екатерина В.</a></div>
-									<div class="catalog_org_min_subtitle">Арендодатель</div>
-								</div>
-							</div>
-							<div class="catalog_org_footer-right">
-								<div class="catalog_spec_address">
-									<p><a href="#">г. Минск, пр-т Независимости, 187</a></p>
-								</div>
-								<div class="catalog_spec_phone">
-									<p>+375 33 390-40-90;  +375 29 390-40-90</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="catalog_org_box catalog_org_hot">
-						<div class="catalog_org_content">
-							<div class="catalog_org_avatar">
-								<a href="#"><img src="img/organization/organization_img7.png" alt=""></a>
-							</div>
-							<div class="catalog_org_body">
-								<div class="catalog_org_category">Усадьбы и коттеджи</div>
-								<div class="catalog_org_title"><a href="#">Тарасово</a> <span class="pro">pro</span></div>
-								<div class="catalog_org_info">
-									<p>Адрес: <a href="#">г. Минск пр-т Независимости, 177</a> </p>
-									<p>Удаленность от областного центра, км: <b>Более 50</b></p>
-									<p>Количество спальных мест: <b>30</b></p>
-									<p>Количество мест для гостей: <b>20</b></p>
-									<p>Количество комнат: <b>12</b></p>
-									<p>Площадь, м2: <b>250</b></p>
-								</div>								
-								<div class="catalog_spec_link">
-									<a href="#" class="a_button a_green a_sm">Арендовать онлайн</a>
-								</div>
-							</div>
-							<div class="clear"></div>
-						</div>
-						<div class="catalog_org_gallery">
-							<div class="org_gallery_img">
-								<img src="img/org_gallery_img.jpg" alt="">
-							</div>
-							<div class="org_gallery_img">
-								<img src="img/org_gallery_img.jpg" alt="">
-							</div>
-							<div class="org_gallery_img">
-								<img src="img/org_gallery_img.jpg" alt="">
-							</div>
-							<div class="org_gallery_img">
-								<img src="img/org_gallery_img.jpg" alt="">
-							</div>
-						</div>						
-						<div class="catalog_org_footer">
-							<div class="catalog_org_footer-left">
-								<div class="catalog_org_min_avatar"><a href="#"><img src="img/organization/organization_img1.png" alt=""></a></div>
-								<div class="catalog_org_min_info">
-									<div class="catalog_org_min_title"><a href="#">Екатерина В.</a></div>
-									<div class="catalog_org_min_subtitle">Арендодатель</div>
-								</div>
-							</div>
-							<div class="catalog_org_footer-right">
-								<div class="catalog_spec_address">
-									<p><a href="#">г. Минск, пр-т Независимости, 187</a></p>
-								</div>
-								<div class="catalog_spec_phone">
-									<p>+375 33 390-40-90;  +375 29 390-40-90</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="catalog_org_box">
-						<div class="catalog_org_content">
-							<div class="catalog_org_avatar">
-								<a href="#"><img src="img/organization/organization_img7.png" alt=""></a>
-							</div>
-							<div class="catalog_org_body">
-								<div class="catalog_org_category">Усадьбы и коттеджи</div>
-								<div class="catalog_org_title"><a href="#">Тарасово</a> <span class="pro">pro</span></div>
-								<div class="catalog_org_info">
-									<p>Адрес: <a href="#">г. Минск пр-т Независимости, 177</a> </p>
-								</div>								
-								<div class="catalog_spec_link">
-									<a href="#" class="a_button a_green a_sm">Арендовать онлайн</a>
-								</div>
-							</div>
-							<div class="clear"></div>
-						</div>
-						<div class="catalog_org_gallery">
-							<div class="org_gallery_img">
-								<img src="img/org_gallery_img.jpg" alt="">
-							</div>
-							<div class="org_gallery_img">
-								<img src="img/org_gallery_img.jpg" alt="">
-							</div>
-							<div class="org_gallery_img">
-								<img src="img/org_gallery_img.jpg" alt="">
-							</div>
-							<div class="org_gallery_img">
-								<img src="img/org_gallery_img.jpg" alt="">
-							</div>
-						</div>						
-						<div class="catalog_org_footer">
-							<div class="catalog_org_footer-left">
-								<div class="catalog_org_min_avatar"><a href="#"><img src="img/organization/organization_img1.png" alt=""></a></div>
-								<div class="catalog_org_min_info">
-									<div class="catalog_org_min_title"><a href="#">Екатерина В.</a></div>
-									<div class="catalog_org_min_subtitle">Арендодатель</div>
-								</div>
-							</div>
-							<div class="catalog_org_footer-right">
-								<div class="catalog_spec_address">
-									<p><a href="#">г. Минск, пр-т Независимости, 187</a></p>
-								</div>
-								<div class="catalog_spec_phone">
-									<p>+375 33 390-40-90;  +375 29 390-40-90</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="catalog_org_box">
-						<div class="catalog_org_content">
-							<div class="catalog_org_avatar">
-								<a href="#"><img src="img/organization/organization_img7.png" alt=""></a>
-							</div>
-							<div class="catalog_org_body">
-								<div class="catalog_org_category">Усадьбы и коттеджи</div>
-								<div class="catalog_org_title"><a href="#">Тарасово</a> <span class="pro">pro</span></div>
-								<div class="catalog_org_info">
-									<p>Адрес: <a href="#">г. Минск пр-т Независимости, 177</a> </p>
-								</div>								
-								<div class="catalog_spec_link">
-									<a href="#" class="a_button a_green a_sm">Арендовать онлайн</a>
-								</div>
-							</div>
-							<div class="clear"></div>
-						</div>
-						<div class="catalog_org_gallery">
-							<div class="org_gallery_img">
-								<img src="img/org_gallery_img.jpg" alt="">
-							</div>
-							<div class="org_gallery_img">
-								<img src="img/org_gallery_img.jpg" alt="">
-							</div>
-							<div class="org_gallery_img">
-								<img src="img/org_gallery_img.jpg" alt="">
-							</div>
-							<div class="org_gallery_img">
-								<img src="img/org_gallery_img.jpg" alt="">
-							</div>
-						</div>						
-						<div class="catalog_org_footer">
-							<div class="catalog_org_footer-left">
-								<div class="catalog_org_min_avatar"><a href="#"><img src="img/organization/organization_img1.png" alt=""></a></div>
-								<div class="catalog_org_min_info">
-									<div class="catalog_org_min_title"><a href="#">Екатерина В.</a></div>
-									<div class="catalog_org_min_subtitle">Арендодатель</div>
-								</div>
-							</div>
-							<div class="catalog_org_footer-right">
-								<div class="catalog_spec_address">
-									<p><a href="#">г. Минск, пр-т Независимости, 187</a></p>
-								</div>
-								<div class="catalog_spec_phone">
-									<p>+375 33 390-40-90;  +375 29 390-40-90</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="catalog_org_box">
-						<div class="catalog_org_content">
-							<div class="catalog_org_body">
-								<div class="catalog_org_category">Конференц залы</div>
-								<div class="catalog_org_title"><a href="#">Imaguru</a></div>
-								<div class="catalog_org_info">
-									<p>Адрес: <a href="#">г. Минск пр-т Независимости, 177</a> </p>
-								</div>	
-								<div class="catalog_org_link">
-									<a href="#" class="a_button a_green a_sm">Арендовать онлайн</a>
-								</div>
-							</div>
-							<div class="clear"></div>
-						</div>				
-						<div class="catalog_org_footer">
-							<div class="catalog_org_footer-left">
-								<div class="catalog_org_min_avatar"><a href="#"><img src="img/organization/organization_img1.png" alt=""></a></div>
-								<div class="catalog_org_min_info">
-									<div class="catalog_org_min_title"><a href="#">Екатерина В.</a></div>
-									<div class="catalog_org_min_subtitle">Арендодатель</div>
-								</div>
-							</div>
-							<div class="catalog_org_footer-right">
-								<div class="catalog_org_address">
-									<p><a href="#">г. Минск, пр-т Независимости, 187</a></p>
-								</div>
-								<div class="catalog_org_phone">
-									<p>+375 33 390-40-90;  +375 29 390-40-90</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="catalog_more">
-					<a href="#" class="load"><img src="img/uploadmore_icon_x2.png" alt=""><div class="more_text">Загрузить ещё</div></a>
-				</div>
-				<div class="pagers">
-					<ul>
-						<li class="active">1</li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li class="pager_dot"><a href="#">...</a></li>
-						<li><a href="#">17</a></li>
-					</ul>
-				</div>
-				<div class="catalog_content_about">
-					<p>Что значат салоны красоты в жизни настоящих женщин? Конечно, не все, но очень многое. Ведь именно в этих заведениях подчеркиваются и сохраняются внешние данные, которые каждая девочка получает от природы при рождении. Информационно-развлекательный портал alrait.by предлагает своим пользователям максимально полный список заведений Минска, в которых ваша природная красота получит достойный уход и внимание.</p>
 				</div>
 			</div>
 			<div class="clear"></div>
 		</div>
 	</div>
 	<!-- END OF main -->
+
 	<div class="top">
 		<a href="#main" class="a_button a_sm">Вверх <i class="fa fa-angle-up"></i></a>
 	</div>
@@ -826,18 +916,11 @@
 	</footer>
 	<!-- END OF footer -->
 
-
 	<!-- Validation -->
 	<script src="js/validation/dist/jquery.validate.js"></script>
-	<script>
-		// $.validator.setDefaults({
-		// 	submitHandler: function() {
-		// 		alert("submitted!");
-		// 	}
-		// });
-		
+	<script>		
 		$().ready(function() {
-			// validate signup form on keyup and submit
+
 			$("#modal_reg form").validate({
 				rules: {
 					firstname: "required",
@@ -856,22 +939,22 @@
 					}
 				},
 				submitHandler: function(form) {
-					$.fancybox({ 
-						href: "#modal_thanks",
-						padding: 0,
-						margin: 10,
-						minHeight: false,
-						autoHeight: true,
-						openEffect: 'fade',
-						closeEffect: 'fade',
-						openSpeed: 400,
-						closeSpeed: 400,
-						helpers: {
-							overlay: {
-								locked: true
-							}
-						}
-					});
+					// $.fancybox({ 
+					// 	href: "#modal_thanks",
+					// 	padding: 0,
+					// 	margin: 10,
+					// 	minHeight: false,
+					// 	autoHeight: true,
+					// 	openEffect: 'fade',
+					// 	closeEffect: 'fade',
+					// 	openSpeed: 400,
+					// 	closeSpeed: 400,
+					// 	helpers: {
+					// 		overlay: {
+					// 			locked: true
+					// 		}
+					// 	}
+					// });
 				}
 			});
 
@@ -898,22 +981,82 @@
 					}
 				},
 				submitHandler: function(form) {
-					$.fancybox({ 
-						href: "#modal_thanks",
-						padding: 0,
-						margin: 10,
-						minHeight: false,
-						autoHeight: true,
-						openEffect: 'fade',
-						closeEffect: 'fade',
-						openSpeed: 400,
-						closeSpeed: 400,
-						helpers: {
-							overlay: {
-								locked: true
-							}
-						}
-					});
+					// $.fancybox({ 
+					// 	href: "#modal_thanks",
+					// 	padding: 0,
+					// 	margin: 10,
+					// 	minHeight: false,
+					// 	autoHeight: true,
+					// 	openEffect: 'fade',
+					// 	closeEffect: 'fade',
+					// 	openSpeed: 400,
+					// 	closeSpeed: 400,
+					// 	helpers: {
+					// 		overlay: {
+					// 			locked: true
+					// 		}
+					// 	}
+					// });
+				}
+			});
+
+			// validate signup form on keyup and submit
+			$("#info_form").validate({
+				rules: {
+					firstname: "required",
+					lastname: "required",
+					email: {
+						required: true,
+						email: true
+					},
+					pass: { 
+						required: true,
+						minlength: 6
+					},
+					confirmpass: {
+						required: true,
+						minlength: 6,
+						equalTo: "#reg_pass"
+					},
+					phone: "required",
+					avatar: "required"
+				},
+				messages: {
+					firstname: "Введите ваше имя",
+					lastname: "Введите вашу фамилию",
+					email: {
+						required: "Введите ваш email",
+						email: "Правильно введите ваш email"
+					},
+					pass: {
+						required: "Введите пароль",
+						minlength: "Минимум 6 символов"
+					},
+					confirmpass: {
+						required: "Повторите пароль",
+						minlength: "Минимум 6 символов",
+						equalTo: "Пароли не совпадают"
+					},
+					phone: "Введите ваш телефон",
+					avatar: ""
+				},
+				submitHandler: function(form) {
+					// $.fancybox({ 
+					// 	href: "#modal_thanks",
+					// 	padding: 0,
+					// 	margin: 10,
+					// 	minHeight: false,
+					// 	autoHeight: true,
+					// 	openEffect: 'fade',
+					// 	closeEffect: 'fade',
+					// 	openSpeed: 400,
+					// 	closeSpeed: 400,
+					// 	helpers: {
+					// 		overlay: {
+					// 			locked: true
+					// 		}
+					// 	}
+					// });
 				}
 			});
 		});
@@ -1266,6 +1409,72 @@
 			<div class="form_button">
 				<a href="#modal_reg" class="a_button a_grad open_modal">Создать акцию</a>
 			</div>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_avatar" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Фотография аватара</div>
+			<div class="modal_text">
+				<p>Выбранная область будет показываться на Вашей странице. </p>
+				<p>Если изображение ориентировано неправильно, фотографию можно повернуть.</p>
+			</div>
+			<form id="upload_form" enctype="multipart/form-data" method="post" action="upload.php" onsubmit="return checkForm()">
+				<div class="avatar_img">
+					<img id="preview">
+				</div>
+				<div class="modal_button">
+					<input type="hidden" id="x1" name="x1">
+                    <input type="hidden" id="y1" name="y1">
+                    <input type="hidden" id="x2" name="x2">
+                    <input type="hidden" id="y2" name="y2">
+                    <input type="hidden" class="image_file" name="image_file" value="<?=$_POST['image_file'];?>">
+                    <input type="hidden" id="w" name="w">
+                    <input type="hidden" id="h" name="h">
+					<button type="submite" class="a_button">Сохранить аватар</button>
+					<a href="#" class="forgot_pass">Вернуться назад</a>
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_change_phone" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Изменить номер для SMS-уведомлений</div>
+			<div class="modal_text">
+				<p>Чтобы изменить номер для SMS-уведомлений, введите новый номер, а затем подтвердите его проверочным кодом.</p>
+			</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Введите новый номер</label>
+						<div class="form_group">
+							<input type="text" name="phone" placeholder="+375 (33) 300-00-00" required class="phone reg_sms" data-attr="sms1">
+						</div>
+						<div class="form_group">
+							<a href="#" class="a_button disable sms_button" data-attr="sms1">Подтвердить</a>
+						</div>
+						<div class="form_group">
+							<div class="form_row_row">
+								<input class="sms_confirm" type="text" placeholder="12345" data-attr="sms1">
+								<a href="#" class="a_button sms_code" data-attr="sms1">Код верный</a>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#modal_change_phone_conf" class="a_button a_grad open_modal">Отправить</a>
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_change_phone_conf" class="modal modal_confirm">
+		<div class="modal_head">
+			<div class="modal_title">Номер для SMS-уведомлений изменен</div>
 		</div>
 		<span class="modal_close"></span>
 	</div>

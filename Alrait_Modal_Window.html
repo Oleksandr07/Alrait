@@ -17,6 +17,7 @@
 		<!--SCRIPT -->
 			<script src="js/jquery-1.11.1.min.js"></script>
 			<script src="js/jquery.placeholder.js"></script>
+			<script src="js/jquery.maskedinput.js"></script>
 			<script src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
 			<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
 			<script type="text/javascript" src="js/slick/slick.min.js"></script>
@@ -462,6 +463,8 @@
 						<a href="#modal_region" class="a_button open_modal">Region</a>
 						<a href="#modal_login" class="a_button open_modal">Login</a>
 						<a href="#modal_pass" class="a_button open_modal">Pass</a>
+						<a href="#modal_pass_confirm" class="a_button open_modal">PassConfirm</a>
+						<a href="#modal_noemail" class="a_button open_modal">NoEmail</a>
 						<a href="#modal_reg" class="a_button open_modal">Registration</a>
 						<a href="#modal_email" class="a_button open_modal">Email</a>
 						<a href="#modal_thanks" class="a_button open_modal">Thanks</a>
@@ -480,6 +483,16 @@
 					<h4>Index</h4>
 					<p>
 						<a href="#modal_send_article" class="a_button open_modal">SendArticle</a>
+					</p>
+					<h4>Alrait_Client_UserPages_Info</h4>
+					<p>
+						<a href="#modal_change_email" class="a_button open_modal">ChangeEmail</a>
+						<a href="#modal_change_phone" class="a_button open_modal">ChangePhone</a>
+						<a href="#modal_change_phone_conf" class="a_button open_modal">ChangePhoneConf</a>
+					</p>
+					<h4>Alrait_StartPage</h4>
+					<p>
+						<a href="#modal_popular_spec_org" class="a_button open_modal">PopularSpecOrg</a>
 					</p>
 				</div>
 			</div>
@@ -599,8 +612,6 @@
 	<!-- End Validation -->
 
 	<!--modal -->
-
-	<a id="thanks" href="#modal_thanks" class="a_button open_modal">Thanks</a>
 
 	<div id="modal_region" class="modal">
 		<div class="modal_head">
@@ -2008,6 +2019,45 @@
 					<a href="#modal_add_services" class="a_button a_grad open_modal">Добавить услугу</a>
 				</div>
 			</div>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_change_phone" class="modal">
+		<div class="modal_head">
+			<div class="modal_title">Изменить номер для SMS-уведомлений</div>
+			<div class="modal_text">
+				<p>Чтобы изменить номер для SMS-уведомлений, введите новый номер, а затем подтвердите его проверочным кодом.</p>
+			</div>
+			<form action="#">
+				<div class="form_row">
+					<div class="form_group">
+						<label>Введите новый номер</label>
+						<div class="form_group">
+							<input type="text" name="phone" placeholder="+375 (33) 300-00-00" required class="phone reg_sms" data-attr="sms1">
+						</div>
+						<div class="form_group">
+							<a href="#" class="a_button disable sms_button" data-attr="sms1">Подтвердить</a>
+						</div>
+						<div class="form_group">
+							<div class="form_row_row">
+								<input class="sms_confirm" type="text" placeholder="12345" data-attr="sms1">
+								<a href="#" class="a_button sms_code" data-attr="sms1">Код верный</a>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="form_button">
+					<a href="#modal_change_phone_conf" class="a_button a_grad open_modal">Отправить</a>
+				</div>
+			</form>
+		</div>
+		<span class="modal_close"></span>
+	</div>
+
+	<div id="modal_change_phone_conf" class="modal modal_confirm">
+		<div class="modal_head">
+			<div class="modal_title">Номер для SMS-уведомлений изменен</div>
 		</div>
 		<span class="modal_close"></span>
 	</div>
